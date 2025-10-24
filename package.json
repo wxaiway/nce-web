@@ -1,0 +1,27 @@
+{
+  "name": "nce",
+  "version": "2.0.0",
+  "description": "新概念英语在线点读",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint src/**/*.js --fix",
+    "format": "prettier --write \"src/**/*.{js,css,html}\""
+  },
+  "keywords": [
+    "nce",
+    "english",
+    "learning"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "terser": "^5.44.0",
+    "vite": "^5.0.0"
+  }
+}

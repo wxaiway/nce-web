@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a84ff" />
+    <title>NCE - 课文</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <!-- 页面头部 -->
+    <header class="hero">
+      <h1 id="lessonTitle">课文</h1>
+      <p id="lessonSub"></p>
+
+      <!-- 语言切换 -->
+      <div class="segmented tabs">
+        <button data-mode="en">EN</button>
+        <button data-mode="bi" class="active">EN+CN</button>
+        <button data-mode="cn">CN</button>
+      </div>
+    </header>
+
+    <!-- 工具栏 -->
+    <div class="toolbar">
+      <div class="player-controls">
+        <a id="backLink" class="back-btn">← 返回</a>
+        <audio id="player" controls></audio>
+        <button id="helpBtn" class="control-btn">⌨️</button>
+        <button id="settingsBtn" class="control-btn">⚙️</button>
+      </div>
+
+      <!-- 移动端扩展控制栏 -->
+      <div class="mobile-controls">
+        <button class="mobile-btn" id="replayBtn">⟲ 重播</button>
+        <button class="mobile-btn" id="seekBackBtn">⏪ -5s</button>
+        <button class="mobile-btn" id="seekForwardBtn">⏩ +5s</button>
+        <button class="mobile-btn" id="muteBtn">🔇 静音</button>
+      </div>
+    </div>
+
+    <!-- 加载提示 -->
+    <div id="loadingIndicator" class="loading-indicator" hidden>
+      <div class="spinner"></div>
+      <p>加载中...</p>
+    </div>
+
+    <!-- 句子列表 -->
+    <main class="sentences" id="sentences"></main>
+
+    <!-- 课程导航 -->
+    <nav class="lesson-nav">
+      <a id="prevLesson" class="btn-nav prev" href="#" hidden>← 上一课</a>
+      <a id="nextLesson" class="btn-nav next" href="#" hidden>下一课 →</a>
+    </nav>
+
+    <!-- 设置面板 -->
+    <div id="settingsOverlay" class="overlay" hidden></div>
+    <div id="settingsPanel" class="settings-panel" hidden>
+      <div class="panel-header">
+        <h2>设置</h2>
+        <button id="settingsClose" class="close-btn">✕</button>
+      </div>
+
+      <div class="panel-content">
+        <div class="setting-item">
+          <label>播放速度</label>
+          <div class="setting-desc">调整音频播放速度，适应不同学习节奏。</div>
+          <div class="segmented">
+            <button data-speed="0.75">0.75x</button>
+            <button data-speed="1.0" class="active">1.0x</button>
+            <button data-speed="1.25">1.25x</button>
+            <button data-speed="1.5">1.5x</button>
+            <button data-speed="2.0">2.0x</button>
+          </div>
+        </div>
+
+        <div class="setting-item">
+          <label>读模式</label>
+          <div class="setting-desc">连读模式自动播放下一句，点读模式播完当前句后停止。</div>
+          <div class="segmented">
+            <button data-read-mode="continuous" class="active">连读</button>
+            <button data-read-mode="single">点读</button>
+          </div>
+        </div>
+
+        <div class="setting-item">
+          <label>循环模式</label>
+          <div class="setting-desc">播完后的重复行为。点读模式下，单句循环会重播当前句；连读模式下，整篇循环会回到第一句。</div>
+          <div class="segmented">
+            <button data-loop-mode="none" class="active">不循环</button>
+            <button data-loop-mode="single">单句循环</button>
+            <button data-loop-mode="all">整篇循环</button>
+          </div>
+        </div>
+
+        <div class="setting-item">
+          <label>
+            <input type="checkbox" id="autoScrollToggle" checked />
+            自动跟随滚动
+          </label>
+          <div class="setting-desc">播放时自动滚动到当前句子，保持在视野中心。</div>
+        </div>
+
+        <div class="setting-item">
+          <label>
+            <input type="checkbox" id="autoNextToggle" />
+            自动续播下一课
+          </label>
+          <div class="setting-desc">当前课程播完后，自动跳转到下一课（仅连读模式）。</div>
+        </div>
+
+        <div class="setting-item" style="margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border);">
+          <button id="resetSettingsBtn" class="control-btn" style="width: 100%;">恢复默认设置</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 快捷键帮助面板 -->
+    <div id="helpOverlay" class="overlay" hidden></div>
+    <div id="helpPanel" class="help-panel" hidden>
+      <div class="panel-header">
+        <h2>快捷键</h2>
+        <button id="helpClose" class="close-btn">✕</button>
+      </div>
+
+      <div class="panel-content">
+        <div class="shortcuts-grid">
+          <div class="shortcut-item">
+            <kbd>Space</kbd>
+            <span>播放/暂停</span>
+          </div>
+          <div class="shortcut-item">
+            <kbd>R</kbd>
+            <span>重播当前句</span>
+          </div>
+          <div class="shortcut-item">
+            <kbd>M</kbd>
+            <span>静音/取消静音</span>
+          </div>
+          <div class="shortcut-item">
+            <kbd>←</kbd> / <kbd>A</kbd>
+            <span>上一句</span>
+          </div>
+          <div class="shortcut-item">
+            <kbd>→</kbd> / <kbd>D</kbd>
+            <span>下一句</span>
+          </div>
+          <div class="shortcut-item">
+            <kbd>↑</kbd>
+            <span>音量增加</span>
+          </div>
+          <div class="shortcut-item">
+            <kbd>↓</kbd>
+            <span>音量减少</span>
+          </div>
+          <div class="shortcut-item">
+            <kbd>Shift</kbd> + <kbd>←</kbd>
+            <span>快退 5 秒</span>
+          </div>
+          <div class="shortcut-item">
+            <kbd>Shift</kbd> + <kbd>→</kbd>
+            <span>快进 5 秒</span>
+          </div>
+          <div class="shortcut-item">
+            <kbd>1</kbd> - <kbd>9</kbd>
+            <span>跳转到 10%-90%</span>
+          </div>
+          <div class="shortcut-item">
+            <kbd>?</kbd> / <kbd>H</kbd>
+            <span>显示此帮助</span>
+          </div>
+          <div class="shortcut-item">
+            <kbd>ESC</kbd>
+            <span>关闭面板</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p class="footer-title">New Concept English</p>
+        <p class="footer-desc">新概念英语在线学习平台</p>
+        <p class="footer-copyright">© 2025 NCE. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- 脚本 -->
+    <script type="module" src="/js/app.js"></script>
+    <script type="module" src="/js/lesson.js"></script>
+  </body>
+</html>

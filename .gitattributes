@@ -1,0 +1,36 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Source code
+*.js text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+
+# Scripts
+*.sh text eol=lf
+
+# Audio files (binary)
+*.mp3 binary
+*.wav binary
+
+# Subtitle files
+*.lrc text eol=lf
+
+# Images (binary)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg text
+
+# Archives (binary)
+*.zip binary
+*.tar binary
+*.gz binary
+*.tgz binary
+
+# Documents (binary)
+*.pdf binary

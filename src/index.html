@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a84ff" />
+    <title>NCE - New Concept English</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <style>
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: var(--space-lg);
+      }
+
+      .book-tabs {
+        display: flex;
+        justify-content: center;
+        gap: var(--space-sm);
+        margin-bottom: var(--space-xl);
+      }
+
+      .book-tabs button {
+        padding: 12px 24px;
+        border: 2px solid var(--border);
+        background: var(--card);
+        color: var(--text);
+        border-radius: var(--radius);
+        cursor: pointer;
+        transition: var(--transition);
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .book-tabs button:hover {
+        border-color: var(--accent);
+      }
+
+      .book-tabs button.active {
+        background: var(--accent);
+        color: white;
+        border-color: var(--accent);
+      }
+
+      .lessons-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: var(--space-md);
+      }
+
+      .lesson-card {
+        position: relative;
+        padding: var(--space-lg);
+        background: var(--card);
+        border-radius: var(--radius);
+        text-decoration: none;
+        color: var(--text);
+        transition: var(--transition);
+        border: 2px solid transparent;
+      }
+
+      .lesson-card:hover {
+        border-color: var(--accent);
+        transform: translateY(-2px);
+      }
+
+      .lesson-num {
+        font-size: 12px;
+        color: var(--muted);
+        margin-bottom: var(--space-xs);
+      }
+
+      .lesson-title {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .favorite-btn {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        padding: 4px;
+        opacity: 0.5;
+        transition: var(--transition);
+        color: var(--muted);
+      }
+
+      .favorite-btn:hover {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+
+      .favorite-btn.active {
+        opacity: 1;
+        color: #FFD700;
+      }
+
+      .favorites-section {
+        margin-bottom: var(--space-xl);
+      }
+
+      .favorites-section h2 {
+        font-size: 20px;
+        margin-bottom: var(--space-md);
+        color: var(--text);
+      }
+
+      .favorites-section .lessons-grid {
+        margin-bottom: var(--space-xl);
+      }
+
+      .empty-favorites {
+        text-align: center;
+        padding: var(--space-xl);
+        color: var(--muted);
+      }
+
+      /* 上次学习 */
+      .last-study-section {
+        margin-bottom: var(--space-xl);
+      }
+
+      .last-study-section h2 {
+        font-size: 20px;
+        margin-bottom: var(--space-md);
+        color: var(--text);
+      }
+
+      .last-study-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--space-lg);
+        background: linear-gradient(135deg,
+          rgba(10, 132, 255, 0.1) 0%,
+          rgba(124, 77, 255, 0.1) 100%);
+        border: 2px solid var(--accent);
+        border-radius: var(--radius);
+        text-decoration: none;
+        color: var(--text);
+        transition: var(--transition);
+        box-shadow: var(--shadow);
+      }
+
+      .last-study-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        border-color: var(--accent-2);
+      }
+
+      .last-study-card .lesson-content {
+        flex: 1;
+      }
+
+      .last-study-card .lesson-num {
+        font-size: 12px;
+        color: var(--accent);
+        font-weight: 600;
+        margin-bottom: var(--space-xs);
+      }
+
+      .last-study-card .lesson-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--text);
+        margin-bottom: var(--space-xs);
+      }
+
+      .last-study-card .progress-info {
+        font-size: 13px;
+        color: var(--muted);
+        margin-top: var(--space-xs);
+      }
+
+      .last-study-card .continue-icon {
+        flex: 0 0 auto;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        color: var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <h1>New Concept English</h1>
+      <p>新概念英语在线学习</p>
+      <div style="margin-top: var(--space-md);">
+        <a href="guide.html" class="control-btn" style="text-decoration: none;">📚 学习指导</a>
+      </div>
+    </header>
+
+    <div class="container">
+      <!-- 收藏列表 -->
+      <div id="favorites" class="favorites-section" style="display: none">
+        <h2>⭐ 我的收藏</h2>
+        <div id="favoritesList" class="lessons-grid"></div>
+      </div>
+
+      <!-- 上次学习 -->
+      <div id="lastStudy" class="last-study-section" style="display: none">
+        <h2>📖 继续学习</h2>
+        <div id="lastStudyCard"></div>
+      </div>
+
+      <!-- 书籍选择 -->
+      <div class="book-tabs">
+        <button data-book="NCE1" class="active">新概念一</button>
+        <button data-book="NCE2">新概念二</button>
+        <button data-book="NCE3">新概念三</button>
+        <button data-book="NCE4">新概念四</button>
+      </div>
+
+      <!-- 课程列表 -->
+      <div id="lessons" class="lessons-grid"></div>
+    </div>
+
+    <script type="module">
+      import { Storage } from './js/utils/storage.js';
+
+      class IndexApp {
+        constructor() {
+          this.currentBook = 'NCE1';
+          this.data = null;
+          this.favorites = Storage.get('favorites', []);
+          this.init();
+        }
+
+        async init() {
+          // 加载数据
+          await this.loadData();
+
+          // 初始化书籍切换
+          this.initBookTabs();
+
+          // 检查 URL hash，自动切换到对应书籍
+          this.checkHashNavigation();
+
+          // 渲染收藏列表
+          this.renderFavorites();
+
+          // 渲染上次学习
+          this.renderLastStudy();
+
+          // 渲染课程列表
+          this.renderLessons();
+        }
+
+        async loadData() {
+          try {
+            const response = await fetch(import.meta.env.BASE_URL + 'static/data.json');
+            this.data = await response.json();
+          } catch (error) {
+            console.error('Failed to load data:', error);
+          }
+        }
+
+        initBookTabs() {
+          const tabs = document.querySelectorAll('[data-book]');
+
+          tabs.forEach((tab) => {
+            tab.addEventListener('click', () => {
+              this.currentBook = tab.dataset.book;
+
+              // 更新按钮状态（互斥选择）
+              tabs.forEach((t) => t.classList.toggle('active', t === tab));
+
+              this.renderLessons();
+            });
+          });
+        }
+
+        renderLessons() {
+          const container = document.getElementById('lessons');
+          const bookNum = this.currentBook.replace('NCE', '');
+          const lessons = this.data?.[bookNum] || [];
+
+          container.innerHTML = lessons
+            .map(
+              (lesson, idx) => {
+                const lessonKey = `${this.currentBook}/${lesson.filename}`;
+                const isFavorite = this.favorites.includes(lessonKey);
+                // NCE1 每个文件包含两课（1&2, 3&4...），其他册别正常递增
+                const lessonNumber = bookNum === '1' ? `${idx * 2 + 1}&${idx * 2 + 2}` : String(idx + 1);
+                return `
+            <a href="lesson.html#${lessonKey}" class="lesson-card">
+              <button class="favorite-btn ${isFavorite ? 'active' : ''}" data-lesson="${lessonKey}" onclick="event.preventDefault(); window.indexApp.toggleFavorite('${lessonKey}')">
+                ${isFavorite ? '⭐' : '☆'}
+              </button>
+              <div class="lesson-num">第 ${lessonNumber} 课</div>
+              <div class="lesson-title">${lesson.title}</div>
+            </a>
+          `;
+              }
+            )
+            .join('');
+        }
+
+        renderFavorites() {
+          const section = document.getElementById('favorites');
+          const container = document.getElementById('favoritesList');
+
+          if (this.favorites.length === 0) {
+            section.style.display = 'none';
+            return;
+          }
+
+          section.style.display = 'block';
+
+          // 解析收藏的课程信息
+          const favoriteLessons = this.favorites
+            .map((key) => {
+              const [book, filename] = key.split('/');
+              const bookNum = book.replace('NCE', '');
+              const lessons = this.data?.[bookNum] || [];
+              const lessonIndex = lessons.findIndex((l) => l.filename === filename);
+              const lesson = lessons[lessonIndex];
+              if (!lesson) return null;
+
+              // 计算课号：NCE1 显示 1&2, 3&4...，其他册别正常递增
+              const lessonNumber = bookNum === '1' ? `${lessonIndex * 2 + 1}&${lessonIndex * 2 + 2}` : String(lessonIndex + 1);
+              return { ...lesson, book, key, lessonNumber };
+            })
+            .filter(Boolean);
+
+          container.innerHTML = favoriteLessons
+            .map(
+              (lesson) => `
+            <a href="lesson.html#${lesson.key}" class="lesson-card">
+              <button class="favorite-btn active" data-lesson="${lesson.key}" onclick="event.preventDefault(); window.indexApp.toggleFavorite('${lesson.key}')">
+                ⭐
+              </button>
+              <div class="lesson-num">第 ${lesson.lessonNumber} 课</div>
+              <div class="lesson-title">${lesson.title}</div>
+            </a>
+          `
+            )
+            .join('');
+        }
+
+        toggleFavorite(lessonKey) {
+          const index = this.favorites.indexOf(lessonKey);
+          if (index > -1) {
+            this.favorites.splice(index, 1);
+          } else {
+            this.favorites.push(lessonKey);
+          }
+
+          Storage.set('favorites', this.favorites);
+          this.renderFavorites();
+          this.renderLessons();
+        }
+
+        checkHashNavigation() {
+          const hash = location.hash.slice(1);
+          if (hash && ['NCE1', 'NCE2', 'NCE3', 'NCE4'].includes(hash)) {
+            const tab = document.querySelector(`[data-book="${hash}"]`);
+            if (tab) {
+              // 更新当前书籍
+              this.currentBook = hash;
+              // 更新按钮状态
+              const tabs = document.querySelectorAll('[data-book]');
+              tabs.forEach((t) => t.classList.toggle('active', t === tab));
+            }
+          }
+        }
+
+        renderLastStudy() {
+          const section = document.getElementById('lastStudy');
+          const container = document.getElementById('lastStudyCard');
+
+          // 获取所有学习进度
+          const allProgress = Storage.get('lessonProgress', {});
+
+          // 找到最近学习的课程（按 lastStudy 时间排序）
+          const progressEntries = Object.entries(allProgress)
+            .filter(([key, progress]) => progress.lastStudy && progress.idx >= 0)
+            .sort((a, b) => b[1].lastStudy - a[1].lastStudy);
+
+          if (progressEntries.length === 0) {
+            section.style.display = 'none';
+            return;
+          }
+
+          const [lessonKey, progress] = progressEntries[0];
+          const [book, filename] = lessonKey.split('/');
+          const bookNum = book.replace('NCE', '');
+          const lessons = this.data?.[bookNum] || [];
+          const lessonIndex = lessons.findIndex((l) => l.filename === filename);
+          const lesson = lessons[lessonIndex];
+
+          if (!lesson) {
+            section.style.display = 'none';
+            return;
+          }
+
+          section.style.display = 'block';
+
+          // 计算课号
+          const lessonNumber = bookNum === '1' ? `${lessonIndex * 2 + 1}&${lessonIndex * 2 + 2}` : String(lessonIndex + 1);
+
+          // 格式化时间
+          const formatTime = (seconds) => {
+            const m = Math.floor(seconds / 60);
+            const s = Math.floor(seconds % 60);
+            return `${m}:${String(s).padStart(2, '0')}`;
+          };
+
+          // 构建进度信息
+          const progressInfo = [
+            `第 ${lessonNumber} 课`,
+            progress.time > 0 ? formatTime(progress.time) : null,
+            progress.percentage > 0 ? `${progress.percentage}%` : null
+          ].filter(Boolean).join(' · ');
+
+          container.innerHTML = `
+            <a href="lesson.html#${lessonKey}" class="last-study-card" data-lesson="${lessonKey}">
+              <div class="lesson-content">
+                <div class="lesson-num">上次学习</div>
+                <div class="lesson-title">${lesson.title}</div>
+                ${progressInfo ? `<div class="progress-info">${progressInfo}</div>` : ''}
+              </div>
+              <div class="continue-icon">→</div>
+            </a>
+          `;
+
+          // 添加点击事件，设置自动播放标记
+          const card = container.querySelector('.last-study-card');
+          if (card) {
+            card.addEventListener('click', (e) => {
+              e.preventDefault();
+              sessionStorage.setItem('nce_auto_play', '1');
+              location.href = card.getAttribute('href');
+            });
+          }
+        }
+      }
+
+      window.indexApp = new IndexApp();
+    </script>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p class="footer-title">New Concept English</p>
+        <p class="footer-desc">新概念英语在线学习平台</p>
+        <p class="footer-copyright">© 2025 NCE. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

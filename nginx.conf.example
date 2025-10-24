@@ -1,0 +1,170 @@
+# NCE - Nginx 配置示例
+#
+# 使用方法：
+# 1. 复制此文件到 Nginx 配置目录
+#    sudo cp nginx.conf.example /etc/nginx/sites-available/nce
+#
+# 2. 修改配置中的域名和路径
+#    sudo nano /etc/nginx/sites-available/nce
+#
+# 3. 创建软链接启用配置
+#    sudo ln -s /etc/nginx/sites-available/nce /etc/nginx/sites-enabled/
+#
+# 4. 测试配置并重启
+#    sudo nginx -t
+#    sudo systemctl restart nginx
+
+server {
+    listen 80;
+    listen [::]:80;
+
+    # 修改为你的域名
+    server_name your-domain.com www.your-domain.com;
+
+    # 网站根目录（指向构建产物）
+    # 修改为你的实际路径
+    root /var/www/nce/dist;
+    index index.html;
+
+    # 字符集
+    charset utf-8;
+
+    # 日志文件
+    access_log /var/log/nginx/nce_access.log;
+    error_log /var/log/nginx/nce_error.log;
+
+    # ==========================================
+    # Gzip 压缩配置
+    # ==========================================
+    gzip on;
+    gzip_vary on;
+    gzip_comp_level 6;
+    gzip_min_length 1000;
+    gzip_proxied any;
+    gzip_types
+        text/plain
+        text/css
+        text/xml
+        text/javascript
+        application/json
+        application/javascript
+        application/xml+rss
+        application/rss+xml
+        font/truetype
+        font/opentype
+        application/vnd.ms-fontobject
+        image/svg+xml;
+
+    # ==========================================
+    # 缓存策略
+    # ==========================================
+
+    # 静态资源（带 hash 的 JS/CSS）- 长期缓存
+    location ~* ^/assets/.*\.(js|css)$ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+        access_log off;
+    }
+
+    # 音频文件 - 中期缓存
+    location ~* \.(mp3|lrc)$ {
+        expires 30d;
+        add_header Cache-Control "public";
+        access_log off;
+    }
+
+    # 图片文件 - 中期缓存
+    location ~* \.(jpg|jpeg|png|gif|ico|svg|webp)$ {
+        expires 30d;
+        add_header Cache-Control "public";
+        access_log off;
+    }
+
+    # 字体文件 - 长期缓存
+    location ~* \.(woff|woff2|ttf|otf|eot)$ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+        access_log off;
+    }
+
+    # HTML 文件 - 不缓存
+    location ~* \.html$ {
+        expires -1;
+        add_header Cache-Control "no-cache, no-store, must-revalidate";
+        add_header Pragma "no-cache";
+    }
+
+    # ==========================================
+    # 安全头部
+    # ==========================================
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-XSS-Protection "1; mode=block" always;
+
+    # ==========================================
+    # 路由配置
+    # ==========================================
+
+    # 默认路由
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # 禁止访问隐藏文件
+    location ~ /\. {
+        deny all;
+        access_log off;
+        log_not_found off;
+    }
+
+    # 禁止访问备份文件
+    location ~ ~$ {
+        deny all;
+        access_log off;
+        log_not_found off;
+    }
+}
+
+# ==========================================
+# HTTPS 配置（可选）
+# ==========================================
+#
+# 使用 Let's Encrypt 自动配置：
+#   sudo certbot --nginx -d your-domain.com
+#
+# 或手动配置：
+
+# server {
+#     listen 443 ssl http2;
+#     listen [::]:443 ssl http2;
+#
+#     server_name your-domain.com www.your-domain.com;
+#
+#     # SSL 证书
+#     ssl_certificate /etc/letsencrypt/live/your-domain.com/fullchain.pem;
+#     ssl_certificate_key /etc/letsencrypt/live/your-domain.com/privkey.pem;
+#
+#     # SSL 配置
+#     ssl_protocols TLSv1.2 TLSv1.3;
+#     ssl_ciphers HIGH:!aNULL:!MD5;
+#     ssl_prefer_server_ciphers on;
+#     ssl_session_cache shared:SSL:10m;
+#     ssl_session_timeout 10m;
+#
+#     # HSTS
+#     add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+#
+#     # 其他配置同上...
+#     root /var/www/nce/dist;
+#     index index.html;
+#
+#     # ... (复制上面的其他配置)
+# }
+#
+# # HTTP 重定向到 HTTPS
+# server {
+#     listen 80;
+#     listen [::]:80;
+#     server_name your-domain.com www.your-domain.com;
+#     return 301 https://$server_name$request_uri;
+# }
