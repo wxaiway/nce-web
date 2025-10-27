@@ -1,3 +1,10 @@
+/* ==================== 通用容器 ==================== */
+.container {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-md);
+}
+
 /* ==================== 页面头部 ==================== */
 .hero {
   text-align: center;
@@ -165,4 +172,29 @@ audio {
   font-size: 13px;
   color: var(--muted);
   opacity: 0.7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+.footer-icon-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--muted);
+  text-decoration: none;
+  transition: all var(--transition);
+  opacity: 0.7;
+}
+
+.footer-icon-link:hover {
+  color: var(--accent);
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.footer-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
 }
