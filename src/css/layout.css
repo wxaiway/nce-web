@@ -1,0 +1,168 @@
+/* ==================== 页面头部 ==================== */
+.hero {
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero > * {
+  max-width: var(--content-max);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: var(--space-md);
+}
+
+/* Lesson Header: 返回按钮 + Tab 切换 */
+.lesson-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.back-link {
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.back-link:hover {
+  background: var(--surface);
+  border-color: var(--accent);
+}
+
+/* ==================== 工具栏 ==================== */
+.toolbar {
+  padding: var(--space-md);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+.player-controls audio {
+  flex: 1;
+  min-width: 200px;
+}
+
+.player-controls button,
+.player-controls a {
+  flex: 0 0 auto;
+}
+
+audio {
+  height: 34px;
+}
+
+/* 语言切换 */
+.language-switcher {
+  margin: 0 var(--space-md);
+}
+
+/* 移动端控制栏 */
+.mobile-controls {
+  display: none;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+/* ==================== 内容区域 ==================== */
+.sentences {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+}
+
+/* ==================== 课程导航 ==================== */
+.lesson-nav {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+/* ==================== 学习指导页 ==================== */
+.guide-nav {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-md);
+}
+
+.guide-content {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+}
+
+.guide-footer {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md);
+  text-align: center;
+}
+
+/* ==================== 页脚 ==================== */
+.site-footer {
+  background: var(--card);
+  border-top: 1px solid var(--border);
+  padding: var(--space-xl) var(--space-md);
+  margin-top: var(--space-xl);
+}
+
+.footer-content {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: var(--space-sm);
+}
+
+.footer-desc {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: var(--space-md);
+}
+
+.footer-copyright {
+  font-size: 13px;
+  color: var(--muted);
+  opacity: 0.7;
+}

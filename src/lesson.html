@@ -13,26 +13,39 @@
       <h1 id="lessonTitle">课文</h1>
       <p id="lessonSub"></p>
 
-      <!-- 语言切换 -->
-      <div class="segmented tabs">
-        <button data-mode="en">EN</button>
-        <button data-mode="bi" class="active">EN+CN</button>
-        <button data-mode="cn">CN</button>
+      <!-- 导航区域：返回按钮 + Tab 切换 -->
+      <div class="lesson-header">
+        <a id="backLink" class="back-link">← 返回</a>
+        <div class="lesson-tabs">
+          <button class="tab-btn active" data-tab="text">课文</button>
+          <button class="tab-btn" data-tab="notes">讲解</button>
+        </div>
       </div>
     </header>
 
     <!-- 工具栏 -->
     <div class="toolbar">
       <div class="player-controls">
-        <a id="backLink" class="back-btn">← 返回</a>
         <audio id="player" controls></audio>
+
+        <!-- 语言切换（PC端） -->
+        <div class="segmented tabs language-switcher" id="languageSwitcher">
+          <button data-mode="en">EN</button>
+          <button data-mode="bi" class="active">EN+CN</button>
+          <button data-mode="cn">CN</button>
+        </div>
+
         <button id="helpBtn" class="control-btn">⌨️</button>
         <button id="settingsBtn" class="control-btn">⚙️</button>
       </div>
 
       <!-- 移动端扩展控制栏 -->
-      <div class="mobile-controls">
-        <button class="mobile-btn" id="replayBtn">⟲ 重播</button>
+      <div class="mobile-controls" id="mobileControls">
+        <select class="mobile-btn language-select" id="mobileLanguageSelect">
+          <option value="en">EN</option>
+          <option value="bi" selected>EN+CN</option>
+          <option value="cn">CN</option>
+        </select>
         <button class="mobile-btn" id="seekBackBtn">⏪ -5s</button>
         <button class="mobile-btn" id="seekForwardBtn">⏩ +5s</button>
         <button class="mobile-btn" id="muteBtn">🔇 静音</button>
@@ -45,8 +58,18 @@
       <p>加载中...</p>
     </div>
 
-    <!-- 句子列表 -->
-    <main class="sentences" id="sentences"></main>
+    <!-- 内容区域 -->
+    <main id="content">
+      <!-- 课文 Tab -->
+      <div id="tab-text" class="tab-content active">
+        <div class="sentences" id="sentences"></div>
+      </div>
+
+      <!-- 讲解 Tab -->
+      <div id="tab-notes" class="tab-content">
+        <div class="markdown-content" id="notesContent"></div>
+      </div>
+    </main>
 
     <!-- 课程导航 -->
     <nav class="lesson-nav">
@@ -76,21 +99,57 @@
         </div>
 
         <div class="setting-item">
-          <label>读模式</label>
-          <div class="setting-desc">连读模式自动播放下一句，点读模式播完当前句后停止。</div>
-          <div class="segmented">
-            <button data-read-mode="continuous" class="active">连读</button>
-            <button data-read-mode="single">点读</button>
-          </div>
-        </div>
+          <label>学习方式</label>
+          <div class="setting-desc">选择适合你的学习场景</div>
 
-        <div class="setting-item">
-          <label>循环模式</label>
-          <div class="setting-desc">播完后的重复行为。点读模式下，单句循环会重播当前句；连读模式下，整篇循环会回到第一句。</div>
-          <div class="segmented">
-            <button data-loop-mode="none" class="active">不循环</button>
-            <button data-loop-mode="single">单句循环</button>
-            <button data-loop-mode="all">整篇循环</button>
+          <div class="play-mode-list">
+            <label class="mode-option">
+              <div class="mode-header">
+                <span class="mode-icon">📖</span>
+                <span class="mode-title">点读模式</span>
+                <input type="radio" name="playMode" value="single" />
+              </div>
+              <div class="mode-desc">点击句子播放，适合精读</div>
+            </label>
+
+            <label class="mode-option">
+              <div class="mode-header">
+                <span class="mode-icon">🔁</span>
+                <span class="mode-title">发音练习</span>
+                <input type="radio" name="playMode" value="single-loop" />
+              </div>
+              <div class="mode-desc">重复播放当前句，适合跟读</div>
+            </label>
+
+            <label class="mode-option recommended">
+              <div class="mode-header">
+                <span class="mode-icon">📚</span>
+                <span class="mode-title">
+                  标准学习
+                  <span class="badge">推荐</span>
+                </span>
+                <input type="radio" name="playMode" value="continuous" checked />
+              </div>
+              <div class="mode-desc">自动播放整课，播完停止</div>
+            </label>
+
+            <label class="mode-option">
+              <div class="mode-header">
+                <span class="mode-icon">🔄</span>
+                <span class="mode-title">课程复习</span>
+                <input type="radio" name="playMode" value="continuous-loop" />
+              </div>
+              <div class="mode-desc">重复播放当前课，巩固记忆</div>
+            </label>
+
+            <label class="mode-option">
+              <div class="mode-header">
+                <span class="mode-icon">⏭️</span>
+                <span class="mode-title">连贯学习</span>
+                <input type="radio" name="playMode" value="continuous-next" />
+              </div>
+              <div class="mode-desc">自动播放下一课，系统学习</div>
+            </label>
           </div>
         </div>
 
@@ -100,14 +159,6 @@
             自动跟随滚动
           </label>
           <div class="setting-desc">播放时自动滚动到当前句子，保持在视野中心。</div>
-        </div>
-
-        <div class="setting-item">
-          <label>
-            <input type="checkbox" id="autoNextToggle" />
-            自动续播下一课
-          </label>
-          <div class="setting-desc">当前课程播完后，自动跳转到下一课（仅连读模式）。</div>
         </div>
 
         <div class="setting-item" style="margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border);">

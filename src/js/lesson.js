@@ -2,9 +2,23 @@ import { LRCParser } from './core/lrc-parser.js';
 import { AudioPlayer } from './core/audio-player.js';
 import { SettingsPanel } from './ui/settings-panel.js';
 import { ShortcutManager } from './ui/shortcuts.js';
+import { LessonTabs } from './ui/lesson-tabs.js';
+import { LessonNotes } from './ui/lesson-notes.js';
+import { LessonNavigation } from './ui/lesson-navigation.js';
+import { LanguageSwitcher } from './utils/language-switcher.js';
+import { Logger } from './utils/logger.js';
 import { Storage } from './utils/storage.js';
 import { IOSHelper } from './utils/ios-helper.js';
 import { Toast } from './utils/toast.js';
+import { marked } from 'marked';
+
+// 配置 marked.js 安全选项
+marked.setOptions({
+  breaks: true,        // 支持 GFM 换行
+  gfm: true,          // 启用 GitHub Flavored Markdown
+  headerIds: true,    // 为标题生成 ID
+  mangle: false,      // 不混淆邮箱地址
+});
 
 /**
  * 课文页面主应用
@@ -16,6 +30,9 @@ class LessonApp {
     this.lessonKey = ''; // 当前课程标识 (book/filename)
     this.scrollTimer = null; // 滚动定时器
     this.sessionStartTime = Date.now(); // 会话开始时间
+    this.tabs = null; // Tab 管理器
+    this.notes = null; // 讲解管理器
+    this.navigation = null; // 导航管理器
     this.init();
   }
 
@@ -66,6 +83,23 @@ class LessonApp {
       // 初始化移动端控制按钮
       this.setupMobileControls();
 
+      // 初始化 Tab 管理器
+      this.tabs = new LessonTabs();
+      this.notes = new LessonNotes(this.lessonKey);
+
+      // Tab 切换回调：加载讲解内容
+      this.tabs.onTabChange = (tab) => {
+        if (tab === 'notes' && !this.notes.isLoaded()) {
+          this.notes.loadNotes();
+        }
+      };
+
+      // 初始化语言切换
+      const languageSwitcher = new LanguageSwitcher();
+      languageSwitcher.init();
+      languageSwitcher.initButtons('#languageSwitcher button');
+      languageSwitcher.initMobileSelect('mobileLanguageSelect', '#languageSwitcher button');
+
       // iOS 优化
       IOSHelper.unlockAudio(audio);
       IOSHelper.optimizeTouchEvents();
@@ -79,13 +113,14 @@ class LessonApp {
       // 设置返回按钮
       this.setupBackButton(book);
 
-      // 设置课程导航
-      this.setupLessonNavigation();
+      // 初始化课程导航
+      this.navigation = new LessonNavigation(book, filename);
+      this.navigation.setupNavigation();
 
       // 音频加载完成后隐藏 loading（组合方案：兼容移动端 Safari）
       this.setupLoadingHide(audio);
     } catch (error) {
-      console.error('初始化失败:', error);
+      Logger.error('初始化失败:', error);
       this.hideLoading();
       this.showError('页面加载失败，请刷新重试');
     }
@@ -236,73 +271,11 @@ class LessonApp {
     const backLink = document.getElementById('backLink');
     if (!backLink) return;
 
+    // 直接设置 href，利用浏览器原生导航
     const fallback = `index.html#${book}`;
     backLink.href = fallback;
-
-    backLink.addEventListener('click', (e) => {
-      e.preventDefault();
-      // 始终返回首页并定位到对应书籍
-      location.href = fallback;
-    });
   }
 
-  /**
-   * 设置课程导航
-   */
-  async setupLessonNavigation() {
-    const prevBtn = document.getElementById('prevLesson');
-    const nextBtn = document.getElementById('nextLesson');
-
-    if (!prevBtn || !nextBtn) return;
-
-    try {
-      const { book, filename } = this.parseHash();
-      const response = await fetch(import.meta.env.BASE_URL + 'static/data.json');
-      const data = await response.json();
-      const bookNum = book.replace('NCE', '');
-      const lessons = data[bookNum] || [];
-
-      const currentIndex = lessons.findIndex((l) => l.filename === filename);
-
-      if (currentIndex === -1) {
-        prevBtn.hidden = true;
-        nextBtn.hidden = true;
-        return;
-      }
-
-      // 上一课
-      if (currentIndex > 0) {
-        const prevLesson = lessons[currentIndex - 1];
-        prevBtn.href = `lesson.html#${book}/${prevLesson.filename}`;
-        prevBtn.hidden = false;
-        prevBtn.onclick = (e) => {
-          e.preventDefault();
-          location.href = `lesson.html#${book}/${prevLesson.filename}`;
-          location.reload();
-        };
-      } else {
-        prevBtn.hidden = true;
-      }
-
-      // 下一课
-      if (currentIndex < lessons.length - 1) {
-        const nextLesson = lessons[currentIndex + 1];
-        nextBtn.href = `lesson.html#${book}/${nextLesson.filename}`;
-        nextBtn.hidden = false;
-        nextBtn.onclick = (e) => {
-          e.preventDefault();
-          location.href = `lesson.html#${book}/${nextLesson.filename}`;
-          location.reload();
-        };
-      } else {
-        nextBtn.hidden = true;
-      }
-    } catch (error) {
-      console.error('设置课程导航失败:', error);
-      prevBtn.hidden = true;
-      nextBtn.hidden = true;
-    }
-  }
 
   /**
    * 设置移动端控制按钮
@@ -397,7 +370,7 @@ class LessonApp {
       };
       showCountdown();
     } catch (error) {
-      console.error('自动续播失败:', error);
+      Logger.error('自动续播失败:', error);
     }
   }
 
@@ -541,6 +514,8 @@ class LessonApp {
   showError(message) {
     Toast.error(message, 3000);
   }
+
+
 
   /**
    * HTML 转义

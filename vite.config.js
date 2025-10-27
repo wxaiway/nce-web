@@ -1,5 +1,7 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
+import fs from 'fs';
+import path from 'path';
 
 export default defineConfig({
   // 部署在子路径 /nce/
@@ -35,5 +37,41 @@ export default defineConfig({
   server: {
     port: 8080,
     open: true
-  }
+  },
+
+  plugins: [
+    {
+      name: 'markdown-loader',
+      configureServer(server) {
+        server.middlewares.use((req, res, next) => {
+          if (req.url && req.url.endsWith('.md')) {
+            try {
+              const decodedUrl = decodeURIComponent(req.url);
+              const relativePath = decodedUrl.replace('/nce/', '');
+              const filePath = path.join(__dirname, 'public', relativePath);
+
+              if (fs.existsSync(filePath)) {
+                const content = fs.readFileSync(filePath, 'utf-8');
+                res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+                res.end(content);
+                return;
+              } else {
+                // 文件不存在，返回 404
+                res.statusCode = 404;
+                res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+                res.end('Not Found');
+                return;
+              }
+            } catch (error) {
+              console.error('Markdown loader error:', error);
+              res.statusCode = 500;
+              res.end('Internal Server Error');
+              return;
+            }
+          }
+          next();
+        });
+      }
+    }
+  ]
 });

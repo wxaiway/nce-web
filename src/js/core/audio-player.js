@@ -14,6 +14,7 @@ export class AudioPlayer extends EventEmitter {
     this.segmentEnd = 0;
     this.segmentTimer = null;
     this.isManualPlay = false; // 标记是否为手动播放
+    this.isStateTransitioning = false; // 状态转换锁，防止并发更新
 
     // 读取用户设置
     this.readMode = Storage.get('readMode', 'continuous'); // 'continuous' | 'single'
@@ -58,6 +59,12 @@ export class AudioPlayer extends EventEmitter {
   async playSegment(idx, manual = false) {
     if (idx < 0 || idx >= this.items.length) return;
 
+    // 锁定状态，防止 timeupdate 干扰
+    this.isStateTransitioning = true;
+
+    // 清理旧的定时器
+    this.clearAdvance();
+
     this.currentIdx = idx;
     this.isManualPlay = manual;
     const item = this.items[idx];
@@ -78,6 +85,11 @@ export class AudioPlayer extends EventEmitter {
       this.scheduleAdvance();
     } catch (error) {
       this.emit('error', { error, message: '播放失败' });
+    } finally {
+      // 延迟解锁，给 iOS 足够时间同步状态
+      setTimeout(() => {
+        this.isStateTransitioning = false;
+      }, 100);
     }
   }
 
@@ -130,8 +142,24 @@ export class AudioPlayer extends EventEmitter {
    * 设置读模式
    */
   setReadMode(mode) {
+    const oldMode = this.readMode;
     this.readMode = mode;
     Storage.set('readMode', mode);
+
+    // 模式切换时重新计算和调度
+    if (oldMode !== mode) {
+      // 清理旧的定时器
+      this.clearAdvance();
+
+      // 如果正在播放，重新计算 segmentEnd 并调度
+      if (!this.audio.paused && this.currentIdx >= 0) {
+        const item = this.items[this.currentIdx];
+        // 重新计算当前句子的结束时间（基于新模式）
+        this.segmentEnd = this.calculateSegmentEnd(item, this.currentIdx);
+        // 重新调度自动前进
+        this.scheduleAdvance();
+      }
+    }
   }
 
   /**
@@ -146,6 +174,11 @@ export class AudioPlayer extends EventEmitter {
    * 时间更新处理 - 检测句子切换
    */
   onTimeUpdate() {
+    // 状态转换期间跳过自动更新，防止并发冲突
+    if (this.isStateTransitioning) {
+      return;
+    }
+
     const currentTime = this.audio.currentTime;
 
     for (let i = 0; i < this.items.length; i++) {

@@ -33,17 +33,11 @@ export class SettingsPanel {
     // 播放速度控制（设置面板）
     this.initSpeedControlInPanel();
 
-    // 读模式控制（设置面板）
-    this.initReadModeControlInPanel();
-
-    // 循环模式控制
-    this.initLoopModeControl();
+    // 学习方式控制（新的统一设置）
+    this.initPlayModeControl();
 
     // 自动跟随控制
     this.initAutoScrollControl();
-
-    // 自动续播控制
-    this.initAutoNextControl();
 
     // 恢复默认按钮
     this.initResetButton();
@@ -79,72 +73,87 @@ export class SettingsPanel {
   }
 
   /**
-   * 读模式控制（设置面板）
+   * 学习方式控制（新的统一设置）
    */
-  initReadModeControlInPanel() {
-    const modeBtns = document.querySelectorAll('[data-read-mode]');
-    const savedMode = Storage.get('readMode', 'continuous');
+  initPlayModeControl() {
+    // 播放模式映射表
+    const playModeMapping = {
+      'single': { readMode: 'single', loopMode: 'none', autoNext: false },
+      'single-loop': { readMode: 'single', loopMode: 'single', autoNext: false },
+      'continuous': { readMode: 'continuous', loopMode: 'none', autoNext: false },
+      'continuous-loop': { readMode: 'continuous', loopMode: 'all', autoNext: false },
+      'continuous-next': { readMode: 'continuous', loopMode: 'none', autoNext: true }
+    };
 
-    // 设置初始模式
-    this.player.setReadMode(savedMode);
-    this.updateSettingsConstraints();
+    // 迁移旧设置到新格式
+    const savedPlayMode = this.migrateOldSettings();
 
-    // 设置初始激活状态（互斥选择）
-    modeBtns.forEach((btn) => {
-      const mode = btn.dataset.readMode;
-      btn.classList.toggle('active', mode === savedMode);
+    // 获取所有播放模式选项
+    const modeOptions = document.querySelectorAll('input[name="playMode"]');
+
+    // 设置初始选中状态
+    modeOptions.forEach((option) => {
+      if (option.value === savedPlayMode) {
+        option.checked = true;
+      }
     });
 
-    // 添加点击事件
-    modeBtns.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const newMode = btn.dataset.readMode;
-        this.player.setReadMode(newMode);
-        Storage.set('readMode', newMode);
+    // 应用初始设置到播放器
+    const initialSettings = playModeMapping[savedPlayMode];
+    this.player.setReadMode(initialSettings.readMode);
+    this.player.setLoopMode(initialSettings.loopMode);
+    Storage.set('autoNext', initialSettings.autoNext);
 
-        // 更新按钮状态（互斥选择）
-        modeBtns.forEach((b) => b.classList.toggle('active', b === btn));
+    // 添加变更事件
+    modeOptions.forEach((option) => {
+      option.addEventListener('change', () => {
+        if (option.checked) {
+          const settings = playModeMapping[option.value];
 
-        // 更新设置约束
-        this.updateSettingsConstraints();
+          // 应用设置
+          this.player.setReadMode(settings.readMode);
+          this.player.setLoopMode(settings.loopMode);
+          Storage.set('autoNext', settings.autoNext);
+
+          // 保存当前播放模式
+          Storage.set('playMode', option.value);
+        }
       });
     });
   }
 
   /**
-   * 循环模式控制
+   * 迁移旧设置到新格式
    */
-  initLoopModeControl() {
-    const loopBtns = document.querySelectorAll('[data-loop-mode]');
-    const savedLoop = Storage.get('loopMode', 'none');
+  migrateOldSettings() {
+    // 检查是否已有新格式的设置
+    const savedPlayMode = Storage.get('playMode');
+    if (savedPlayMode) {
+      return savedPlayMode;
+    }
 
-    // 设置初始激活状态（互斥选择）
-    loopBtns.forEach((btn) => {
-      btn.classList.toggle('active', btn.dataset.loopMode === savedLoop);
-    });
+    // 读取旧设置
+    const readMode = Storage.get('readMode', 'continuous');
+    const loopMode = Storage.get('loopMode', 'none');
+    const autoNext = Storage.get('autoNext', false);
 
-    // 添加点击事件
-    loopBtns.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const mode = btn.dataset.loopMode;
-        const readMode = this.player.readMode || 'continuous';
+    // 转换为新格式
+    let playMode;
+    if (readMode === 'single') {
+      playMode = loopMode === 'single' ? 'single-loop' : 'single';
+    } else {
+      if (autoNext) {
+        playMode = 'continuous-next';
+      } else if (loopMode === 'all') {
+        playMode = 'continuous-loop';
+      } else {
+        playMode = 'continuous';
+      }
+    }
 
-        // 检查设置冲突并提示
-        if (btn.disabled) {
-          if (mode === 'single' && readMode === 'continuous') {
-            Toast.warning('单句循环仅在点读模式下可用', 2000);
-          } else if (mode === 'all' && readMode === 'single') {
-            Toast.warning('整篇循环仅在连读模式下可用', 2000);
-          }
-          return;
-        }
-
-        this.player.setLoopMode(mode);
-
-        // 更新按钮状态（互斥选择）
-        loopBtns.forEach((b) => b.classList.toggle('active', b === btn));
-      });
-    });
+    // 保存新格式
+    Storage.set('playMode', playMode);
+    return playMode;
   }
 
   /**
@@ -162,29 +171,6 @@ export class SettingsPanel {
     });
   }
 
-  /**
-   * 自动续播控制
-   */
-  initAutoNextControl() {
-    const toggle = document.getElementById('autoNextToggle');
-    if (!toggle) return;
-
-    const saved = Storage.get('autoNext', false);
-    toggle.checked = saved;
-
-    toggle.addEventListener('change', () => {
-      const readMode = this.player.readMode || 'continuous';
-
-      // 检查设置冲突并提示
-      if (toggle.checked && readMode === 'single') {
-        Toast.warning('自动续播仅在连读模式下可用', 2000);
-        toggle.checked = false;
-        return;
-      }
-
-      Storage.set('autoNext', toggle.checked);
-    });
-  }
 
   /**
    * 恢复默认设置
@@ -197,10 +183,8 @@ export class SettingsPanel {
       // 默认值
       const defaults = {
         audioPlaybackRate: 1.0,
-        readMode: 'continuous',
-        loopMode: 'none',
+        playMode: 'continuous',
         autoScroll: true,
-        autoNext: false,
       };
 
       // 恢复播放速度
@@ -210,18 +194,24 @@ export class SettingsPanel {
         btn.classList.toggle('active', parseFloat(btn.dataset.speed) === defaults.audioPlaybackRate);
       });
 
-      // 恢复读模式
-      this.player.setReadMode(defaults.readMode);
-      Storage.set('readMode', defaults.readMode);
-      document.querySelectorAll('[data-read-mode]').forEach((btn) => {
-        btn.classList.toggle('active', btn.dataset.readMode === defaults.readMode);
-      });
+      // 恢复播放模式
+      const playModeMapping = {
+        'single': { readMode: 'single', loopMode: 'none', autoNext: false },
+        'single-loop': { readMode: 'single', loopMode: 'single', autoNext: false },
+        'continuous': { readMode: 'continuous', loopMode: 'none', autoNext: false },
+        'continuous-loop': { readMode: 'continuous', loopMode: 'all', autoNext: false },
+        'continuous-next': { readMode: 'continuous', loopMode: 'none', autoNext: true }
+      };
 
-      // 恢复循环模式
-      this.player.setLoopMode(defaults.loopMode);
-      Storage.set('loopMode', defaults.loopMode);
-      document.querySelectorAll('[data-loop-mode]').forEach((btn) => {
-        btn.classList.toggle('active', btn.dataset.loopMode === defaults.loopMode);
+      const defaultSettings = playModeMapping[defaults.playMode];
+      this.player.setReadMode(defaultSettings.readMode);
+      this.player.setLoopMode(defaultSettings.loopMode);
+      Storage.set('autoNext', defaultSettings.autoNext);
+      Storage.set('playMode', defaults.playMode);
+
+      // 更新 UI
+      document.querySelectorAll('input[name="playMode"]').forEach((option) => {
+        option.checked = option.value === defaults.playMode;
       });
 
       // 恢复自动跟随
@@ -229,75 +219,11 @@ export class SettingsPanel {
       const autoScrollToggle = document.getElementById('autoScrollToggle');
       if (autoScrollToggle) autoScrollToggle.checked = defaults.autoScroll;
 
-      // 恢复自动续播
-      Storage.set('autoNext', defaults.autoNext);
-      const autoNextToggle = document.getElementById('autoNextToggle');
-      if (autoNextToggle) autoNextToggle.checked = defaults.autoNext;
-
-      // 更新设置约束
-      this.updateSettingsConstraints();
-
       // 显示提示
       Toast.success('已恢复默认设置', 2000);
     });
   }
 
-  /**
-   * 更新设置项约束
-   * 根据当前读模式，启用/禁用相关选项
-   */
-  updateSettingsConstraints() {
-    const readMode = this.player.readMode || 'continuous';
-    const currentLoop = this.player.loopMode || 'none';
-    const loopBtns = document.querySelectorAll('[data-loop-mode]');
-    const autoNextToggle = document.getElementById('autoNextToggle');
-
-    if (readMode === 'single') {
-      // 点读模式：禁用整篇循环和自动续播
-
-      // 如果当前是整篇循环，自动降级到不循环
-      if (currentLoop === 'all') {
-        this.player.setLoopMode('none');
-        Storage.set('loopMode', 'none');
-
-        // 更新 UI 状态
-        loopBtns.forEach((btn) => {
-          btn.classList.toggle('active', btn.dataset.loopMode === 'none');
-        });
-      }
-
-      // 设置按钮禁用状态
-      loopBtns.forEach((btn) => {
-        btn.disabled = btn.dataset.loopMode === 'all';
-      });
-
-      if (autoNextToggle) {
-        autoNextToggle.disabled = true;
-      }
-    } else {
-      // 连读模式：禁用单句循环
-
-      // 如果当前是单句循环，自动降级到不循环
-      if (currentLoop === 'single') {
-        this.player.setLoopMode('none');
-        Storage.set('loopMode', 'none');
-
-        // 更新 UI 状态
-        loopBtns.forEach((btn) => {
-          btn.classList.toggle('active', btn.dataset.loopMode === 'none');
-        });
-      }
-
-      // 设置按钮禁用状态
-      loopBtns.forEach((btn) => {
-        btn.disabled = btn.dataset.loopMode === 'single';
-      });
-
-      if (autoNextToggle) {
-        autoNextToggle.disabled = false;
-      }
-    }
-  }
 
   /**
    * 打开设置面板

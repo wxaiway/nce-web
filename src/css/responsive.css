@@ -1,0 +1,91 @@
+/* ==================== 响应式样式 ==================== */
+
+/* 小屏时显示移动端控制栏，隐藏帮助按钮和PC语言切换 */
+@media (max-width: 768px) {
+  /* 移动端控制栏 */
+  .mobile-controls {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #helpBtn,
+  .language-switcher {
+    display: none;
+  }
+
+  /* 页面头部 */
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  /* 句子列表 */
+  .sentence {
+    padding: var(--space-sm);
+  }
+
+  /* 设置面板 */
+  .settings-panel {
+    width: 100%;
+    max-width: none;
+  }
+
+  /* 小屏幕下内容区域占满宽度 */
+  .hero > *,
+  .player-controls,
+  .sentences {
+    max-width: 100%;
+  }
+
+  /* 移动端：返回按钮和 Tab 保持同一行，紧凑布局 */
+  .lesson-header {
+    gap: var(--space-sm);
+    padding: 0 var(--space-sm);
+  }
+
+  .back-link {
+    padding: 8px 12px;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+
+  .lesson-tabs {
+    padding: 3px;
+  }
+
+  .tab-btn {
+    padding: 6px 16px;
+    font-size: 13px;
+  }
+
+  /* 课程导航 */
+  .lesson-nav {
+    padding: var(--space-md);
+  }
+
+  .btn-nav {
+    font-size: 14px;
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  /* 学习指导页 */
+  .guide-section {
+    padding: var(--space-md);
+  }
+
+  .guide-header h2 {
+    font-size: 20px;
+  }
+
+  .guide-icon {
+    font-size: 28px;
+  }
+
+  .guide-item h3 {
+    font-size: 16px;
+  }
+
+  .guide-item p,
+  .guide-item ul li {
+    font-size: 14px;
+  }
+}
