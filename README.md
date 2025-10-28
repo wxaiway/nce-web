@@ -6,6 +6,8 @@
 
 [https://wxaiway.com/nce/](https://wxaiway.com/nce/)
 
+![伟贤AI智研社](img/show.gif)
+
 ## ✨ 核心特性
 
 - 🎨 **现代 UI 设计**: Apple 风格界面，深浅色主题自适应
@@ -192,7 +194,8 @@ MIT License
 - 项目地址: https://github.com/wxaiway/nce-web
 - 问题反馈: https://github.com/wxaiway/nce-web/issues
 - 联系作者: wxaiway@qq.com
-- 作者微信: Lwxaiway
+- 作者微信: LwxAiWay
+![伟贤AI智研社](img/mp.jpg)
 ---
 
 **享受学习新概念英语的乐趣！** 🎉
