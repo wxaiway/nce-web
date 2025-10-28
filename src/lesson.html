@@ -36,6 +36,7 @@
         </div>
 
         <button id="helpBtn" class="control-btn">⌨️</button>
+        <span id="wakeLockIcon" class="control-btn" hidden title="屏幕保持常亮中">🔆</span>
         <button id="settingsBtn" class="control-btn">⚙️</button>
       </div>
 
@@ -159,6 +160,14 @@
             自动跟随滚动
           </label>
           <div class="setting-desc">播放时自动滚动到当前句子，保持在视野中心。</div>
+        </div>
+
+        <div class="setting-item" id="keepScreenOnSetting" hidden>
+          <label>
+            <input type="checkbox" id="keepScreenOnToggle" checked />
+            播放时保持屏幕常亮（仅手机端）
+          </label>
+          <div class="setting-desc">防止播放时屏幕自动熄灭，需要浏览器支持。不支持的设备会显示设置提示。</div>
         </div>
 
         <div class="setting-item" style="margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border);">

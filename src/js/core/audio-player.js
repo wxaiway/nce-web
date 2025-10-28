@@ -289,6 +289,29 @@ export class AudioPlayer extends EventEmitter {
   }
 
   /**
+   * 更新句子数据（用于切换课程）
+   * @param {Array} items - 新的句子数组
+   */
+  updateItems(items) {
+    this.items = items;
+    this.currentIdx = -1;
+    this.segmentEnd = 0;
+    this.adjustLastSentenceEnd();
+  }
+
+  /**
+   * 重置播放器状态（用于切换课程）
+   */
+  reset() {
+    this.clearAdvance();
+    this.currentIdx = -1;
+    this.segmentEnd = 0;
+    this.isManualPlay = false;
+    this.isStateTransitioning = false;
+    // 不重置 readMode 和 loopMode（保持用户设置）
+  }
+
+  /**
    * 销毁播放器
    */
   destroy() {

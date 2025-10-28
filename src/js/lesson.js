@@ -10,6 +10,7 @@ import { Logger } from './utils/logger.js';
 import { Storage } from './utils/storage.js';
 import { IOSHelper } from './utils/ios-helper.js';
 import { Toast } from './utils/toast.js';
+import { WakeLockManager } from './utils/wake-lock-manager.js';
 import { marked } from 'marked';
 
 // 配置 marked.js 安全选项
@@ -33,6 +34,7 @@ class LessonApp {
     this.tabs = null; // Tab 管理器
     this.notes = null; // 讲解管理器
     this.navigation = null; // 导航管理器
+    this.wakeLockManager = new WakeLockManager(); // 屏幕唤醒锁管理器
     this.init();
   }
 
@@ -41,12 +43,76 @@ class LessonApp {
       // 显示加载提示
       this.showLoading();
 
-      // 解析 URL
-      const { book, filename } = this.parseHash();
+      // 初始化音频播放器（只做一次）
+      const audio = document.getElementById('player');
+
+      // 恢复音量设置
+      const savedVolume = Storage.get('audioVolume');
+      if (savedVolume !== null) {
+        audio.volume = savedVolume;
+      }
+
+      this.player = new AudioPlayer(audio, []);
+
+      // 设置事件监听（只做一次）
+      this.setupPlayerEvents();
+
+      // 初始化 UI 组件（只做一次）
+      this.settingsPanel = new SettingsPanel(this.player, this.wakeLockManager);
+      new ShortcutManager(this.player);
+
+      // 初始化移动端控制按钮
+      this.setupMobileControls();
+
+      // 初始化 Tab 管理器
+      this.tabs = new LessonTabs();
+
+      // 初始化语言切换
+      const languageSwitcher = new LanguageSwitcher();
+      languageSwitcher.init();
+      languageSwitcher.initButtons('#languageSwitcher button');
+      languageSwitcher.initMobileSelect('mobileLanguageSelect', '#languageSwitcher button');
+
+      // iOS 优化（只做一次）
+      IOSHelper.unlockAudio(audio);
+      IOSHelper.optimizeTouchEvents();
+
+      // 加载第一个课程
+      await this.loadLesson();
+
+      // 检查自动播放
+      this.checkAutoPlay();
+    } catch (error) {
+      Logger.error('初始化失败:', error);
+      this.hideLoading();
+      this.showError('页面加载失败，请刷新重试');
+    }
+  }
+
+  /**
+   * 加载课程（可重复调用，用于切换课程）
+   * @param {string} book - 书籍名称（可选，不传则从URL解析）
+   * @param {string} filename - 课程文件名（可选，不传则从URL解析）
+   */
+  async loadLesson(book, filename) {
+    try {
+      // 显示加载提示
+      this.showLoading();
+
+      // 解析 URL（如果没传参数）
+      if (!book || !filename) {
+        const parsed = this.parseHash();
+        book = parsed.book;
+        filename = parsed.filename;
+      }
+
       if (!book || !filename) {
         window.location.href = 'index.html';
         return;
       }
+
+      // 清理旧状态
+      this.cleanup();
 
       // 加载 LRC
       const lrcText = await this.fetchText(`${book}/${filename}.lrc`);
@@ -58,34 +124,35 @@ class LessonApp {
       // 设置页面标题
       this.setTitle(meta, filename);
 
-      // 初始化音频播放器
-      const audio = document.getElementById('player');
-      audio.src = `${book}/${filename}.mp3`;
+      // 更新音频源
+      this.player.audio.src = `${book}/${filename}.mp3`;
 
-      // 恢复音量设置
-      const savedVolume = Storage.get('audioVolume');
-      if (savedVolume !== null) {
-        audio.volume = savedVolume;
-      }
-
-      this.player = new AudioPlayer(audio, items);
-
-      // 设置事件监听
-      this.setupPlayerEvents();
+      // 更新播放器数据
+      this.player.updateItems(items);
 
       // 渲染句子列表
       this.renderSentences();
 
-      // 初始化 UI 组件
-      new SettingsPanel(this.player);
-      new ShortcutManager(this.player);
+      // 设置返回按钮
+      this.setupBackButton(book);
 
-      // 初始化移动端控制按钮
-      this.setupMobileControls();
+      // 更新课程导航
+      if (!this.navigation) {
+        this.navigation = new LessonNavigation(book, filename);
+        await this.navigation.setupNavigation();
+      } else {
+        this.navigation.book = book;
+        this.navigation.filename = filename;
+        await this.navigation.setupNavigation();
+      }
 
-      // 初始化 Tab 管理器
-      this.tabs = new LessonTabs();
-      this.notes = new LessonNotes(this.lessonKey);
+      // 更新讲解内容
+      if (!this.notes) {
+        this.notes = new LessonNotes(this.lessonKey);
+      } else {
+        this.notes.lessonKey = this.lessonKey;
+        this.notes.notesLoaded = false;
+      }
 
       // Tab 切换回调：加载讲解内容
       this.tabs.onTabChange = (tab) => {
@@ -94,36 +161,45 @@ class LessonApp {
         }
       };
 
-      // 初始化语言切换
-      const languageSwitcher = new LanguageSwitcher();
-      languageSwitcher.init();
-      languageSwitcher.initButtons('#languageSwitcher button');
-      languageSwitcher.initMobileSelect('mobileLanguageSelect', '#languageSwitcher button');
-
-      // iOS 优化
-      IOSHelper.unlockAudio(audio);
-      IOSHelper.optimizeTouchEvents();
+      // 切换到课文 Tab
+      this.tabs.switchTab('text');
 
       // 恢复学习进度
       this.restoreProgress();
 
-      // 检查自动播放
-      this.checkAutoPlay();
-
-      // 设置返回按钮
-      this.setupBackButton(book);
-
-      // 初始化课程导航
-      this.navigation = new LessonNavigation(book, filename);
-      this.navigation.setupNavigation();
+      // 更新 URL（不刷新页面）
+      if (location.hash !== `#${book}/${filename}`) {
+        location.hash = `${book}/${filename}`;
+      }
 
       // 音频加载完成后隐藏 loading（组合方案：兼容移动端 Safari）
-      this.setupLoadingHide(audio);
+      this.setupLoadingHide(this.player.audio);
     } catch (error) {
-      Logger.error('初始化失败:', error);
+      Logger.error('加载课程失败:', error);
       this.hideLoading();
-      this.showError('页面加载失败，请刷新重试');
+      this.showError('课程加载失败，请重试');
+      throw error;
     }
+  }
+
+  /**
+   * 清理旧状态（切换课程前调用）
+   */
+  cleanup() {
+    // 停止播放
+    if (this.player) {
+      this.player.pause();
+      this.player.reset();
+    }
+
+    // 清理定时器
+    if (this.scrollTimer) {
+      clearTimeout(this.scrollTimer);
+      this.scrollTimer = null;
+    }
+
+    // 重置会话时间
+    this.sessionStartTime = Date.now();
   }
 
   /**
@@ -185,6 +261,34 @@ class LessonApp {
     const audio = this.player.audio;
     audio.addEventListener('volumechange', () => {
       Storage.set('audioVolume', audio.volume);
+    });
+
+    // 播放时启用屏幕常亮
+    this.player.on('play', () => {
+      this.wakeLockManager.enable().then(() => {
+        // 更新图标
+        if (this.settingsPanel) {
+          this.settingsPanel.updateWakeLockIcon();
+        }
+      });
+    });
+
+    // 暂停时禁用屏幕常亮
+    this.player.on('pause', () => {
+      this.wakeLockManager.disable();
+      // 更新图标
+      if (this.settingsPanel) {
+        this.settingsPanel.updateWakeLockIcon();
+      }
+    });
+
+    // 播放结束时禁用屏幕常亮
+    audio.addEventListener('ended', () => {
+      this.wakeLockManager.disable();
+      // 更新图标
+      if (this.settingsPanel) {
+        this.settingsPanel.updateWakeLockIcon();
+      }
     });
   }
 
@@ -362,15 +466,23 @@ class LessonApp {
           countdown--;
           setTimeout(showCountdown, 1000);
         } else {
-          // 跳转到下一课
-          sessionStorage.setItem('nce_auto_play', '1');
-          location.hash = `${book}/${nextLesson.filename}`;
-          location.reload();
+          // 不刷新页面，直接加载下一课
+          this.loadLesson(book, nextLesson.filename).then(() => {
+            // 加载完成后自动播放第一句
+            // 延迟一下确保音频加载完成
+            setTimeout(() => {
+              this.player.playSegment(0);
+            }, 500);
+          }).catch((error) => {
+            Logger.error('加载下一课失败:', error);
+            Toast.error('加载下一课失败，请手动切换', 3000);
+          });
         }
       };
       showCountdown();
     } catch (error) {
       Logger.error('自动续播失败:', error);
+      Toast.error('自动续播失败', 3000);
     }
   }
 

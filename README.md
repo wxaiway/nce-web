@@ -2,6 +2,10 @@
 
 一个现代化的新概念英语在线点读应用，提供流畅的学习体验和丰富的功能。
 
+## 🎉 演示地址
+
+[https://wxaiway.com/nce/](https://wxaiway.com/nce/)
+
 ## ✨ 核心特性
 
 - 🎨 **现代 UI 设计**: Apple 风格界面，深浅色主题自适应
@@ -106,8 +110,13 @@ npm run build
 
 - **触摸优化**: 44px 最小触摸目标
 - **移动端控制栏**: 快退、快进、静音等快捷操作
+- **屏幕常亮**: 播放时自动保持屏幕常亮,防止熄屏(仅手机端)
+  - ✅ Android Chrome 84+ / Firefox 126+ / Edge 84+
+  - ✅ iOS Safari 18.4+
+  - ⚠️ 不支持的设备会显示设置提示
 - **iOS 音频解锁**: 自动处理 iOS 音频播放限制
 - **Safari 兼容**: 完美支持 iOS Safari 浏览器
+- **连贯学习**: 自动播放下一课,无需刷新页面
 
 ## 🛠️ 技术栈
 
@@ -182,7 +191,8 @@ MIT License
 
 - 项目地址: https://github.com/wxaiway/nce-web
 - 问题反馈: https://github.com/wxaiway/nce-web/issues
-
+- 联系作者: wxaiway@qq.com
+- 作者微信: Lwxaiway
 ---
 
 **享受学习新概念英语的乐趣！** 🎉

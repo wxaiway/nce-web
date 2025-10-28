@@ -30,6 +30,15 @@ export class LessonTabs {
   switchTab(tab) {
     this.currentTab = tab;
 
+    // 更新按钮状态
+    document.querySelectorAll('.tab-btn').forEach((btn) => {
+      if (btn.dataset.tab === tab) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
     // 切换内容
     document.querySelectorAll('.tab-content').forEach((content) => {
       content.classList.remove('active');

@@ -12,6 +12,11 @@
   display: inline-block;
 }
 
+/* 确保 hidden 属性生效 */
+.control-btn[hidden] {
+  display: none !important;
+}
+
 .control-btn:hover {
   background: var(--surface);
   border-color: var(--accent);
