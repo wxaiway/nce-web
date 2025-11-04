@@ -13,6 +13,15 @@ export class SettingsPanel {
     this.overlay = document.getElementById('settingsOverlay');
     this.focusTrapCleanup = null;
 
+    // 播放模式映射表
+    this.playModeMapping = {
+      'single': { readMode: 'single', loopMode: 'none', autoNext: false },
+      'single-loop': { readMode: 'single', loopMode: 'single', autoNext: false },
+      'continuous': { readMode: 'continuous', loopMode: 'none', autoNext: false },
+      'continuous-loop': { readMode: 'continuous', loopMode: 'all', autoNext: false },
+      'continuous-next': { readMode: 'continuous', loopMode: 'none', autoNext: true }
+    };
+
     if (!this.panel || !this.overlay) return;
 
     this.init();
@@ -49,6 +58,9 @@ export class SettingsPanel {
 
     // 恢复默认按钮
     this.initResetButton();
+
+    // 重置播放器按钮
+    this.initResetPlayerButton();
   }
 
   /**
@@ -84,15 +96,6 @@ export class SettingsPanel {
    * 学习方式控制（新的统一设置）
    */
   initPlayModeControl() {
-    // 播放模式映射表
-    const playModeMapping = {
-      'single': { readMode: 'single', loopMode: 'none', autoNext: false },
-      'single-loop': { readMode: 'single', loopMode: 'single', autoNext: false },
-      'continuous': { readMode: 'continuous', loopMode: 'none', autoNext: false },
-      'continuous-loop': { readMode: 'continuous', loopMode: 'all', autoNext: false },
-      'continuous-next': { readMode: 'continuous', loopMode: 'none', autoNext: true }
-    };
-
     // 迁移旧设置到新格式
     const savedPlayMode = this.migrateOldSettings();
 
@@ -107,7 +110,7 @@ export class SettingsPanel {
     });
 
     // 应用初始设置到播放器
-    const initialSettings = playModeMapping[savedPlayMode];
+    const initialSettings = this.playModeMapping[savedPlayMode];
     this.player.setReadMode(initialSettings.readMode);
     this.player.setLoopMode(initialSettings.loopMode);
     Storage.set('autoNext', initialSettings.autoNext);
@@ -116,7 +119,7 @@ export class SettingsPanel {
     modeOptions.forEach((option) => {
       option.addEventListener('change', () => {
         if (option.checked) {
-          const settings = playModeMapping[option.value];
+          const settings = this.playModeMapping[option.value];
 
           // 应用设置
           this.player.setReadMode(settings.readMode);
@@ -263,15 +266,7 @@ export class SettingsPanel {
       });
 
       // 恢复播放模式
-      const playModeMapping = {
-        'single': { readMode: 'single', loopMode: 'none', autoNext: false },
-        'single-loop': { readMode: 'single', loopMode: 'single', autoNext: false },
-        'continuous': { readMode: 'continuous', loopMode: 'none', autoNext: false },
-        'continuous-loop': { readMode: 'continuous', loopMode: 'all', autoNext: false },
-        'continuous-next': { readMode: 'continuous', loopMode: 'none', autoNext: true }
-      };
-
-      const defaultSettings = playModeMapping[defaults.playMode];
+      const defaultSettings = this.playModeMapping[defaults.playMode];
       this.player.setReadMode(defaultSettings.readMode);
       this.player.setLoopMode(defaultSettings.loopMode);
       Storage.set('autoNext', defaultSettings.autoNext);
@@ -292,6 +287,26 @@ export class SettingsPanel {
     });
   }
 
+  /**
+   * 重置播放器按钮
+   */
+  initResetPlayerButton() {
+    const resetPlayerBtn = document.getElementById('resetPlayerBtn');
+    if (!resetPlayerBtn) return;
+
+    resetPlayerBtn.addEventListener('click', () => {
+      // 确认对话框
+      if (!confirm('重置播放器将：\n\n✓ 停止当前播放\n✓ 清除播放状态\n✓ 清除所有定时器\n\n不会影响学习进度和设置。\n\n是否继续？')) {
+        return;
+      }
+
+      // 调用播放器的重置方法
+      this.player.resetPlayer();
+
+      // 显示提示
+      Toast.success('播放器已重置', 2000);
+    });
+  }
 
   /**
    * 打开设置面板

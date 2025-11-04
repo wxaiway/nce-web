@@ -257,6 +257,20 @@ class LessonApp {
       this.showError(message);
     });
 
+    // 播放器重置 - 清除 UI 高亮
+    this.player.on('playerreset', () => {
+      document.querySelectorAll('.sentence.active').forEach((el) => {
+        el.classList.remove('active');
+      });
+    });
+
+    // 状态清理 - 清除 UI 高亮
+    this.player.on('statecleared', () => {
+      document.querySelectorAll('.sentence.active').forEach((el) => {
+        el.classList.remove('active');
+      });
+    });
+
     // 音量变化 - 保存设置
     const audio = this.player.audio;
     audio.addEventListener('volumechange', () => {
@@ -517,13 +531,9 @@ class LessonApp {
     if (progress && progress.idx > 0) {
       // 延迟恢复，等待 UI 渲染完成
       setTimeout(() => {
-        // 只设置位置和高亮，不触发播放（避免浏览器自动播放限制）
-        const item = this.items[progress.idx];
-        if (item) {
-          this.player.currentIdx = progress.idx;
-          this.player.audio.currentTime = item.start;
-          this.highlightSentence(progress.idx, false);
-        }
+        // 只恢复 UI 显示，不设置播放器状态
+        // 避免 seek 冲突和状态不一致问题
+        this.highlightSentence(progress.idx, false);
       }, 500);
     }
   }

@@ -15,6 +15,9 @@ export class AudioPlayer extends EventEmitter {
     this.segmentTimer = null;
     this.isManualPlay = false; // 标记是否为手动播放
     this.isStateTransitioning = false; // 状态转换锁，防止并发更新
+    this.isSeeking = false; // 标记音频是否正在 seek
+    this.seekingTimer = null; // seeking 超时定时器
+    this.shouldUpdateOnTimeUpdate = false; // 标记是否应该在 timeupdate 时更新状态
 
     // 读取用户设置
     this.readMode = Storage.get('readMode', 'continuous'); // 'continuous' | 'single'
@@ -47,8 +50,38 @@ export class AudioPlayer extends EventEmitter {
     });
 
     // 播放/暂停事件
-    this.audio.addEventListener('play', () => this.scheduleAdvance());
-    this.audio.addEventListener('pause', () => this.clearAdvance());
+    this.audio.addEventListener('play', () => {
+      this.shouldUpdateOnTimeUpdate = true;
+      // scheduleAdvance 已在 playSegment 中调用，这里不需要重复调用
+    });
+    this.audio.addEventListener('pause', () => {
+      this.shouldUpdateOnTimeUpdate = false;
+      this.clearAdvance();
+    });
+
+    // seek 事件 - 跟踪 seek 状态
+    this.audio.addEventListener('seeking', () => {
+      this.isSeeking = true;
+
+      // 设置超时保护，防止 seeked 事件未触发导致状态卡住
+      if (this.seekingTimer) {
+        clearTimeout(this.seekingTimer);
+      }
+      this.seekingTimer = setTimeout(() => {
+        if (this.isSeeking) {
+          console.warn('seeking 超时，强制重置状态');
+          this.isSeeking = false;
+        }
+      }, 5000); // 5 秒超时
+    });
+
+    this.audio.addEventListener('seeked', () => {
+      this.isSeeking = false;
+      if (this.seekingTimer) {
+        clearTimeout(this.seekingTimer);
+        this.seekingTimer = null;
+      }
+    });
   }
 
   /**
@@ -64,6 +97,10 @@ export class AudioPlayer extends EventEmitter {
 
     // 清理旧的定时器
     this.clearAdvance();
+
+    // 保存旧状态，用于播放失败时恢复
+    const oldIdx = this.currentIdx;
+    const oldTime = this.audio.currentTime;
 
     this.currentIdx = idx;
     this.isManualPlay = manual;
@@ -81,9 +118,40 @@ export class AudioPlayer extends EventEmitter {
     // 开始播放
     try {
       await this.audio.play();
+      this.shouldUpdateOnTimeUpdate = true; // 播放成功，开启 timeupdate 更新
       this.emit('play', { idx, item });
       this.scheduleAdvance();
     } catch (error) {
+      // 播放失败，智能恢复
+      console.warn('播放失败', error);
+
+      this.shouldUpdateOnTimeUpdate = false; // 播放失败，关闭 timeupdate 更新
+
+      // 检查旧状态是否是"终止状态"
+      const duration = this.audio.duration || Infinity;
+      const isTerminalState = oldTime >= duration - 1;
+
+      if (!isTerminalState && oldIdx >= 0) {
+        // 旧状态有效，恢复到之前的状态
+        this.currentIdx = oldIdx;
+
+        // 尝试恢复音频位置，如果失败则忽略
+        try {
+          this.audio.currentTime = oldTime;
+        } catch (seekError) {
+          console.warn('恢复音频位置失败，忽略', seekError);
+        }
+
+        // 恢复 UI 显示
+        const oldItem = this.items[oldIdx];
+        this.segmentEnd = this.calculateSegmentEnd(oldItem, oldIdx);
+        this.emit('sentencechange', { idx: oldIdx, item: oldItem, manual: false });
+      } else {
+        // 旧状态是终止状态或无效，不恢复
+        // 保持在用户点击的句子，UI 已经高亮
+        console.warn('旧状态无效，保持在目标句子');
+      }
+
       this.emit('error', { error, message: '播放失败' });
     } finally {
       // 延迟解锁，给 iOS 足够时间同步状态
@@ -151,8 +219,15 @@ export class AudioPlayer extends EventEmitter {
       // 清理旧的定时器
       this.clearAdvance();
 
-      // 如果正在播放，重新计算 segmentEnd 并调度
-      if (!this.audio.paused && this.currentIdx >= 0) {
+      // 检查是否是终止状态
+      const duration = this.audio.duration || Infinity;
+      const isTerminalState = this.audio.currentTime >= duration - 1;
+
+      if (isTerminalState) {
+        // 清理终止状态
+        this._clearTerminalState();
+      } else if (!this.audio.paused && this.currentIdx >= 0) {
+        // 正在播放，重新计算 segmentEnd 并调度
         const item = this.items[this.currentIdx];
         // 重新计算当前句子的结束时间（基于新模式）
         this.segmentEnd = this.calculateSegmentEnd(item, this.currentIdx);
@@ -166,8 +241,20 @@ export class AudioPlayer extends EventEmitter {
    * 设置循环模式
    */
   setLoopMode(mode) {
+    const oldMode = this.loopMode;
     this.loopMode = mode;
     Storage.set('loopMode', mode);
+
+    // 模式切换时检查终止状态
+    if (oldMode !== mode) {
+      const duration = this.audio.duration || Infinity;
+      const isTerminalState = this.audio.currentTime >= duration - 1;
+
+      if (isTerminalState) {
+        // 清理终止状态
+        this._clearTerminalState();
+      }
+    }
   }
 
   /**
@@ -176,6 +263,16 @@ export class AudioPlayer extends EventEmitter {
   onTimeUpdate() {
     // 状态转换期间跳过自动更新，防止并发冲突
     if (this.isStateTransitioning) {
+      return;
+    }
+
+    // seek 期间跳过，等待 seek 完成
+    if (this.isSeeking) {
+      return;
+    }
+
+    // 检查是否应该更新（替代 audio.paused 检查，避免竞态条件）
+    if (!this.shouldUpdateOnTimeUpdate) {
       return;
     }
 
@@ -213,6 +310,7 @@ export class AudioPlayer extends EventEmitter {
       this.segmentTimer = setTimeout(() => {
         // 点读模式：播放完当前句就停止
         if (this.readMode === 'single') {
+          this.shouldUpdateOnTimeUpdate = false; // 暂停前先关闭 timeupdate 更新
           this.audio.pause();
 
           // 单句循环：重播当前句
@@ -229,6 +327,7 @@ export class AudioPlayer extends EventEmitter {
           this.playSegment(this.currentIdx + 1);
         } else {
           // 播放到最后一句
+          this.shouldUpdateOnTimeUpdate = false; // 暂停前先关闭 timeupdate 更新
           this.audio.pause();
 
           // 整篇循环：回到第一句
@@ -252,6 +351,26 @@ export class AudioPlayer extends EventEmitter {
     if (this.segmentTimer) {
       clearTimeout(this.segmentTimer);
       this.segmentTimer = null;
+    }
+  }
+
+  /**
+   * 清理终止状态（私有方法）
+   */
+  _clearTerminalState() {
+    this.currentIdx = -1;
+    this.segmentEnd = 0;
+    this.emit('statecleared');
+  }
+
+  /**
+   * 清除所有定时器
+   */
+  clearAllTimers() {
+    this.clearAdvance();
+    if (this.seekingTimer) {
+      clearTimeout(this.seekingTimer);
+      this.seekingTimer = null;
     }
   }
 
@@ -303,19 +422,43 @@ export class AudioPlayer extends EventEmitter {
    * 重置播放器状态（用于切换课程）
    */
   reset() {
-    this.clearAdvance();
+    this.clearAllTimers();
     this.currentIdx = -1;
     this.segmentEnd = 0;
     this.isManualPlay = false;
     this.isStateTransitioning = false;
+    this.isSeeking = false;
+    this.shouldUpdateOnTimeUpdate = false;
     // 不重置 readMode 和 loopMode（保持用户设置）
+  }
+
+  /**
+   * 重置播放器（用于故障恢复）
+   * 比 reset() 更彻底，会暂停音频并重置位置
+   */
+  resetPlayer() {
+    // 1. 暂停播放
+    this.audio.pause();
+
+    // 2. 重置状态（复用 reset）
+    this.reset();
+
+    // 3. 重置音频位置
+    try {
+      this.audio.currentTime = 0;
+    } catch (error) {
+      console.warn('重置音频位置失败', error);
+    }
+
+    // 4. 触发重置事件，让 UI 清除高亮
+    this.emit('playerreset');
   }
 
   /**
    * 销毁播放器
    */
   destroy() {
-    this.clearAdvance();
+    this.clearAllTimers();
     this.audio.pause();
     this._events.clear();
   }
