@@ -163,31 +163,10 @@ export class AudioPlayer extends EventEmitter {
 
   /**
    * 计算句子结束时间
-   * 点读模式下提前 0.5 秒结束，避免播放到下一句
    */
   calculateSegmentEnd(item, idx) {
-    const SINGLE_CUTOFF = 0.5; // 点读模式提前量
-    const MIN_DURATION = 0.2; // 最小播放时长
-
-    let baseEnd = item.end || item.start + 1;
-
-    // 点读模式：提前结束
-    if (this.readMode === 'single') {
-      // 如果有下一句，使用下一句的开始时间作为基准
-      if (idx < this.items.length - 1) {
-        const nextItem = this.items[idx + 1];
-        if (nextItem.start > item.start) {
-          baseEnd = Math.min(baseEnd, nextItem.start);
-        }
-      }
-
-      // 提前 0.5 秒结束，但保证最小播放时长
-      const cutoffEnd = baseEnd - SINGLE_CUTOFF;
-      return Math.max(item.start + MIN_DURATION, cutoffEnd);
-    }
-
-    // 连读模式：正常结束
-    return baseEnd;
+    // 返回句子的实际结束时间
+    return item.end || item.start + 1;
   }
 
   /**
@@ -276,6 +255,12 @@ export class AudioPlayer extends EventEmitter {
       return;
     }
 
+    // 点读模式：不检测句子切换，由 scheduleAdvance 控制
+    if (this.readMode === 'single') {
+      return;
+    }
+
+    // 连读模式：检测句子切换
     const currentTime = this.audio.currentTime;
 
     for (let i = 0; i < this.items.length; i++) {

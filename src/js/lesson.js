@@ -561,7 +561,13 @@ class LessonApp {
       if (autoPlayTriggered) return;
       autoPlayTriggered = true;
       setTimeout(() => {
-        this.player.playSegment(0);
+        // 获取进度信息，从上次学习位置开始播放
+        const allProgress = Storage.get('lessonProgress', {});
+        const progress = allProgress[this.lessonKey];
+
+        // 如果有进度，从进度位置开始；否则从第 0 句开始
+        const startIdx = (progress && progress.idx > 0) ? progress.idx : 0;
+        this.player.playSegment(startIdx);
       }, 300);
     };
 
