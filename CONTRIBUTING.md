@@ -19,6 +19,16 @@ NCE/
 │   │   │   ├── lesson-navigation.js   # 课程导航
 │   │   │   ├── settings-panel.js      # 设置面板
 │   │   │   └── shortcuts.js           # 快捷键
+│   │   ├── vocabulary/    # 单词练习模块
+│   │   │   ├── vocabulary.js      # 单词练习配置页
+│   │   │   ├── flashcard.js       # 卡片学习
+│   │   │   ├── browse.js          # 浏览模式
+│   │   │   └── printable.js       # 默写稿生成
+│   │   ├── dictation/     # 听写练习模块
+│   │   │   ├── dictation-practice.js  # 在线听写
+│   │   │   ├── dictation-play.js      # 线下听写播放
+│   │   │   ├── dictation-input.js     # 答案录入
+│   │   │   └── dictation-result.js    # 结果展示
 │   │   ├── utils/         # 工具函数
 │   │   │   ├── event-emitter.js       # 事件系统
 │   │   │   ├── language-switcher.js   # 语言切换
@@ -27,7 +37,10 @@ NCE/
 │   │   │   ├── toast.js               # 提示消息
 │   │   │   ├── focus-trap.js          # 焦点管理
 │   │   │   ├── ios-helper.js          # iOS 优化
-│   │   │   └── wake-lock-manager.js   # 屏幕常亮管理
+│   │   │   ├── wake-lock-manager.js   # 屏幕常亮管理（课文页）
+│   │   │   ├── global-wake-lock.js    # 全局屏幕常亮（单词/听写页）
+│   │   │   ├── history.js             # 历史记录管理
+│   │   │   └── font-loader.js         # 字体加载（PDF生成）
 │   │   ├── app.js         # 全局应用
 │   │   └── lesson.js      # 课文页入口
 │   ├── css/               # 样式文件（模块化）
@@ -35,16 +48,38 @@ NCE/
 │   │   ├── components.css     # 组件样式
 │   │   ├── layout.css         # 布局样式
 │   │   ├── responsive.css     # 响应式样式
+│   │   ├── vocabulary.css     # 单词练习样式
+│   │   ├── flashcard.css      # 卡片学习样式
+│   │   ├── browse.css         # 浏览模式样式
+│   │   ├── printable.css      # 默写稿样式
+│   │   ├── dictation.css      # 听写练习样式
 │   │   └── styles.css         # 样式入口
 │   ├── index.html         # 首页
 │   ├── lesson.html        # 课文页
 │   ├── guide.html         # 学习指导
-│   └── book.html          # 书籍页
+│   ├── book.html          # 书籍页
+│   ├── vocabulary.html    # 单词练习配置页
+│   ├── flashcard.html     # 卡片学习页
+│   ├── browse.html        # 浏览模式页
+│   ├── printable.html     # 默写稿页
+│   ├── dictation-practice.html  # 在线听写页
+│   ├── dictation-play.html      # 线下听写播放页
+│   ├── dictation-input.html     # 答案录入页
+│   └── dictation-result.html    # 结果展示页
 ├── public/                # 静态资源
 │   ├── NCE1/              # 第一册音频和字幕
 │   ├── NCE2/              # 第二册
 │   ├── NCE3/              # 第三册
 │   ├── NCE4/              # 第四册
+│   ├── words/             # 单词音频和数据
+│   │   ├── nce1/          # 第一册单词音频
+│   │   ├── nce2/          # 第二册单词音频
+│   │   ├── nce3/          # 第三册单词音频
+│   │   ├── nce4/          # 第四册单词音频
+│   │   ├── nce1.json      # 第一册单词数据
+│   │   ├── nce2.json      # 第二册单词数据
+│   │   ├── nce3.json      # 第三册单词数据
+│   │   └── nce4.json      # 第四册单词数据
 │   ├── static/
 │   │   └── data.json      # 课程元数据
 │   └── default.md         # 默认讲解
@@ -54,54 +89,21 @@ NCE/
 └── README.md
 ```
 
-## 🛠️ 技术栈
-
-- **构建工具**: Vite 5.x
-- **语言**: 纯原生 JavaScript (ES6+ Modules)
-- **样式**: 原生 CSS (CSS Variables + 模块化)
-- **Markdown**: marked.js
-- **代码质量**: ESLint + Prettier
-- **架构**: 模块化设计，零运行时依赖
-
 ## 🚀 开发环境设置
 
-### 前置要求
-
-- Node.js >= 16.0.0
-- npm >= 7.0.0
-- Git
-
-### 快速开始
-
 ```bash
-# 1. Fork 并克隆项目
+# Fork 并克隆项目
 git clone https://github.com/YOUR_USERNAME/nce-web.git
 cd nce-web
 
-# 2. 安装依赖
+# 安装依赖并启动
 npm install
-
-# 3. 启动开发服务器
 npm run dev
 
 # 访问 http://localhost:8080/nce/
 ```
 
-### 开发命令
-
-```bash
-# 开发
-npm run dev          # 启动开发服务器（热重载）
-npm run preview      # 预览构建产物
-
-# 构建
-npm run build        # 生产构建
-
-# 代码质量
-npm run lint         # ESLint 检查
-npm run lint:fix     # 自动修复 ESLint 问题
-npm run format       # Prettier 格式化
-```
+**常用命令**: `npm run dev` (开发) | `npm run build` (构建) | `npm run lint` (检查) | `npm run format` (格式化)
 
 ## 📝 代码规范
 
@@ -329,43 +331,31 @@ Logger.error('错误信息');  // 开发+生产
 
 ### 常见开发问题
 
-1. **音频不播放**：检查浏览器自动播放策略，移动端需要用户交互后才能播放
+1. **音频不播放**：检查浏览器自动播放策略，移动端需要用户交互后才能播放。听写模式已优化，点击"开始听写"按钮即可自动解锁音频。
 2. **样式不生效**：检查 CSS Variables 是否正确，确保 styles.css 正确导入了所有模块
 3. **路径 404**：检查 `vite.config.js` 中的 `base` 配置是否为 `/nce/`
 4. **ESLint 错误**：确保使用 `.eslintrc.cjs` 而非 `.eslintrc.js`（避免 ES 模块冲突）
 5. **模块导入失败**：检查文件路径和导出语法，确保使用 `.js` 扩展名
 6. **热重载不工作**：检查文件是否在 `src/` 目录下，重启开发服务器
 7. **Markdown 不显示**：检查 Vite 中间件插件是否正确配置
+8. **播放速度重置**：已修复，切换课程时会自动恢复用户设置的播放速度
 
-## 🧪 测试
+## 🧪 测试清单
 
-### 手动测试清单
+### 核心功能
+- [ ] 课文播放、句子高亮、语言切换、快捷键
+- [ ] 播放速度保持（切换课程/自动续播）
+- [ ] 卡片学习、浏览模式、默写稿、听写练习
+- [ ] 移动端音频自动播放（点击开始按钮）
+- [ ] 历史记录进入听写功能
+- [ ] 屏幕常亮（手机端播放时）
 
-- [ ] 首页课程列表显示正常
-- [ ] 点击课程能正常跳转
-- [ ] 音频播放正常
-- [ ] 句子高亮和滚动正常
-- [ ] Tab 切换正常（课文/讲解）
-- [ ] 语言切换正常（EN/EN+CN/CN）
-- [ ] 课程导航正常（上一课/下一课）
-- [ ] 快捷键功能正常
-- [ ] 设置面板功能正常
-- [ ] 学习进度保存正常
-- [ ] 屏幕常亮功能正常（手机端）
-  - [ ] PC端不显示图标和设置选项
-  - [ ] 手机端播放时显示🔆图标
-  - [ ] 手机端暂停时隐藏图标
-  - [ ] 不支持的设备显示提示
-- [ ] 连贯学习功能正常（自动播放下一课）
-- [ ] 移动端适配正常
+### 响应式
+- [ ] PC/iPad/手机布局正常
 - [ ] iOS Safari 兼容性正常
 
-### 浏览器兼容性
-
-- Chrome/Edge (最新版)
-- Firefox (最新版)
-- Safari (最新版)
-- iOS Safari (iOS 14+)
+### 浏览器
+Chrome/Edge/Firefox/Safari (最新版) | iOS Safari (iOS 14+)
 
 ## 📦 构建和部署
 

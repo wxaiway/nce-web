@@ -8,7 +8,7 @@
 /* ==================== 页面头部 ==================== */
 .hero {
   text-align: center;
-  padding: var(--space-xl) var(--space-md);
+  padding: var(--space-lg) var(--space-md);
   background: var(--surface);
   border-bottom: 1px solid var(--border);
 }
@@ -20,15 +20,73 @@
 }
 
 .hero h1 {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 600;
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
 }
 
 .hero p {
   color: var(--muted);
-  font-size: 14px;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+/* Hero 顶部导航 */
+.hero-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 16px;
+  transition: var(--transition);
+}
+
+.hero-brand:hover {
+  color: var(--accent);
+}
+
+.hero-logo {
+  font-size: 20px;
+}
+
+.hero-name {
+  font-weight: 700;
+}
+
+.hero-menu {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.hero-link {
+  padding: 6px 12px;
+  color: var(--muted);
+  text-decoration: none;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.hero-link:hover {
+  color: var(--text);
+  background: var(--card);
+}
+
+.hero-link.active {
+  color: var(--accent);
+  background: var(--card);
 }
 
 /* Lesson Header: 返回按钮 + Tab 切换 */

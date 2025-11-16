@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a84ff" />
+    <title>NCE - 单词学习</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/flashcard.css" />
+  </head>
+  <body>
+    <!-- 页面头部 -->
+    <header class="hero no-print">
+      <div style="display: flex; justify-content: space-between; align-items: center; max-width: var(--content-max); margin: 0 auto;">
+        <button class="control-btn" id="backBtn">← 返回</button>
+        <h1 id="flashcardTitle" style="margin: 0; font-size: 1.2rem;">单词学习</h1>
+        <button class="control-btn" id="exitBtn">✕ 退出</button>
+      </div>
+    </header>
+
+    <div class="flashcard-container">
+
+      <!-- 进度条 -->
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <!-- 统计信息 -->
+      <div class="stats">
+        <span>进度: <strong id="progressText">0/0</strong></span>
+        <span>⭐ 已掌握: <strong id="masteredCount">0</strong></span>
+        <span>❌ 待复习: <strong id="reviewCount">0</strong></span>
+      </div>
+
+      <!-- 卡片 -->
+      <div class="flashcard" id="flashcard">
+        <div class="flashcard-inner">
+          <!-- 正面（中文） -->
+          <div class="flashcard-front">
+            <div class="word-meaning" id="wordMeaning">原谅</div>
+            <div class="word-pos" id="wordPos">v.</div>
+            <button class="show-answer-btn" id="showAnswerBtn">显示答案</button>
+          </div>
+
+          <!-- 背面（英文） -->
+          <div class="flashcard-back">
+            <div class="word-text" id="wordText">excuse</div>
+            <div class="word-phonetic" id="wordPhonetic">[ɪkˈskjuːz]</div>
+            <div class="word-audio-buttons" id="audioButtons">
+              <button class="audio-btn" id="playUsBtn" title="美音" style="display: none;">
+                <span class="audio-icon">🔊</span>
+                <span class="audio-label">美</span>
+              </button>
+              <button class="audio-btn" id="playUkBtn" title="英音" style="display: none;">
+                <span class="audio-icon">🔊</span>
+                <span class="audio-label">英</span>
+              </button>
+            </div>
+            <div class="word-pos-back" id="wordPosBack">v. 原谅</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 评价按钮 -->
+      <div class="rating-buttons" id="ratingButtons" style="display: none;">
+        <button class="rating-btn rating-mastered" data-level="2">
+          <span class="rating-icon">😊</span>
+          <span class="rating-label">认识</span>
+          <span class="rating-key">1</span>
+        </button>
+        <button class="rating-btn rating-review" data-level="1">
+          <span class="rating-icon">🤔</span>
+          <span class="rating-label">模糊</span>
+          <span class="rating-key">2</span>
+        </button>
+        <button class="rating-btn rating-learning" data-level="0">
+          <span class="rating-icon">😓</span>
+          <span class="rating-label">不认识</span>
+          <span class="rating-key">3</span>
+        </button>
+      </div>
+
+      <!-- 快捷键提示 -->
+      <div class="shortcuts-hint">
+        <kbd>Space</kbd> 显示答案 ·
+        <kbd>1</kbd>/<kbd>2</kbd>/<kbd>3</kbd> 评价 ·
+        <kbd>ESC</kbd> 退出
+      </div>
+    </div>
+
+    <!-- 完成界面 -->
+    <div class="completion-screen" id="completionScreen" style="display: none;">
+      <div class="completion-content">
+        <div class="completion-icon">🎉</div>
+        <h2>学习完成！</h2>
+
+        <div class="completion-stats">
+          <div class="stat-item">
+            <div class="stat-label">已掌握</div>
+            <div class="stat-value stat-mastered" id="finalMastered">0</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">需复习</div>
+            <div class="stat-value stat-review" id="finalReview">0</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">未掌握</div>
+            <div class="stat-value stat-learning" id="finalLearning">0</div>
+          </div>
+        </div>
+
+        <div class="completion-time">
+          学习时长：<strong id="studyTime">0分0秒</strong>
+        </div>
+
+        <div class="completion-actions">
+          <button class="control-btn" id="reviewWrongBtn" style="display: none;">
+            复习错题
+          </button>
+          <button class="control-btn" id="restartBtn">重新学习</button>
+          <button class="control-btn" id="backToConfigBtn">返回配置</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/js/vocabulary/flashcard.js"></script>
+  </body>
+</html>

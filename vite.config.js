@@ -20,7 +20,16 @@ export default defineConfig({
         main: resolve(__dirname, 'src/index.html'),
         lesson: resolve(__dirname, 'src/lesson.html'),
         book: resolve(__dirname, 'src/book.html'),
-        guide: resolve(__dirname, 'src/guide.html')
+        guide: resolve(__dirname, 'src/guide.html'),
+        vocabulary: resolve(__dirname, 'src/vocabulary.html'),
+        flashcard: resolve(__dirname, 'src/flashcard.html'),
+        'flashcard-result': resolve(__dirname, 'src/flashcard-result.html'),
+        browse: resolve(__dirname, 'src/browse.html'),
+        printable: resolve(__dirname, 'src/printable.html'),
+        'dictation-practice': resolve(__dirname, 'src/dictation-practice.html'),
+        'dictation-play': resolve(__dirname, 'src/dictation-play.html'),
+        'dictation-input': resolve(__dirname, 'src/dictation-input.html'),
+        'dictation-result': resolve(__dirname, 'src/dictation-result.html')
       }
     },
 

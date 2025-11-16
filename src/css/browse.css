@@ -1,0 +1,233 @@
+/**
+ * 单词浏览页面样式
+ */
+
+body {
+  background: var(--bg);
+  overflow-x: hidden;
+}
+
+/* 容器 */
+.browse-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+}
+
+/* 统计信息 */
+.browse-stats {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.browse-stats strong {
+  color: var(--accent);
+  font-size: 18px;
+}
+
+/* 搜索和筛选 */
+.browse-controls {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.1);
+}
+
+.search-input::placeholder {
+  color: var(--muted);
+}
+
+.pos-filter {
+  min-width: 120px;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.pos-filter:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* 单词网格 */
+.word-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-md);
+}
+
+/* 单词卡片 */
+.word-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-lg);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.word-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+/* 卡片头部：单词 + 词性 + 音频按钮 */
+.word-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xs);
+  flex-wrap: wrap;
+}
+
+.word-card-word {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.word-card-pos {
+  display: inline-block;
+  padding: 2px 8px;
+  background: var(--surface);
+  color: var(--accent);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* 音频播放按钮 */
+.word-card-audio {
+  display: flex;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.word-card-phonetic {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-family: 'Courier New', Consolas, monospace;
+  margin-bottom: var(--space-xs);
+}
+
+.audio-btn-small {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 4px 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 12px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.audio-btn-small:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+  transform: scale(1.05);
+}
+
+.audio-btn-small:active {
+  transform: scale(0.98);
+}
+
+.audio-btn-small .audio-icon {
+  font-size: 14px;
+}
+
+.audio-btn-small .audio-label {
+  font-weight: 500;
+}
+
+.word-card-meaning {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* 空状态 */
+.empty-state {
+  text-align: center;
+  padding: var(--space-xxl);
+  color: var(--muted);
+}
+
+.empty-state-icon {
+  font-size: 4rem;
+  margin-bottom: var(--space-md);
+}
+
+.empty-state-text {
+  font-size: 1.2rem;
+  margin-bottom: var(--space-sm);
+}
+
+.empty-state-hint {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .browse-container {
+    padding: var(--space-md);
+  }
+
+  .browse-controls {
+    flex-direction: column;
+  }
+
+  .word-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .word-card {
+    padding: var(--space-md);
+  }
+
+  .word-card-word {
+    font-size: 1.3rem;
+  }
+}
+
+/* 平板 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .word-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
+
+/* 大屏幕 */
+@media (min-width: 1400px) {
+  .word-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}

@@ -4,13 +4,14 @@ import { SettingsPanel } from './ui/settings-panel.js';
 import { ShortcutManager } from './ui/shortcuts.js';
 import { LessonTabs } from './ui/lesson-tabs.js';
 import { LessonNotes } from './ui/lesson-notes.js';
+import { LessonWords } from './ui/lesson-words.js';
 import { LessonNavigation } from './ui/lesson-navigation.js';
 import { LanguageSwitcher } from './utils/language-switcher.js';
 import { Logger } from './utils/logger.js';
 import { Storage } from './utils/storage.js';
 import { IOSHelper } from './utils/ios-helper.js';
 import { Toast } from './utils/toast.js';
-import { WakeLockManager } from './utils/wake-lock-manager.js';
+import { globalWakeLock } from './utils/global-wake-lock.js';
 import { marked } from 'marked';
 
 // 配置 marked.js 安全选项
@@ -33,13 +34,21 @@ class LessonApp {
     this.sessionStartTime = Date.now(); // 会话开始时间
     this.tabs = null; // Tab 管理器
     this.notes = null; // 讲解管理器
+    this.words = null; // 单词管理器
     this.navigation = null; // 导航管理器
-    this.wakeLockManager = new WakeLockManager(); // 屏幕唤醒锁管理器
     this.init();
   }
 
   async init() {
     try {
+      // 初始化全局屏幕常亮
+      globalWakeLock.init();
+
+      // 页面卸载时释放常亮
+      window.addEventListener('beforeunload', () => {
+        globalWakeLock.getManager().disable();
+      });
+
       // 显示加载提示
       this.showLoading();
 
@@ -58,7 +67,7 @@ class LessonApp {
       this.setupPlayerEvents();
 
       // 初始化 UI 组件（只做一次）
-      this.settingsPanel = new SettingsPanel(this.player, this.wakeLockManager);
+      this.settingsPanel = new SettingsPanel(this.player);
       new ShortcutManager(this.player);
 
       // 初始化移动端控制按钮
@@ -79,6 +88,12 @@ class LessonApp {
 
       // 加载第一个课程
       await this.loadLesson();
+
+      // 加载完成后启用常亮（如果用户开启了设置）
+      if (globalWakeLock.getManager().getUserEnabled()) {
+        await globalWakeLock.getManager().enable();
+        globalWakeLock.updateIcon();
+      }
 
       // 检查自动播放
       this.checkAutoPlay();
@@ -127,6 +142,10 @@ class LessonApp {
       // 更新音频源
       this.player.audio.src = `${book}/${filename}.mp3`;
 
+      // 恢复播放速度设置（改变 src 会重置 playbackRate）
+      const savedRate = Storage.get('audioPlaybackRate', 1.0);
+      this.player.setPlaybackRate(savedRate);
+
       // 更新播放器数据
       this.player.updateItems(items);
 
@@ -154,10 +173,28 @@ class LessonApp {
         this.notes.notesLoaded = false;
       }
 
-      // Tab 切换回调：加载讲解内容
+      // 更新单词内容
+      const lessonNumbers = this.extractLessonNumber(filename);
+      if (!this.words) {
+        this.words = new LessonWords(book, lessonNumbers);
+      } else {
+        this.words.updateLesson(book, lessonNumbers);
+      }
+
+      // Tab 切换回调：懒加载讲解和单词内容
       this.tabs.onTabChange = (tab) => {
+        // 切换到非课文 Tab 时暂停播放
+        if (tab !== 'text') {
+          if (this.player && !this.player.audio.paused) {
+            this.player.pause();
+          }
+        }
+
+        // 懒加载内容
         if (tab === 'notes' && !this.notes.isLoaded()) {
           this.notes.loadNotes();
+        } else if (tab === 'words' && !this.words.isLoaded()) {
+          this.words.loadWords();
         }
       };
 
@@ -209,6 +246,34 @@ class LessonApp {
     const hash = decodeURIComponent(location.hash.slice(1));
     const [book, ...rest] = hash.split('/');
     return { book, filename: rest.join('/') };
+  }
+
+  /**
+   * 从文件名提取课程编号
+   * @param {string} filename - 文件名
+   * @returns {string[]} - 课程编号数组（3位数字）
+   *
+   * 示例:
+   * - NCE1: "001&002－Excuse Me" -> ["001", "002"]
+   * - NCE2/3/4: "01－A Private Conversation" -> ["001"]
+   */
+  extractLessonNumber(filename) {
+    // 检测 NCE1 的两课合一格式: "001&002"
+    const combinedMatch = filename.match(/^(\d+)&(\d+)/);
+    if (combinedMatch) {
+      return [
+        combinedMatch[1].padStart(3, '0'),
+        combinedMatch[2].padStart(3, '0')
+      ];
+    }
+
+    // 单课格式
+    const singleMatch = filename.match(/^(\d+)/);
+    if (singleMatch) {
+      return [singleMatch[1].padStart(3, '0')];
+    }
+
+    return ['001'];
   }
 
   /**
@@ -277,33 +342,8 @@ class LessonApp {
       Storage.set('audioVolume', audio.volume);
     });
 
-    // 播放时启用屏幕常亮
-    this.player.on('play', () => {
-      this.wakeLockManager.enable().then(() => {
-        // 更新图标
-        if (this.settingsPanel) {
-          this.settingsPanel.updateWakeLockIcon();
-        }
-      });
-    });
-
-    // 暂停时禁用屏幕常亮
-    this.player.on('pause', () => {
-      this.wakeLockManager.disable();
-      // 更新图标
-      if (this.settingsPanel) {
-        this.settingsPanel.updateWakeLockIcon();
-      }
-    });
-
-    // 播放结束时禁用屏幕常亮
-    audio.addEventListener('ended', () => {
-      this.wakeLockManager.disable();
-      // 更新图标
-      if (this.settingsPanel) {
-        this.settingsPanel.updateWakeLockIcon();
-      }
-    });
+    // 注意: 屏幕常亮功能已由全局管理器自动处理
+    // globalWakeLock 会自动检测并绑定页面中的 <audio> 元素
   }
 
   /**

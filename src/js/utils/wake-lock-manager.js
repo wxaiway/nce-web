@@ -1,5 +1,6 @@
 import { Storage } from './storage.js';
 import { Toast } from './toast.js';
+import { Logger } from './logger.js';
 
 /**
  * 屏幕唤醒锁管理器（仅手机端）
@@ -70,7 +71,7 @@ export class WakeLockManager {
 
       return true;
     } catch (err) {
-      console.error('Wake Lock 请求失败:', err);
+      Logger.error('Wake Lock 请求失败:', err);
       return false;
     }
   }
@@ -137,7 +138,7 @@ export class WakeLockManager {
             this.wakeLock = await navigator.wakeLock.request('screen');
             this.isEnabled = true;
           } catch (err) {
-            console.error('重新获取 Wake Lock 失败:', err);
+            Logger.error('重新获取 Wake Lock 失败:', err);
           }
         }
       }

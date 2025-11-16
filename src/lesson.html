@@ -6,6 +6,7 @@
     <meta name="theme-color" content="#0a84ff" />
     <title>NCE - 课文</title>
     <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/words.css" />
   </head>
   <body>
     <!-- 页面头部 -->
@@ -19,6 +20,7 @@
         <div class="lesson-tabs">
           <button class="tab-btn active" data-tab="text">课文</button>
           <button class="tab-btn" data-tab="notes">讲解</button>
+          <button class="tab-btn" data-tab="words">单词</button>
         </div>
       </div>
     </header>
@@ -36,7 +38,7 @@
         </div>
 
         <button id="helpBtn" class="control-btn">⌨️</button>
-        <span id="wakeLockIcon" class="control-btn" hidden title="屏幕保持常亮中">🔆</span>
+        <!-- 小太阳图标已移至全局工具栏 -->
         <button id="settingsBtn" class="control-btn">⚙️</button>
       </div>
 
@@ -69,6 +71,11 @@
       <!-- 讲解 Tab -->
       <div id="tab-notes" class="tab-content">
         <div class="markdown-content" id="notesContent"></div>
+      </div>
+
+      <!-- 单词 Tab -->
+      <div id="tab-words" class="tab-content">
+        <div class="words-content" id="wordsContent"></div>
       </div>
     </main>
 
@@ -162,14 +169,6 @@
           <div class="setting-desc">播放时自动滚动到当前句子，保持在视野中心。</div>
         </div>
 
-        <div class="setting-item" id="keepScreenOnSetting" hidden>
-          <label>
-            <input type="checkbox" id="keepScreenOnToggle" checked />
-            播放时保持屏幕常亮（仅手机端）
-          </label>
-          <div class="setting-desc">防止播放时屏幕自动熄灭，需要浏览器支持。不支持的设备会显示设置提示。</div>
-        </div>
-
         <div class="setting-item" style="margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border);">
           <button id="resetSettingsBtn" class="control-btn" style="width: 100%;">恢复默认设置</button>
         </div>
@@ -261,7 +260,6 @@
     </footer>
 
     <!-- 脚本 -->
-    <script type="module" src="/js/app.js"></script>
     <script type="module" src="/js/lesson.js"></script>
   </body>
 </html>

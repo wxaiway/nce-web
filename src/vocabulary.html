@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a84ff" />
+    <title>NCE - 单词练习</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/vocabulary.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-nav">
+        <a href="index.html" class="hero-brand">
+          <span class="hero-logo">📚</span>
+          <span class="hero-name">NCE</span>
+        </a>
+        <nav class="hero-menu">
+          <a href="index.html" class="hero-link">课程</a>
+          <a href="vocabulary.html" class="hero-link active">单词练习</a>
+          <a href="guide.html" class="hero-link">学习指导</a>
+        </nav>
+      </div>
+      <h1>单词练习</h1>
+      <p>选择学习内容和方式</p>
+    </header>
+
+    <div class="container">
+      <div class="vocab-layout">
+
+        <!-- 左侧：通用配置区 -->
+        <aside class="vocab-config">
+          <div class="card">
+            <h3>📚 选择学习内容</h3>
+
+            <!-- 册数选择 -->
+            <div class="form-group">
+              <label>选择册数</label>
+              <div class="book-selector">
+                <label class="radio-label">
+                  <input type="radio" name="bookSelect" value="NCE1" checked />
+                  <span>第一册</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="bookSelect" value="NCE2" />
+                  <span>第二册</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="bookSelect" value="NCE3" />
+                  <span>第三册</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="bookSelect" value="NCE4" />
+                  <span>第四册</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- 课程范围 -->
+            <div class="form-group">
+              <label>课程范围</label>
+              <div class="range-selector">
+                <input type="number" id="startLesson" class="form-control" min="1" max="143" value="1" placeholder="开始" />
+                <span>至</span>
+                <input type="number" id="endLesson" class="form-control" min="1" max="143" value="10" placeholder="结束" />
+              </div>
+            </div>
+
+            <!-- 快捷选择 -->
+            <div class="form-group">
+              <label>快捷选择</label>
+              <div class="quick-select">
+                <button class="btn btn-sm" data-range="1-10">L1-10</button>
+                <button class="btn btn-sm" data-range="11-20">L11-20</button>
+                <button class="btn btn-sm" data-range="21-30">L21-30</button>
+                <button class="btn btn-sm" data-range="all">全部</button>
+              </div>
+            </div>
+
+            <!-- 排列方式 -->
+            <div class="form-group">
+              <label>排列方式</label>
+              <select id="studyMode" class="form-control">
+                <option value="sequential">顺序排列</option>
+                <option value="random">随机排列</option>
+              </select>
+            </div>
+
+            <!-- 单词数量 -->
+            <div class="form-group">
+              <label>单词数量</label>
+              <div class="form-group-inline">
+                <select id="wordCount" class="form-control">
+                  <option value="20">20个</option>
+                  <option value="50">50个</option>
+                  <option value="all" selected>全部</option>
+                  <option value="custom">自定义</option>
+                </select>
+                <input type="number" id="customWordCount" class="form-control" placeholder="输入数量" min="1" style="display: none;" />
+              </div>
+            </div>
+
+            <!-- 词性筛选 -->
+            <div class="form-group">
+              <label>词性筛选</label>
+              <select id="posFilter" class="form-control">
+                <option value="all">全部词性</option>
+                <option value="n.">名词 (n.)</option>
+                <option value="v.">动词 (v.)</option>
+                <option value="adj.">形容词 (adj.)</option>
+                <option value="adv.">副词 (adv.)</option>
+                <option value="pron.">代词 (pron.)</option>
+                <option value="prep.">介词 (prep.)</option>
+                <option value="conj.">连词 (conj.)</option>
+              </select>
+            </div>
+
+            <!-- 统计预览 -->
+            <div class="config-preview">
+              <div class="preview-icon">📊</div>
+              <div class="preview-text">
+                已选择 <strong id="selectedCount">0</strong> 个单词
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- 右侧：功能模块区 -->
+        <main class="vocab-functions">
+
+          <!-- 在线学习 -->
+          <div class="card function-card">
+            <div class="function-header">
+              <div class="function-icon">📖</div>
+              <div class="function-info">
+                <h3>在线学习</h3>
+                <p class="function-desc">使用翻转卡片进行单词记忆练习</p>
+              </div>
+            </div>
+            <div class="function-actions">
+              <button class="btn btn-primary" id="startLearningBtn">
+                <span class="btn-icon">🎯</span>
+                开始学习
+              </button>
+              <button class="btn" id="startBrowseBtn">
+                <span class="btn-icon">👀</span>
+                浏览模式
+              </button>
+            </div>
+          </div>
+
+          <!-- 默写稿生成 -->
+          <div class="card function-card">
+            <div class="function-header">
+              <div class="function-icon">📝</div>
+              <div class="function-info">
+                <h3>默写稿</h3>
+                <p class="function-desc">生成可打印的单词默写练习稿</p>
+              </div>
+            </div>
+
+            <div class="function-settings">
+              <div class="form-group-inline">
+                <label>生成份数</label>
+                <select id="copyCount" class="form-control">
+                  <option value="1" selected>1份</option>
+                  <option value="2">2份</option>
+                  <option value="4">4份</option>
+                  <option value="custom">自定义</option>
+                </select>
+                <input type="number" id="customCopyCount" class="form-control" placeholder="输入份数" min="1" max="10" style="display: none;" />
+              </div>
+            </div>
+
+            <div class="function-actions">
+              <button class="btn btn-primary" id="generatePrintableBtn">
+                <span class="btn-icon">✨</span>
+                生成默写稿
+              </button>
+            </div>
+          </div>
+
+          <!-- 听写练习 -->
+          <div class="card function-card">
+            <div class="function-header">
+              <div class="function-icon">🎧</div>
+              <div class="function-info">
+                <h3>听写练习</h3>
+                <p class="function-desc">自动播放单词发音，进行听写练习</p>
+              </div>
+            </div>
+
+            <!-- 听写模式 -->
+            <div class="function-settings">
+              <div class="form-group">
+                <label>听写模式</label>
+                <div class="radio-group">
+                  <label class="radio-label">
+                    <input type="radio" name="dictationMode" value="online" checked />
+                    <span>⌨️ 线上输入</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="dictationMode" value="offline" />
+                    <span>📝 线下手写</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- 听写设置 -->
+              <div class="settings-grid">
+                <div class="form-group-inline">
+                  <label>发音</label>
+                  <select id="dictationAccent" class="form-control">
+                    <option value="a">美音</option>
+                    <option value="e">英音</option>
+                    <option value="random">随机</option>
+                  </select>
+                </div>
+
+                <div class="form-group-inline">
+                  <label>播放</label>
+                  <select id="dictationPlayCount" class="form-control">
+                    <option value="1">1次</option>
+                    <option value="2" selected>2次</option>
+                    <option value="3">3次</option>
+                    <option value="custom">自定义</option>
+                  </select>
+                  <input type="number" id="customDictationPlayCount" class="form-control" placeholder="输入次数" min="1" max="10" style="display: none;" />
+                </div>
+
+                <div class="form-group-inline">
+                  <label>间隔</label>
+                  <select id="dictationInterval" class="form-control">
+                    <option value="3">3秒</option>
+                    <option value="5" selected>5秒</option>
+                    <option value="8">8秒</option>
+                    <option value="10">10秒</option>
+                    <option value="custom">自定义</option>
+                  </select>
+                  <input type="number" id="customDictationInterval" class="form-control" placeholder="输入秒数" min="1" max="30" style="display: none;" />
+                </div>
+              </div>
+
+              <div class="checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="dictationShowPos" checked />
+                  <span>显示词性提示</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" id="dictationShowMeaning" />
+                  <span>显示中文提示</span>
+                </label>
+              </div>
+
+              <div class="estimated-time">
+                预计时长：<strong id="dictationEstimatedTime">~5分钟</strong>
+              </div>
+            </div>
+
+            <div class="function-actions">
+              <button class="btn btn-primary" id="startDictationBtn">
+                <span class="btn-icon">🎯</span>
+                开始听写
+              </button>
+            </div>
+          </div>
+
+        </main>
+      </div>
+
+      <!-- 历史记录区域 -->
+      <section class="history-section">
+        <div class="history-header">
+          <h3>📚 练习记录</h3>
+          <div class="history-actions">
+            <div class="history-filters">
+              <button class="filter-btn active" data-filter="all">全部</button>
+              <button class="filter-btn" data-filter="flashcard">翻转卡</button>
+              <button class="filter-btn" data-filter="dictation">听写记录</button>
+              <button class="filter-btn" data-filter="printable">默写稿</button>
+            </div>
+            <button class="btn btn-sm" id="clearHistoryBtn" title="清空所有练习记录">
+              🗑️ 清空记录
+            </button>
+          </div>
+        </div>
+        <div class="history-grid" id="historyGrid">
+          <!-- 历史记录卡片将通过 JS 动态生成 -->
+        </div>
+        <div class="history-empty" id="historyEmpty" style="display: none;">
+          <div class="empty-icon">📭</div>
+          <div class="empty-text">还没有练习记录</div>
+          <div class="empty-hint">完成听写练习或生成默写稿后，这里会显示你的记录</div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p class="footer-title">New Concept English</p>
+        <p class="footer-desc">新概念英语在线学习平台</p>
+        <p class="footer-copyright">
+          © 2025 NCE. All rights reserved.
+          <a href="https://github.com/wxaiway/nce-web" target="_blank" rel="noopener noreferrer" class="footer-icon-link" title="GitHub 仓库">
+            <svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+          </a>
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="/js/vocabulary/vocabulary.js"></script>
+  </body>
+</html>

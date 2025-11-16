@@ -1,0 +1,354 @@
+/**
+ * 单词列表样式
+ */
+
+/* 单词内容容器 */
+.words-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+  /* 允许选择文本，方便复制单词和释义 */
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+/* 单词头部 */
+.words-header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-lg);
+  border-bottom: 2px solid var(--border);
+}
+
+.words-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+  color: var(--text-primary);
+}
+
+.words-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xs);
+}
+
+.word-count {
+  font-size: 0.9rem;
+  color: var(--text-tertiary);
+  margin: 0;
+}
+
+/* 单词列表 */
+.words-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* 表头（仅PC显示） */
+.words-table-header {
+  display: none;
+}
+
+/* 课程分组标题 */
+.lesson-group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+  padding-bottom: var(--space-xs);
+  border-bottom: 2px solid var(--border);
+}
+
+.lesson-group-header:first-child {
+  margin-top: 0;
+}
+
+.lesson-group-header h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0;
+}
+
+.lesson-word-count {
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+}
+
+/* 单词项 */
+.word-item {
+  background: var(--bg-secondary);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid var(--border);
+}
+
+.word-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: var(--primary);
+}
+
+/* 单词主体 */
+.word-main {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xs);
+  flex-wrap: wrap;
+}
+
+.word-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1.4;
+}
+
+.word-phonetic {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-family: 'Courier New', Consolas, monospace;
+  line-height: 1.4;
+}
+
+/* 单词详情 */
+.word-details {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+/* 音频播放按钮 */
+.word-audio {
+  display: flex;
+  gap: var(--space-xs);
+  margin-top: var(--space-xs);
+}
+
+.audio-btn {
+  padding: 4px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) / 2);
+  color: var(--text);
+  font-size: 12px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 60px;
+  justify-content: center;
+}
+
+.audio-btn:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.audio-btn:active {
+  transform: translateY(0);
+}
+
+.word-pos {
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+  font-style: italic;
+  min-width: 40px;
+  flex-shrink: 0;
+}
+
+.word-meaning {
+  font-size: 1rem;
+  color: var(--text-primary);
+  line-height: 1.6;
+  flex: 1;
+}
+
+/* 空状态 */
+.empty-state {
+  text-align: center;
+  padding: var(--space-xxl) var(--space-lg);
+  color: var(--text-secondary);
+}
+
+.empty-state p {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-md);
+}
+
+.empty-state .control-btn {
+  margin-top: var(--space-md);
+}
+
+/* PC宽屏：表格式布局 */
+@media (min-width: 769px) {
+  /* 显示表头 */
+  .words-table-header {
+    display: grid;
+    grid-template-columns: 18% 25% 10% 32% 15%;
+    gap: var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+    background: var(--bg-tertiary);
+    border-bottom: 2px solid var(--border);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .words-table-header::after {
+    content: '发音';
+  }
+
+  /* 单词项：表格行布局 */
+  .word-item {
+    display: grid;
+    grid-template-columns: 18% 25% 10% 32% 15%;
+    gap: var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    background: transparent;
+    transition: background 0.2s ease;
+  }
+
+  .word-item:hover {
+    transform: none;
+    box-shadow: none;
+    background: var(--bg-secondary);
+    border-color: var(--border);
+  }
+
+  /* word-main 和 word-details 使用 display: contents */
+  .word-main,
+  .word-details {
+    display: contents;
+  }
+
+  /* 音频按钮在表格中的样式 */
+  .word-audio {
+    margin-top: 0;
+    align-self: center;
+  }
+
+  /* 调整字体大小和对齐 */
+  .word-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    align-self: center;
+  }
+
+  .word-phonetic {
+    font-size: 0.9rem;
+    align-self: center;
+  }
+
+  .word-pos {
+    font-size: 0.85rem;
+    min-width: auto;
+    align-self: center;
+  }
+
+  .word-meaning {
+    font-size: 1rem;
+    align-self: center;
+    line-height: 1.5;
+  }
+
+  /* 课程分组标题调整 */
+  .lesson-group-header {
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-sm);
+  }
+}
+
+/* 移动端/平板：卡片式布局 */
+@media (max-width: 768px) {
+  .words-content {
+    padding: var(--space-md);
+  }
+
+  .words-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .words-subtitle {
+    font-size: 1rem;
+  }
+
+  /* 确保表头在移动端隐藏 */
+  .words-table-header {
+    display: none !important;
+  }
+
+  /* 保持卡片式布局 */
+  .word-item {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-sm) var(--space-md);
+    position: relative;
+  }
+
+  /* 音频按钮移到右上角 */
+  .word-audio {
+    position: absolute;
+    top: var(--space-sm);
+    right: var(--space-sm);
+    margin-top: 0;
+    gap: 4px;
+  }
+
+  /* 缩小手机端按钮尺寸 */
+  .audio-btn {
+    padding: 4px 8px;
+    font-size: 11px;
+    min-width: 50px;
+  }
+
+  /* 单词主体区域留出右侧空间 */
+  .word-main {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 120px;  /* 为音频按钮留出空间 */
+  }
+
+  .word-details {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .word-text {
+    font-size: 1.15rem;
+  }
+
+  .word-phonetic {
+    font-size: 0.85rem;
+  }
+
+  .word-meaning {
+    font-size: 0.95rem;
+  }
+}
+
+/* 暗色模式适配 */
+@media (prefers-color-scheme: dark) {
+  .word-item {
+    background: var(--bg-tertiary);
+  }
+
+  .word-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+}

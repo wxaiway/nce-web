@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a84ff" />
+    <title>NCE - 单词默写稿</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/printable.css" />
+  </head>
+  <body>
+    <header class="hero no-print">
+      <div class="hero-nav">
+        <a href="index.html" class="hero-brand">
+          <span class="hero-logo">📚</span>
+          <span class="hero-name">NCE</span>
+        </a>
+        <nav class="hero-menu">
+          <a href="index.html" class="hero-link">课程</a>
+          <a href="vocabulary.html" class="hero-link active">单词练习</a>
+          <a href="guide.html" class="hero-link">学习指导</a>
+        </nav>
+      </div>
+      <h1>单词默写稿</h1>
+      <p id="headerSubtitle">请先复习这些单词，熟悉后再进行默写练习</p>
+    </header>
+
+    <div class="container">
+      <!-- 打印标题（仅打印时显示） -->
+      <div class="print-header" style="display: none">
+        <div class="print-title">NCE 单词默写</div>
+        <div class="print-meta" id="printMeta"></div>
+      </div>
+
+      <!-- 词语列表卡片 -->
+      <div class="card">
+        <!-- 列表头部：操作按钮 -->
+        <div class="word-list-header no-print">
+          <div class="word-list-actions">
+            <button class="btn btn-sm" id="backBtn">← 返回</button>
+          </div>
+          <div class="word-list-actions">
+            <button class="btn btn-sm" id="settingsBtn">⚙️ 设置</button>
+            <!-- 桌面端 -->
+            <button class="btn btn-sm btn-primary desktop-only" id="downloadPdfBtn">📥 下载PDF</button>
+            <button class="btn btn-sm desktop-only" id="printBtn">🖨️ 打印</button>
+            <!-- 移动端 -->
+            <button class="btn btn-sm btn-primary mobile-only" id="sharePdfBtn">📤 分享PDF</button>
+          </div>
+        </div>
+
+        <!-- 单词列表内容 -->
+        <div id="wordListContainer"></div>
+      </div>
+
+      <!-- 打印页脚（仅打印时显示） -->
+      <div class="print-footer" style="display: none">
+        <p>提示：请先复习这些单词，熟悉后再进行默写练习。</p>
+      </div>
+    </div>
+
+    <footer class="site-footer no-print">
+      <div class="footer-content">
+        <p class="footer-title">New Concept English</p>
+        <p class="footer-desc">新概念英语在线学习平台</p>
+        <p class="footer-copyright">
+          © 2025 NCE. All rights reserved.
+          <a href="https://github.com/wxaiway/nce-web" target="_blank" rel="noopener noreferrer" class="footer-icon-link" title="GitHub 仓库">
+            <svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+          </a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- 设置面板 -->
+    <div id="settingsPanel" class="settings-panel">
+      <div class="settings-overlay"></div>
+      <div class="settings-content">
+        <div class="settings-header">
+          <h3>设置</h3>
+          <button class="settings-close" id="closeSettings">×</button>
+        </div>
+        <div class="settings-body">
+          <!-- 显示内容 -->
+          <div class="settings-section">
+            <h4>显示内容</h4>
+
+            <div class="form-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="showTitle" checked /> 显示标题
+              </label>
+              <input type="text" id="titleText" class="form-control" value="NCE 单词默写" placeholder="自定义标题" />
+            </div>
+
+            <div class="form-group">
+              <label>副标题</label>
+              <div class="checkbox-group">
+                <label><input type="checkbox" id="showLessonRange" checked /> 课程范围</label>
+                <label><input type="checkbox" id="showWordCount" checked /> 单词数量</label>
+                <label><input type="checkbox" id="showDate" checked /> 生成日期</label>
+                <label><input type="checkbox" id="showNameField" checked /> 姓名栏</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="showFooter" checked /> 显示页脚
+              </label>
+              <textarea id="footerText" class="form-control" rows="2" placeholder="页脚提示文字">提示：请先复习这些单词，熟悉后再进行默写练习。</textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="showAnswer" /> 显示答案（英文单词）
+              </label>
+              <p class="form-hint" style="font-size: 12px; color: var(--muted); margin: 4px 0 0 24px;">勾选后生成的PDF将显示英文单词，方便批改</p>
+            </div>
+          </div>
+
+          <!-- 布局样式 -->
+          <div class="settings-section">
+            <h4>布局样式</h4>
+
+            <div class="form-group">
+              <label>栏数</label>
+              <select id="columnCount" class="form-control">
+                <option value="2">2栏</option>
+                <option value="3">3栏</option>
+                <option value="4" selected>4栏</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>字体大小</label>
+              <select id="wordFontSize" class="form-control">
+                <option value="11">小 (11pt)</option>
+                <option value="12">中 (12pt)</option>
+                <option value="13" selected>标准 (13pt)</option>
+                <option value="14">大 (14pt)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>线条样式</label>
+              <div class="radio-group">
+                <label>
+                  <input type="radio" name="lineStyle" value="single" />
+                  单线（简洁模式）
+                </label>
+                <label>
+                  <input type="radio" name="lineStyle" value="triple" checked />
+                  三线格（标准英语本）
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- PDF选项 -->
+          <div class="settings-section">
+            <h4>PDF选项</h4>
+
+            <div class="form-group">
+              <label>纸张大小</label>
+              <div class="radio-group">
+                <label>
+                  <input type="radio" name="paperSize" value="a4" checked />
+                  A4 (210×297mm)
+                </label>
+                <label>
+                  <input type="radio" name="paperSize" value="a5" />
+                  A5 (148×210mm)
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="settings-footer">
+          <button class="btn" id="resetSettings">恢复默认</button>
+          <button class="btn btn-primary" id="applySettings">应用</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- jsPDF 库 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script type="module" src="/js/vocabulary/printable.js"></script>
+  </body>
+</html>

@@ -1,4 +1,5 @@
 import { Storage } from './storage.js';
+import { Logger } from './logger.js';
 
 /**
  * 语言切换管理器
@@ -24,7 +25,7 @@ export class LanguageSwitcher {
    */
   setLang(lang) {
     if (!['en', 'bi', 'cn'].includes(lang)) {
-      console.warn(`Invalid language mode: ${lang}`);
+      Logger.warn(`Invalid language mode: ${lang}`);
       return;
     }
     Storage.set(this.LANG_KEY, lang);

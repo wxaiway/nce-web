@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a84ff" />
+    <title>NCE - 听写播放</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/dictation-play.css" />
+  </head>
+  <body>
+    <!-- 页面头部 -->
+    <header class="hero no-print">
+      <div style="display: flex; justify-content: space-between; align-items: center; max-width: var(--content-max); margin: 0 auto;">
+        <button class="control-btn" id="backBtn">← 返回</button>
+        <h1 id="playTitle" style="margin: 0; font-size: 1.2rem;">听写播放</h1>
+        <div style="width: 80px;"></div>
+      </div>
+    </header>
+
+    <!-- 开始听写覆盖层 -->
+    <div class="start-overlay" id="startOverlay">
+      <div class="start-content">
+        <div class="start-icon">🎧</div>
+        <h2>准备开始听写</h2>
+        <p class="start-hint">点击下方按钮开始听写播放</p>
+        <button class="btn-start" id="startBtn">
+          <span class="btn-start-icon">▶️</span>
+          <span>开始听写</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="play-container">
+      <!-- 播放控制区（紧凑） -->
+      <div class="play-control-compact">
+        <!-- 进度条和统计 -->
+        <div class="progress-stats">
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <div class="stats-inline">
+            <span><strong id="progressText">0/0</strong></span>
+            <span>⏱️ <strong id="elapsedTime">0分0秒</strong></span>
+          </div>
+        </div>
+
+        <!-- 播放状态信息 -->
+        <div class="play-status-info">
+          <div class="status-text-line">
+            <div class="status-left">
+              <span class="status-icon-small">🔊</span>
+              <span class="status-text" id="statusText">准备播放...</span>
+            </div>
+            <span class="countdown-text" id="countdown"></span>
+          </div>
+          <div class="word-info-line">
+            <span class="word-number-text">第 <strong id="wordNumber">1</strong> 个单词</span>
+            <span id="wordPos" class="word-hint"></span>
+            <span id="wordMeaning" class="word-hint"></span>
+          </div>
+        </div>
+
+        <!-- 控制按钮 -->
+        <div class="control-buttons">
+          <button class="control-btn-large" id="pauseBtn">
+            <span class="btn-icon" id="pauseIcon">⏸️</span>
+            <span id="pauseText">暂停</span>
+          </button>
+          <button class="control-btn-large" id="replayBtn">
+            <span class="btn-icon">🔁</span>
+            <span>重播</span>
+          </button>
+          <button class="control-btn-large" id="nextBtn">
+            <span class="btn-icon">⏭️</span>
+            <span>下一个</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 答案列表区域 -->
+      <div class="answer-list-area" id="answerListArea" style="display: none;">
+        <div class="answer-list-header">
+          <h3>听写答案</h3>
+          <div class="answer-list-actions">
+            <button class="btn btn-sm" id="hideAnswersBtn">👁️ 隐藏答案</button>
+            <button class="btn btn-sm btn-primary desktop-only" id="downloadPdfBtn">📥 下载PDF</button>
+            <button class="btn btn-sm desktop-only" id="printBtn">🖨️ 打印</button>
+            <button class="btn btn-sm btn-primary mobile-only" id="sharePdfBtn">📤 分享PDF</button>
+          </div>
+        </div>
+        <div class="answer-list" id="answerList">
+          <!-- 答案列表将通过 JavaScript 动态生成 -->
+        </div>
+      </div>
+
+      <!-- 显示答案按钮（答案列表隐藏时显示） -->
+      <div class="show-answers-container" id="showAnswersContainer">
+        <button class="btn btn-primary btn-large" id="showAnswersBtn">👁️ 显示答案</button>
+      </div>
+    </div>
+
+    <!-- 完成界面 -->
+    <div class="completion-screen" id="completionScreen" style="display: none;">
+      <div class="completion-content">
+        <div class="completion-icon">🎉</div>
+        <h2>播放完成！</h2>
+
+        <div class="completion-stats">
+          <div class="stat-item">
+            <div class="stat-label">播放单词</div>
+            <div class="stat-value" id="finalTotal">0</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">用时</div>
+            <div class="stat-value" id="finalTime">0分0秒</div>
+          </div>
+        </div>
+
+        <div class="completion-message">
+          请检查你的听写本，然后录入答案进行批改
+        </div>
+
+        <div class="completion-actions">
+          <button class="btn btn-primary btn-large" id="inputAnswersBtn">
+            录入答案
+          </button>
+          <button class="btn" id="skipInputBtn">
+            跳过录入
+          </button>
+          <button class="btn" id="restartBtn">重新播放</button>
+          <button class="btn" id="backToConfigBtn">返回配置</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 打印内容（仅打印时显示） -->
+    <div class="print-only" style="display: none;">
+      <div class="print-header">
+        <div class="print-title" id="printTitle">NCE 听写答案</div>
+        <div class="print-meta" id="printMeta"></div>
+      </div>
+      <div class="print-content" id="printContent"></div>
+    </div>
+
+    <!-- jsPDF 库 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script type="module" src="/js/dictation/dictation-play.js"></script>
+  </body>
+</html>

@@ -1,0 +1,197 @@
+/**
+ * 答案录入页面样式
+ */
+
+body {
+  background: var(--bg);
+}
+
+/* 容器 */
+.input-container {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg);
+}
+
+/* 进度信息 */
+.progress-info {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.progress-info strong {
+  color: var(--accent);
+  font-size: 1.2rem;
+}
+
+/* 说明框 */
+.instruction-box {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  margin-bottom: var(--space-xl);
+}
+
+.instruction-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.instruction-text {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* 录入列表 */
+.input-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+/* 录入项 */
+.input-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-lg);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.input-item:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+}
+
+.input-item-number {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.input-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  flex: 1;
+}
+
+.input-item-hints {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.input-item-hint {
+  padding: 2px 8px;
+  background: var(--surface);
+  color: var(--muted);
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.input-item-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 16px;
+  transition: var(--transition);
+}
+
+.input-item-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.1);
+}
+
+.input-item-input::placeholder {
+  color: var(--muted);
+}
+
+.input-item-status {
+  font-size: 1.5rem;
+  text-align: right;
+  position: absolute;
+  top: var(--space-lg);
+  right: var(--space-lg);
+}
+
+.input-item {
+  position: relative;
+}
+
+/* 操作按钮 */
+.action-buttons {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+}
+
+.action-buttons .btn {
+  padding: 10px 24px;
+  font-size: 15px;
+  min-width: 120px;
+}
+
+/* 响应式 */
+
+/* 中等屏幕：2列 */
+@media (max-width: 1024px) {
+  .input-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 平板端：2列 */
+@media (max-width: 768px) {
+  .input-container {
+    padding: var(--space-md);
+  }
+
+  .input-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .instruction-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .action-buttons .btn {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 16px;
+  }
+}
+
+/* 手机端：1列 */
+@media (max-width: 480px) {
+  .input-list {
+    grid-template-columns: 1fr;
+  }
+
+  .input-item-status {
+    position: static;
+    text-align: left;
+    margin-top: var(--space-xs);
+  }
+}

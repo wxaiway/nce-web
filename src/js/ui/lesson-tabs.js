@@ -53,8 +53,8 @@ export class LessonTabs {
       // 课文 Tab：显示语言切换和移动端控制栏
       languageSwitcher?.classList.remove('hidden');
       mobileControls?.classList.remove('hidden');
-    } else if (tab === 'notes') {
-      // 讲解 Tab：隐藏语言切换和移动端控制栏
+    } else {
+      // 其他 Tab（讲解、单词）：隐藏语言切换和移动端控制栏
       languageSwitcher?.classList.add('hidden');
       mobileControls?.classList.add('hidden');
     }
@@ -63,13 +63,5 @@ export class LessonTabs {
     if (this.onTabChange) {
       this.onTabChange(tab);
     }
-  }
-
-  /**
-   * 获取当前 Tab
-   * @returns {string}
-   */
-  getCurrentTab() {
-    return this.currentTab;
   }
 }

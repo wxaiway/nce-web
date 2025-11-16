@@ -1,0 +1,370 @@
+/**
+ * 翻转卡学习结果页面样式
+ */
+
+body {
+  background: var(--bg);
+}
+
+/* 容器 */
+.result-container {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg);
+}
+
+/* 总体统计区域 */
+.summary-section {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: var(--space-xxl);
+  margin-bottom: var(--space-xl);
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.summary-icon {
+  font-size: 4rem;
+  margin-bottom: var(--space-md);
+}
+
+.summary-section h2 {
+  margin: 0 0 var(--space-xl) 0;
+  color: var(--text);
+  font-size: 2rem;
+}
+
+.summary-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.stat-card {
+  padding: var(--space-xl);
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 2px solid var(--border);
+}
+
+.stat-card.stat-mastered {
+  border-color: #34c759;
+  background: rgba(52, 199, 89, 0.05);
+}
+
+.stat-card.stat-review {
+  border-color: #ff9500;
+  background: rgba(255, 149, 0, 0.05);
+}
+
+.stat-card.stat-learning {
+  border-color: #ff3b30;
+  background: rgba(255, 59, 48, 0.05);
+}
+
+.stat-label {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: var(--space-sm);
+}
+
+.stat-value {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.stat-mastered .stat-value {
+  color: #34c759;
+}
+
+.stat-review .stat-value {
+  color: #ff9500;
+}
+
+.stat-learning .stat-value {
+  color: #ff3b30;
+}
+
+.summary-info {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xxl);
+  margin-bottom: var(--space-xl);
+  font-size: 16px;
+  color: var(--muted);
+  flex-wrap: wrap;
+}
+
+.summary-info strong {
+  color: var(--text);
+}
+
+.summary-actions {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* 详细结果区域 */
+.detail-section {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow);
+}
+
+.detail-section h3 {
+  margin: 0 0 var(--space-lg) 0;
+  color: var(--text);
+  font-size: 1.5rem;
+}
+
+/* 筛选标签 */
+.filter-tabs {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--border);
+}
+
+.filter-tab {
+  padding: var(--space-sm) var(--space-lg);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-tab:hover {
+  color: var(--text);
+}
+
+.filter-tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* 结果列表 */
+.result-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-md);
+}
+
+.result-item {
+  padding: var(--space-lg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.result-item.mastered {
+  border-left: 4px solid #34c759;
+  background: rgba(52, 199, 89, 0.02);
+}
+
+.result-item.review {
+  border-left: 4px solid #ff9500;
+  background: rgba(255, 149, 0, 0.02);
+}
+
+.result-item.learning {
+  border-left: 4px solid #ff3b30;
+  background: rgba(255, 59, 48, 0.02);
+}
+
+.result-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-sm);
+}
+
+.result-item-number {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.result-item-status {
+  font-size: 1.5rem;
+}
+
+.result-item-word {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: var(--space-xs);
+}
+
+.result-item-phonetic {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-family: 'Courier New', Consolas, monospace;
+  margin-bottom: var(--space-xs);
+}
+
+.result-item-info {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.result-item-pos {
+  padding: 2px 8px;
+  background: var(--surface);
+  color: var(--accent);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.result-item-meaning {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.result-item-rating {
+  margin-top: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--surface);
+  border-radius: var(--radius);
+  font-size: 14px;
+  text-align: center;
+}
+
+.result-item-rating-label {
+  color: var(--muted);
+  margin-right: var(--space-xs);
+}
+
+.result-item-rating-value {
+  font-weight: 500;
+}
+
+.result-item-rating-value.mastered {
+  color: #34c759;
+}
+
+.result-item-rating-value.review {
+  color: #ff9500;
+}
+
+.result-item-rating-value.learning {
+  color: #ff3b30;
+}
+
+/* 打印样式 */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+  }
+
+  .result-container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .summary-section,
+  .detail-section {
+    box-shadow: none;
+    page-break-inside: avoid;
+  }
+
+  .result-item {
+    page-break-inside: avoid;
+    border: 1px solid #ddd;
+  }
+
+  .result-item.mastered {
+    background: #f0f9ff;
+  }
+
+  .result-item.review {
+    background: #fff9f0;
+  }
+
+  .result-item.learning {
+    background: #fff5f5;
+  }
+
+  @page {
+    margin: 2cm;
+  }
+}
+
+/* 响应式 */
+
+/* 中等屏幕：3列 */
+@media (max-width: 1024px) {
+  .result-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 平板端：2列 */
+@media (max-width: 768px) {
+  .result-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .result-container {
+    padding: var(--space-md);
+  }
+}
+
+/* 手机端：1列 */
+@media (max-width: 480px) {
+  .result-list {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-section,
+  .detail-section {
+    padding: var(--space-lg);
+  }
+
+  .summary-stats {
+    gap: var(--space-md);
+  }
+
+  .stat-card {
+    padding: var(--space-md);
+  }
+
+  .stat-value {
+    font-size: 2rem;
+  }
+
+  .summary-info {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .summary-actions {
+    flex-direction: column;
+  }
+
+  .summary-actions .btn-primary,
+  .summary-actions .control-btn {
+    width: 100%;
+  }
+
+  .result-item-header {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .result-item-word {
+    font-size: 1.3rem;
+  }
+}

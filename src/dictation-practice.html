@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a84ff" />
+    <title>NCE - 在线听写</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/dictation-practice.css" />
+  </head>
+  <body>
+    <!-- 页面头部 -->
+    <header class="hero no-print">
+      <div style="display: flex; justify-content: space-between; align-items: center; max-width: var(--content-max); margin: 0 auto;">
+        <button class="control-btn" id="backBtn">← 返回</button>
+        <h1 id="practiceTitle" style="margin: 0; font-size: 1.2rem;">在线听写</h1>
+        <div style="width: 80px;"></div>
+      </div>
+    </header>
+
+    <!-- 开始听写覆盖层 -->
+    <div class="start-overlay" id="startOverlay">
+      <div class="start-content">
+        <div class="start-icon">🎧</div>
+        <h2>准备开始听写</h2>
+        <p class="start-hint">点击下方按钮开始听写练习</p>
+        <button class="btn-start" id="startBtn">
+          <span class="btn-start-icon">▶️</span>
+          <span>开始听写</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="practice-container">
+      <!-- 播放控制区（紧凑） -->
+      <div class="play-control-compact">
+        <!-- 进度条和统计 -->
+        <div class="progress-stats">
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <div class="stats-inline">
+            <span>✓ <strong id="correctCount">0</strong></span>
+            <span>✗ <strong id="wrongCount">0</strong></span>
+            <span><strong id="progressText">0/0</strong></span>
+            <span>⏱️ <strong id="elapsedTime">0分0秒</strong></span>
+          </div>
+        </div>
+
+        <!-- 播放状态和控制按钮 -->
+        <div class="play-controls">
+          <div class="play-status-inline">
+            <span class="status-icon-small">🔊</span>
+            <span class="status-text-small" id="statusText">准备播放...</span>
+          </div>
+          <div class="control-buttons-inline">
+            <button class="control-btn-small" id="pauseBtn" title="暂停/继续">
+              <span id="pauseIcon">⏸️</span>
+            </button>
+            <button class="control-btn-small" id="replayBtn" title="重播 (Space)">
+              🔁
+            </button>
+            <button class="control-btn-small" id="nextBtn" title="下一个 (Enter)">
+              ⏭️
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 单词列表区 -->
+      <div class="word-list-container">
+        <div class="word-list" id="wordList">
+          <!-- 单词卡片将通过 JavaScript 动态生成 -->
+        </div>
+      </div>
+    </div>
+
+    <!-- 完成界面 -->
+    <div class="completion-screen" id="completionScreen" style="display: none;">
+      <div class="completion-content">
+        <div class="completion-icon">🎉</div>
+        <h2>听写完成！</h2>
+
+        <div class="completion-stats">
+          <div class="stat-card stat-correct">
+            <div class="stat-icon">✓</div>
+            <div class="stat-value" id="finalCorrect">0</div>
+            <div class="stat-label">正确</div>
+          </div>
+          <div class="stat-card stat-wrong">
+            <div class="stat-icon">✗</div>
+            <div class="stat-value" id="finalWrong">0</div>
+            <div class="stat-label">错误</div>
+          </div>
+          <div class="stat-card stat-accuracy">
+            <div class="stat-icon">📊</div>
+            <div class="stat-value" id="finalAccuracy">0%</div>
+            <div class="stat-label">正确率</div>
+          </div>
+        </div>
+
+        <div class="completion-time">
+          学习时长：<strong id="finalTime">0分0秒</strong>
+        </div>
+
+        <div class="completion-actions">
+          <button class="control-btn btn-primary" id="viewResultBtn">
+            查看详情
+          </button>
+          <button class="control-btn" id="reviewWrongBtn" style="display: none;">
+            复习错词
+          </button>
+          <button class="control-btn" id="restartBtn">重新听写</button>
+          <button class="control-btn" id="backToConfigBtn">返回配置</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/js/dictation/dictation-practice.js"></script>
+  </body>
+</html>

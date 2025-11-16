@@ -57,4 +57,30 @@ export class Toast {
   static error(message, duration) {
     this.show(message, 'error', duration);
   }
+
+  /**
+   * 创建可更新的加载提示
+   * @param {string} message - 初始消息
+   * @returns {Object} 包含 update 和 close 方法的对象
+   */
+  static loading(message) {
+    const toast = document.createElement('div');
+    toast.className = 'toast toast-info';
+    toast.textContent = message;
+    document.body.appendChild(toast);
+
+    requestAnimationFrame(() => {
+      toast.classList.add('show');
+    });
+
+    return {
+      update(newMessage) {
+        toast.textContent = newMessage;
+      },
+      close() {
+        toast.classList.remove('show');
+        setTimeout(() => toast.remove(), 300);
+      }
+    };
+  }
 }

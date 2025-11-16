@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a84ff" />
+    <title>NCE - 单词浏览</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/browse.css" />
+  </head>
+  <body>
+    <!-- 页面头部 -->
+    <header class="hero">
+      <div style="display: flex; justify-content: space-between; align-items: center; max-width: var(--content-max); margin: 0 auto;">
+        <button class="control-btn" id="backBtn">← 返回</button>
+        <h1 id="browseTitle" style="margin: 0; font-size: 1.2rem;">单词浏览</h1>
+        <button class="control-btn" id="startLearningBtn">🎯 开始学习</button>
+      </div>
+    </header>
+
+    <div class="browse-container">
+
+      <!-- 统计信息 -->
+      <div class="browse-stats">
+        <span id="statsText">共 0 个单词</span>
+      </div>
+
+      <!-- 搜索和筛选 -->
+      <div class="browse-controls">
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="搜索单词或释义..."
+        />
+        <select id="posFilter" class="pos-filter">
+          <option value="all">全部词性</option>
+          <option value="n.">名词</option>
+          <option value="v.">动词</option>
+          <option value="adj.">形容词</option>
+          <option value="adv.">副词</option>
+          <option value="prep.">介词</option>
+          <option value="conj.">连词</option>
+          <option value="pron.">代词</option>
+          <option value="int.">感叹词</option>
+        </select>
+      </div>
+
+      <!-- 单词网格 -->
+      <div class="word-grid" id="wordGrid">
+        <!-- 单词卡片将通过 JS 动态生成 -->
+      </div>
+    </div>
+
+    <script type="module" src="/js/vocabulary/browse.js"></script>
+  </body>
+</html>

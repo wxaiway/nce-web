@@ -1,5 +1,6 @@
 import { EventEmitter } from '../utils/event-emitter.js';
 import { Storage } from '../utils/storage.js';
+import { Logger } from '../utils/logger.js';
 
 /**
  * 音频播放器
@@ -69,7 +70,7 @@ export class AudioPlayer extends EventEmitter {
       }
       this.seekingTimer = setTimeout(() => {
         if (this.isSeeking) {
-          console.warn('seeking 超时，强制重置状态');
+          Logger.warn('seeking 超时，强制重置状态');
           this.isSeeking = false;
         }
       }, 5000); // 5 秒超时
@@ -123,7 +124,7 @@ export class AudioPlayer extends EventEmitter {
       this.scheduleAdvance();
     } catch (error) {
       // 播放失败，智能恢复
-      console.warn('播放失败', error);
+      Logger.warn('播放失败', error);
 
       this.shouldUpdateOnTimeUpdate = false; // 播放失败，关闭 timeupdate 更新
 
@@ -139,7 +140,7 @@ export class AudioPlayer extends EventEmitter {
         try {
           this.audio.currentTime = oldTime;
         } catch (seekError) {
-          console.warn('恢复音频位置失败，忽略', seekError);
+          Logger.warn('恢复音频位置失败，忽略', seekError);
         }
 
         // 恢复 UI 显示
@@ -149,7 +150,7 @@ export class AudioPlayer extends EventEmitter {
       } else {
         // 旧状态是终止状态或无效，不恢复
         // 保持在用户点击的句子，UI 已经高亮
-        console.warn('旧状态无效，保持在目标句子');
+        Logger.warn('旧状态无效，保持在目标句子');
       }
 
       this.emit('error', { error, message: '播放失败' });
@@ -432,7 +433,7 @@ export class AudioPlayer extends EventEmitter {
     try {
       this.audio.currentTime = 0;
     } catch (error) {
-      console.warn('重置音频位置失败', error);
+      Logger.warn('重置音频位置失败', error);
     }
 
     // 4. 触发重置事件，让 UI 清除高亮

@@ -6,9 +6,8 @@ import { Toast } from '../utils/toast.js';
  * 设置面板管理
  */
 export class SettingsPanel {
-  constructor(player, wakeLockManager) {
+  constructor(player) {
     this.player = player;
-    this.wakeLockManager = wakeLockManager;
     this.panel = document.getElementById('settingsPanel');
     this.overlay = document.getElementById('settingsOverlay');
     this.focusTrapCleanup = null;
@@ -48,13 +47,6 @@ export class SettingsPanel {
 
     // 自动跟随控制
     this.initAutoScrollControl();
-
-    // 屏幕常亮控制（仅手机端）
-    if (this.wakeLockManager) {
-      this.initKeepScreenOnControl();
-      // 初始化图标状态（确保PC端隐藏）
-      this.updateWakeLockIcon();
-    }
 
     // 恢复默认按钮
     this.initResetButton();
@@ -183,65 +175,6 @@ export class SettingsPanel {
   }
 
 
-  /**
-   * 屏幕常亮控制（仅手机端）
-   */
-  initKeepScreenOnControl() {
-    const settingItem = document.getElementById('keepScreenOnSetting');
-    const toggle = document.getElementById('keepScreenOnToggle');
-    if (!toggle || !settingItem) return;
-
-    // 获取状态
-    const status = this.wakeLockManager.getStatus();
-
-    // 只在手机端显示设置项
-    if (status.isMobile) {
-      settingItem.hidden = false;
-
-      // 恢复保存的设置
-      const enabled = this.wakeLockManager.getUserEnabled();
-      toggle.checked = enabled;
-
-      // 监听变化
-      toggle.addEventListener('change', () => {
-        this.wakeLockManager.setUserEnabled(toggle.checked);
-        this.updateWakeLockIcon();
-
-        // 如果正在播放，立即应用
-        if (toggle.checked && !this.player.audio.paused) {
-          this.wakeLockManager.enable();
-        } else if (!toggle.checked) {
-          this.wakeLockManager.disable();
-        }
-      });
-    } else {
-      // PC端隐藏设置项
-      settingItem.hidden = true;
-    }
-  }
-
-  /**
-   * 更新屏幕常亮图标
-   */
-  updateWakeLockIcon() {
-    const icon = document.getElementById('wakeLockIcon');
-    if (!icon) return;
-
-    const status = this.wakeLockManager.getStatus();
-
-    // PC端永不显示图标
-    if (!status.isMobile) {
-      icon.hidden = true;
-      return;
-    }
-
-    // 手机端:只要正在播放就显示图标(不管用户是否启用功能)
-    if (status.isEnabled) {
-      icon.hidden = false;
-    } else {
-      icon.hidden = true;
-    }
-  }
 
   /**
    * 恢复默认设置

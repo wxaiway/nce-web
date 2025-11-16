@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a84ff" />
+    <title>NCE - 听写结果</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/dictation-result.css" />
+  </head>
+  <body>
+    <!-- 页面头部 -->
+    <header class="hero">
+      <div style="display: flex; justify-content: space-between; align-items: center; max-width: var(--content-max); margin: 0 auto;">
+        <button class="control-btn" id="backBtn">← 返回</button>
+        <h1 id="resultTitle" style="margin: 0; font-size: 1.2rem;">听写结果</h1>
+        <div style="width: 80px;"></div>
+      </div>
+    </header>
+
+    <div class="result-container">
+      <!-- 总体统计 -->
+      <section class="summary-section">
+        <div class="summary-icon">🎉</div>
+        <h2>听写完成！</h2>
+
+        <div class="summary-stats">
+          <div class="stat-card stat-correct">
+            <div class="stat-label">正确</div>
+            <div class="stat-value" id="correctCount">0</div>
+          </div>
+          <div class="stat-card stat-wrong">
+            <div class="stat-label">错误</div>
+            <div class="stat-value" id="wrongCount">0</div>
+          </div>
+          <div class="stat-card stat-accuracy">
+            <div class="stat-label">正确率</div>
+            <div class="stat-value" id="accuracy">0%</div>
+          </div>
+        </div>
+
+        <div class="summary-info">
+          <span>📊 总计: <strong id="totalCount">0</strong> 个单词</span>
+          <span>⏱️ 用时: <strong id="duration">0分0秒</strong></span>
+        </div>
+
+        <div class="summary-actions">
+          <button class="control-btn btn-primary" id="reviewWrongBtn" style="display: none;">
+            复习错词
+          </button>
+          <button class="control-btn" id="restartBtn">重新听写</button>
+          <button class="control-btn" id="backToConfigBtn">返回配置</button>
+        </div>
+      </section>
+
+      <!-- 详细结果 -->
+      <section class="detail-section">
+        <h3>📝 详细结果</h3>
+
+        <!-- 筛选选项 -->
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">全部</button>
+          <button class="filter-tab" data-filter="correct">正确</button>
+          <button class="filter-tab" data-filter="wrong">错误</button>
+        </div>
+
+        <!-- 结果列表 -->
+        <div class="result-list" id="resultList">
+          <!-- 动态生成 -->
+        </div>
+      </section>
+    </div>
+
+    <script type="module" src="/js/dictation/dictation-result.js"></script>
+  </body>
+</html>

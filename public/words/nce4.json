@@ -1,0 +1,8215 @@
+{
+  "meta": {
+    "book": "nce4",
+    "bookTitle": "新概念英语第四册",
+    "totalLessons": 48,
+    "totalWords": 791,
+    "generatedAt": "2025-11-09 19:18:26"
+  },
+  "lessons": [
+    {
+      "lessonId": "nce4-001",
+      "lessonNumber": "001",
+      "titleEn": "Finding fossil man",
+      "titleCn": "发现化石人",
+      "wordCount": 12,
+      "words": [
+        {
+          "id": "nce4-001-001",
+          "word": "fossil (man)",
+          "phonetic": [
+            "英[ˈfɒsl] 美[ˈfɑːsl"
+          ],
+          "pos": "a.",
+          "meaning": "化石(人)",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-001-002",
+          "word": "recount",
+          "phonetic": [
+            "ri'kaunt"
+          ],
+          "pos": "v.",
+          "meaning": "叙述",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-001-003",
+          "word": "saga",
+          "phonetic": [
+            "'sa:gə"
+          ],
+          "pos": "n.",
+          "meaning": "英雄故事",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-001-004",
+          "word": "legend",
+          "phonetic": [
+            "'ledʒənd"
+          ],
+          "pos": "n.",
+          "meaning": "传说，传奇",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-001-005",
+          "word": "migration",
+          "phonetic": [
+            "mai'greiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "迁移，移居",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-001-006",
+          "word": "anthropologist",
+          "phonetic": [
+            "ænθrə'pɔlədʒist"
+          ],
+          "pos": "n.",
+          "meaning": "人类学家",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-001-007",
+          "word": "archaeologist",
+          "phonetic": [
+            "'a:kiə'lɔdʒist"
+          ],
+          "pos": "n.",
+          "meaning": "考古学家",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-001-008",
+          "word": "ancestor",
+          "phonetic": [
+            "'ænsistə"
+          ],
+          "pos": "n.",
+          "meaning": "祖先",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-001-009",
+          "word": "Polynesian",
+          "phonetic": [
+            "pɔli'ni:zjən"
+          ],
+          "pos": "a.",
+          "meaning": "波利尼西亚(中太平洋之一群岛)的",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-001-010",
+          "word": "Indonesia",
+          "phonetic": [
+            "'indəu'ni:zjə"
+          ],
+          "pos": "n.",
+          "meaning": "印度尼西亚",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-001-011",
+          "word": "flint",
+          "phonetic": [
+            "flint"
+          ],
+          "pos": "n.",
+          "meaning": "燧石",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-001-012",
+          "word": "rot",
+          "phonetic": [
+            "rɔt"
+          ],
+          "pos": "v.",
+          "meaning": "烂掉",
+          "orderInLesson": 12
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-002",
+      "lessonNumber": "002",
+      "titleEn": "Spare that spider",
+      "titleCn": "不要伤害蜘蛛",
+      "wordCount": 4,
+      "words": [
+        {
+          "id": "nce4-002-001",
+          "word": "beast",
+          "phonetic": [
+            "bi:st"
+          ],
+          "pos": "n.",
+          "meaning": "野兽",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-002-002",
+          "word": "census",
+          "phonetic": [
+            "'sensəs"
+          ],
+          "pos": "n.",
+          "meaning": "统计数字",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-002-003",
+          "word": "acre",
+          "phonetic": [
+            "'eikə"
+          ],
+          "pos": "n.",
+          "meaning": "英亩",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-002-004",
+          "word": "content",
+          "phonetic": [
+            "'kɔntent",
+            "kən'tent"
+          ],
+          "pos": "a.",
+          "meaning": "满足的",
+          "orderInLesson": 4
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-003",
+      "lessonNumber": "003",
+      "titleEn": "Matterhorn man",
+      "titleCn": "马特霍恩山区人",
+      "wordCount": 18,
+      "words": [
+        {
+          "id": "nce4-003-001",
+          "word": "Matterhorn",
+          "phonetic": [
+            "'mætəhɔ:n"
+          ],
+          "pos": "n.",
+          "meaning": "马特霍恩峰(阿尔卑斯山峰之一)",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-003-002",
+          "word": "alpinist",
+          "phonetic": [
+            "'ælpinist"
+          ],
+          "pos": "n.",
+          "meaning": "登山运动员",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-003-003",
+          "word": "pioneer",
+          "phonetic": [
+            "'paiə'niə"
+          ],
+          "pos": "v./n.",
+          "meaning": "开辟，倡导;先锋，开辟者",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-003-004",
+          "word": "summit",
+          "phonetic": [
+            "'sʌmit"
+          ],
+          "pos": "n.",
+          "meaning": "顶峰",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-003-005",
+          "word": "attain",
+          "phonetic": [
+            "ə'tein"
+          ],
+          "pos": "v.",
+          "meaning": "到达",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-003-006",
+          "word": "perilous",
+          "phonetic": [
+            "'periləs"
+          ],
+          "pos": "a.",
+          "meaning": "危险的",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-003-007",
+          "word": "shudder",
+          "phonetic": [
+            "'ʃʌdə"
+          ],
+          "pos": "v.",
+          "meaning": "不寒而栗",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-003-008",
+          "word": "court",
+          "phonetic": [
+            "kɔ:t"
+          ],
+          "pos": "v.",
+          "meaning": "追求",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-003-009",
+          "word": "solitary",
+          "phonetic": [
+            "'sɔlitəri"
+          ],
+          "pos": "a.",
+          "meaning": "唯一的",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-003-010",
+          "word": "impoverish",
+          "phonetic": [
+            "im'pɔvəriʃ"
+          ],
+          "pos": "v.",
+          "meaning": "使贫困",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-003-011",
+          "word": "Alpine",
+          "phonetic": [
+            "'ælpain"
+          ],
+          "pos": "a.",
+          "meaning": "阿尔卑斯山的",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-003-012",
+          "word": "flea-ridden",
+          "phonetic": [],
+          "pos": "a.",
+          "meaning": "布满跳蚤的",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-003-013",
+          "word": "coarse",
+          "phonetic": [
+            "kɔ:s"
+          ],
+          "pos": "a.",
+          "meaning": "粗劣的",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-003-014",
+          "word": "boast",
+          "phonetic": [
+            "bəust"
+          ],
+          "pos": "v.",
+          "meaning": "自恃有",
+          "orderInLesson": 14
+        },
+        {
+          "id": "nce4-003-015",
+          "word": "parishioner",
+          "phonetic": [
+            "pə'riʃənə"
+          ],
+          "pos": "n.",
+          "meaning": "教区居民",
+          "orderInLesson": 15
+        },
+        {
+          "id": "nce4-003-016",
+          "word": "shepherd",
+          "phonetic": [
+            "'ʃepəd"
+          ],
+          "pos": "n.",
+          "meaning": "牧羊人",
+          "orderInLesson": 16
+        },
+        {
+          "id": "nce4-003-017",
+          "word": "linen",
+          "phonetic": [
+            "'linin"
+          ],
+          "pos": "n.",
+          "meaning": "亚麻布",
+          "orderInLesson": 17
+        },
+        {
+          "id": "nce4-003-018",
+          "word": "the Alps",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "阿尔卑斯山脉",
+          "orderInLesson": 18
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-004",
+      "lessonNumber": "004",
+      "titleEn": "Seeing hands",
+      "titleCn": "能看见东西的手",
+      "wordCount": 8,
+      "words": [
+        {
+          "id": "nce4-004-001",
+          "word": "solid",
+          "phonetic": [
+            "'sɔlid"
+          ],
+          "pos": "a.",
+          "meaning": "坚实的",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-004-002",
+          "word": "safe",
+          "phonetic": [
+            "seif"
+          ],
+          "pos": "n.",
+          "meaning": "保险柜",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-004-003",
+          "word": "Ulyanovsk",
+          "phonetic": [
+            "u:'lja:nɔfsk"
+          ],
+          "pos": "n.",
+          "meaning": "乌里扬诺夫斯克",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-004-004",
+          "word": "commission",
+          "phonetic": [
+            "kə'miʃən"
+          ],
+          "pos": "n.",
+          "meaning": "委员会",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-004-005",
+          "word": "opaque",
+          "phonetic": [
+            "əu'peik"
+          ],
+          "pos": "a.",
+          "meaning": "不透明的",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-004-006",
+          "word": "lotto",
+          "phonetic": [
+            "'lɔtou"
+          ],
+          "pos": "n.",
+          "meaning": "一种有编号的纸牌",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-004-007",
+          "word": "slipper",
+          "phonetic": [
+            "'slipə"
+          ],
+          "pos": "n.",
+          "meaning": "拖鞋",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-004-008",
+          "word": "blindfold",
+          "phonetic": [
+            "'blaindfəuld"
+          ],
+          "pos": "a./ad.",
+          "meaning": "被蒙上眼睛的",
+          "orderInLesson": 8
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-005",
+      "lessonNumber": "005",
+      "titleEn": "Youth",
+      "titleCn": "青年",
+      "wordCount": 17,
+      "words": [
+        {
+          "id": "nce4-005-001",
+          "word": "leave",
+          "phonetic": [
+            "li:v"
+          ],
+          "pos": "n.",
+          "meaning": "允许",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-005-002",
+          "word": "fundamentals",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "基本原则",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-005-003",
+          "word": "glorious",
+          "phonetic": [
+            "'glɔ:riəs"
+          ],
+          "pos": "a.",
+          "meaning": "光辉灿烂的",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-005-004",
+          "word": "splendid",
+          "phonetic": [
+            "'splendid"
+          ],
+          "pos": "a.",
+          "meaning": "灿烂的",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-005-005",
+          "word": "rub",
+          "phonetic": [
+            "rʌb"
+          ],
+          "pos": "n.",
+          "meaning": "难题",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-005-006",
+          "word": "identity",
+          "phonetic": [
+            "ai'dentiti"
+          ],
+          "pos": "n.",
+          "meaning": "身份",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-005-007",
+          "word": "dreary",
+          "phonetic": [
+            "'driəri"
+          ],
+          "pos": "a.",
+          "meaning": "沉郁的",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-005-008",
+          "word": "commitment",
+          "phonetic": [
+            "kə'mitmənt"
+          ],
+          "pos": "n.",
+          "meaning": "信奉",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-005-009",
+          "word": "mean",
+          "phonetic": [
+            "mi:n"
+          ],
+          "pos": "a.",
+          "meaning": "吝啬，小气",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-005-010",
+          "word": "social climber",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "追求更高社会地位的人，向上爬的人",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-005-011",
+          "word": "devotion",
+          "phonetic": [
+            "di'vəuʃən"
+          ],
+          "pos": "n.",
+          "meaning": "热爱",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-005-012",
+          "word": "cosmic",
+          "phonetic": [
+            "'kɔzmik"
+          ],
+          "pos": "a.",
+          "meaning": "宇宙的",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-005-013",
+          "word": "suburban",
+          "phonetic": [
+            "sə'bə:bən"
+          ],
+          "pos": "a.",
+          "meaning": "见识不广的，偏狭的",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-005-014",
+          "word": "conceited",
+          "phonetic": [
+            "kən'si:tid"
+          ],
+          "pos": "a.",
+          "meaning": "自高自大的",
+          "orderInLesson": 14
+        },
+        {
+          "id": "nce4-005-015",
+          "word": "presumptuous",
+          "phonetic": [
+            "pri'zʌmptjuəs"
+          ],
+          "pos": "a.",
+          "meaning": "自以为是的，放肆的",
+          "orderInLesson": 15
+        },
+        {
+          "id": "nce4-005-016",
+          "word": "fatuous",
+          "phonetic": [
+            "'fætjuəs"
+          ],
+          "pos": "a.",
+          "meaning": "愚蠢的",
+          "orderInLesson": 16
+        },
+        {
+          "id": "nce4-005-017",
+          "word": "cliché",
+          "phonetic": [
+            "'kli:ʃei"
+          ],
+          "pos": "n.",
+          "meaning": "陈词滥调",
+          "orderInLesson": 17
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-006",
+      "lessonNumber": "006",
+      "titleEn": "The sporting spirit",
+      "titleCn": "体育的精神",
+      "wordCount": 14,
+      "words": [
+        {
+          "id": "nce4-006-001",
+          "word": "goodwill",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "友好",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-006-002",
+          "word": "cricket",
+          "phonetic": [
+            "'krikit"
+          ],
+          "pos": "n.",
+          "meaning": "板球",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-006-003",
+          "word": "inclination",
+          "phonetic": [
+            "'inkli'neiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "意愿",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-006-004",
+          "word": "contest",
+          "phonetic": [
+            "kən'test",
+            "'kɔntest"
+          ],
+          "pos": "n.",
+          "meaning": "比赛",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-006-005",
+          "word": "orgy",
+          "phonetic": [
+            "'ɔ:dʒi"
+          ],
+          "pos": "n.",
+          "meaning": "无节制，放荡",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-006-006",
+          "word": "deduce",
+          "phonetic": [
+            "di'dju:s"
+          ],
+          "pos": "v.",
+          "meaning": "推断",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-006-007",
+          "word": "competitive",
+          "phonetic": [
+            "kəm'petitiv"
+          ],
+          "pos": "a.",
+          "meaning": "竞争性的",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-006-008",
+          "word": "patriotism",
+          "phonetic": [
+            "'pætriətizm"
+          ],
+          "pos": "n.",
+          "meaning": "地方观念，爱国主义",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-006-009",
+          "word": "disgrace",
+          "phonetic": [
+            "dis'greis"
+          ],
+          "pos": "v.",
+          "meaning": "使丢脸",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-006-010",
+          "word": "savage",
+          "phonetic": [
+            "'sævidʒ"
+          ],
+          "pos": "a.",
+          "meaning": "野性的",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-006-011",
+          "word": "combative",
+          "phonetic": [
+            "'kɔmbətiv"
+          ],
+          "pos": "a.",
+          "meaning": "好斗的",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-006-012",
+          "word": "mimic warfare",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "模拟战争",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-006-013",
+          "word": "behaviour",
+          "phonetic": [
+            "bi'heivjə"
+          ],
+          "pos": "n.",
+          "meaning": "行动，举止",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-006-014",
+          "word": "absurd",
+          "phonetic": [
+            "əb'sə:d"
+          ],
+          "pos": "a.",
+          "meaning": "荒唐的",
+          "orderInLesson": 14
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-007",
+      "lessonNumber": "007",
+      "titleEn": "Bats",
+      "titleCn": "蝙蝠",
+      "wordCount": 14,
+      "words": [
+        {
+          "id": "nce4-007-001",
+          "word": "bat",
+          "phonetic": [
+            "bæt"
+          ],
+          "pos": "n.",
+          "meaning": "蝙蝠",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-007-002",
+          "word": "strictly",
+          "phonetic": [
+            "'striktli"
+          ],
+          "pos": "ad.",
+          "meaning": "明确地",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-007-003",
+          "word": "utilitarian",
+          "phonetic": [
+            "'ju:tili'tєəriən"
+          ],
+          "pos": "a.",
+          "meaning": "实用的",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-007-004",
+          "word": "appreciation",
+          "phonetic": [
+            "ə'pri:ʃi'eiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "理解",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-007-005",
+          "word": "obstruction",
+          "phonetic": [
+            "əb'strʌkʃən"
+          ],
+          "pos": "n.",
+          "meaning": "障碍物",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-007-006",
+          "word": "elapse",
+          "phonetic": [
+            "i'læps"
+          ],
+          "pos": "v.",
+          "meaning": "消逝",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-007-007",
+          "word": "hull",
+          "phonetic": [
+            "hʌl"
+          ],
+          "pos": "n.",
+          "meaning": "船体",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-007-008",
+          "word": "interval",
+          "phonetic": [
+            "'intəvəl"
+          ],
+          "pos": "n.",
+          "meaning": "间隔",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-007-009",
+          "word": "receipt",
+          "phonetic": [
+            "ri'si:t"
+          ],
+          "pos": "n.",
+          "meaning": "收到",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-007-010",
+          "word": "apparatus",
+          "phonetic": [
+            "æpə'reitəs"
+          ],
+          "pos": "n.",
+          "meaning": "仪器",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-007-011",
+          "word": "shoal",
+          "phonetic": [
+            "ʃəul"
+          ],
+          "pos": "n.",
+          "meaning": "鱼群",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-007-012",
+          "word": "herring",
+          "phonetic": [
+            "'heriŋ"
+          ],
+          "pos": "n.",
+          "meaning": "鲱鱼",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-007-013",
+          "word": "cod",
+          "phonetic": [
+            "kɔd"
+          ],
+          "pos": "n.",
+          "meaning": "鳕鱼",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-007-014",
+          "word": "squeak",
+          "phonetic": [
+            "skwi:k"
+          ],
+          "pos": "n.",
+          "meaning": "尖叫声",
+          "orderInLesson": 14
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-008",
+      "lessonNumber": "008",
+      "titleEn": "Trading standards",
+      "titleCn": "贸易标准",
+      "wordCount": 12,
+      "words": [
+        {
+          "id": "nce4-008-001",
+          "word": "slaughter",
+          "phonetic": [
+            "'slɔ:tə"
+          ],
+          "pos": "v.",
+          "meaning": "屠宰",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-008-002",
+          "word": "fit",
+          "phonetic": [
+            "fit"
+          ],
+          "pos": "a.",
+          "meaning": "适合",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-008-003",
+          "word": "grace",
+          "phonetic": [
+            "greis"
+          ],
+          "pos": "v.",
+          "meaning": "给…增光",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-008-004",
+          "word": "tariff",
+          "phonetic": [
+            "'tærif"
+          ],
+          "pos": "n.",
+          "meaning": "关税",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-008-005",
+          "word": "standard",
+          "phonetic": [
+            "'stændəd"
+          ],
+          "pos": "n.",
+          "meaning": "标准",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-008-006",
+          "word": "dialysis",
+          "phonetic": [
+            "dai'ælisis"
+          ],
+          "pos": "n.",
+          "meaning": "分离，分解；透析，渗析",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-008-007",
+          "word": "electrocute",
+          "phonetic": [
+            "i'lektrəkjut"
+          ],
+          "pos": "v.",
+          "meaning": "使触电身亡",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-008-008",
+          "word": "eliminate",
+          "phonetic": [
+            "i'limineit"
+          ],
+          "pos": "v.",
+          "meaning": "消灭",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-008-009",
+          "word": "accord",
+          "phonetic": [
+            "ə'kɔ:d"
+          ],
+          "pos": "n.",
+          "meaning": "协议",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-008-010",
+          "word": "device",
+          "phonetic": [
+            "di'vais"
+          ],
+          "pos": "n.",
+          "meaning": "仪器，器械",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-008-011",
+          "word": "hammer out",
+          "phonetic": [],
+          "pos": "v.",
+          "meaning": "推敲",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-008-012",
+          "word": "pact",
+          "phonetic": [
+            "pækt"
+          ],
+          "pos": "n.",
+          "meaning": "合同，条约，公约",
+          "orderInLesson": 12
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-009",
+      "lessonNumber": "009",
+      "titleEn": "Royal espionage",
+      "titleCn": "王室谍报活动",
+      "wordCount": 26,
+      "words": [
+        {
+          "id": "nce4-009-001",
+          "word": "espionage",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "间谍活动",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-009-002",
+          "word": "Danish",
+          "phonetic": [
+            "'deiniʃ"
+          ],
+          "pos": "a.",
+          "meaning": "丹麦的，丹麦人的，丹麦语的",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-009-003",
+          "word": "minstrel",
+          "phonetic": [
+            "'minstrəl"
+          ],
+          "pos": "n.",
+          "meaning": "中世纪的吟游歌手",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-009-004",
+          "word": "wandering",
+          "phonetic": [
+            "'wɔndəriŋ"
+          ],
+          "pos": "a.",
+          "meaning": "漫游的",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-009-005",
+          "word": "harp",
+          "phonetic": [
+            "ha:p"
+          ],
+          "pos": "n.",
+          "meaning": "竖琴",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-009-006",
+          "word": "ballad",
+          "phonetic": [
+            "'bæləd"
+          ],
+          "pos": "n.",
+          "meaning": "民歌",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-009-007",
+          "word": "acrobatic",
+          "phonetic": [
+            "'ækrə'bætik"
+          ],
+          "pos": "a.",
+          "meaning": "杂技的",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-009-008",
+          "word": "conjuring",
+          "phonetic": [
+            "'kʌndʒəriŋ"
+          ],
+          "pos": "n.",
+          "meaning": "魔术",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-009-009",
+          "word": "Athelney",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "阿塞尔纳(英国一个小岛)",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-009-010",
+          "word": "Chippenham",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "切本哈姆(英国一城市)",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-009-011",
+          "word": "thither",
+          "phonetic": [
+            "'ðiðə"
+          ],
+          "pos": "ad.",
+          "meaning": "向那里",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-009-012",
+          "word": "Dane",
+          "phonetic": [
+            "dein"
+          ],
+          "pos": "n.",
+          "meaning": "丹麦人",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-009-013",
+          "word": "slack",
+          "phonetic": [
+            "slæk"
+          ],
+          "pos": "a.",
+          "meaning": "涣散的",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-009-014",
+          "word": "conqueror",
+          "phonetic": [
+            "'kɔŋkərə"
+          ],
+          "pos": "n.",
+          "meaning": "征服者",
+          "orderInLesson": 14
+        },
+        {
+          "id": "nce4-009-015",
+          "word": "casual",
+          "phonetic": [
+            "'kæʒjuəl"
+          ],
+          "pos": "a.",
+          "meaning": "马虎的，随便的",
+          "orderInLesson": 15
+        },
+        {
+          "id": "nce4-009-016",
+          "word": "precaution",
+          "phonetic": [
+            "pri'kɔ:ʃən"
+          ],
+          "pos": "n.",
+          "meaning": "预防，警惕",
+          "orderInLesson": 16
+        },
+        {
+          "id": "nce4-009-017",
+          "word": "proceeds",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "所得",
+          "orderInLesson": 17
+        },
+        {
+          "id": "nce4-009-018",
+          "word": "assemble",
+          "phonetic": [
+            "ə'sembl"
+          ],
+          "pos": "v.",
+          "meaning": "集合",
+          "orderInLesson": 18
+        },
+        {
+          "id": "nce4-009-019",
+          "word": "trivial",
+          "phonetic": [
+            "'triviəl"
+          ],
+          "pos": "a.",
+          "meaning": "微不足道的",
+          "orderInLesson": 19
+        },
+        {
+          "id": "nce4-009-020",
+          "word": "prolonged",
+          "phonetic": [],
+          "pos": "a.",
+          "meaning": "持久的",
+          "orderInLesson": 20
+        },
+        {
+          "id": "nce4-009-021",
+          "word": "commissary",
+          "phonetic": [
+            "'kɔmisəri"
+          ],
+          "pos": "n.",
+          "meaning": "军粮供应",
+          "orderInLesson": 21
+        },
+        {
+          "id": "nce4-009-022",
+          "word": "episode",
+          "phonetic": [
+            "'episəud"
+          ],
+          "pos": "n.",
+          "meaning": "一个事件，片断",
+          "orderInLesson": 22
+        },
+        {
+          "id": "nce4-009-023",
+          "word": "epic",
+          "phonetic": [
+            "'epik"
+          ],
+          "pos": "n.",
+          "meaning": "史诗",
+          "orderInLesson": 23
+        },
+        {
+          "id": "nce4-009-024",
+          "word": "harry",
+          "phonetic": [
+            "'hæri"
+          ],
+          "pos": "v.",
+          "meaning": "骚扰",
+          "orderInLesson": 24
+        },
+        {
+          "id": "nce4-009-025",
+          "word": "assail",
+          "phonetic": [
+            "ə'seil"
+          ],
+          "pos": "v.",
+          "meaning": "袭击",
+          "orderInLesson": 25
+        },
+        {
+          "id": "nce4-009-026",
+          "word": "skirmish",
+          "phonetic": [
+            "'skə:miʃ"
+          ],
+          "pos": "n.",
+          "meaning": "小规模战斗",
+          "orderInLesson": 26
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-010",
+      "lessonNumber": "010",
+      "titleEn": "Silicon valley",
+      "titleCn": "硅谷",
+      "wordCount": 22,
+      "words": [
+        {
+          "id": "nce4-010-001",
+          "word": "silicon",
+          "phonetic": [
+            "'silikən"
+          ],
+          "pos": "n.",
+          "meaning": "硅",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-010-002",
+          "word": "integrated",
+          "phonetic": [
+            "'intəgreitid"
+          ],
+          "pos": "a.",
+          "meaning": "综合的",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-010-003",
+          "word": "circuit",
+          "phonetic": [
+            "'sə:kit"
+          ],
+          "pos": "n.",
+          "meaning": "线路，电路",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-010-004",
+          "word": "California",
+          "phonetic": [
+            "'kæli'fɔ:njə"
+          ],
+          "pos": "n.",
+          "meaning": "加利福尼亚(美国州名)",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-010-005",
+          "word": "workstation",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "工作站",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-010-006",
+          "word": "chip",
+          "phonetic": [
+            "tʃip"
+          ],
+          "pos": "n.",
+          "meaning": "芯片，集成电路片，集成块",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-010-007",
+          "word": "newsletter",
+          "phonetic": [
+            "nju:z'letə"
+          ],
+          "pos": "n.",
+          "meaning": "时事通讯",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-010-008",
+          "word": "Macintosh",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "苹果机，一种个人电脑",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-010-009",
+          "word": "penalize",
+          "phonetic": [
+            "'pi:nlaiz"
+          ],
+          "pos": "v.",
+          "meaning": "处罚，惩罚",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-010-010",
+          "word": "customize",
+          "phonetic": [],
+          "pos": "v.",
+          "meaning": "按顾客具体需要制造",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-010-011",
+          "word": "spawn",
+          "phonetic": [
+            "spɔ:n"
+          ],
+          "pos": "v.",
+          "meaning": "引起，酿成",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-010-012",
+          "word": "thrive",
+          "phonetic": [
+            "θraiv"
+          ],
+          "pos": "v.",
+          "meaning": "兴旺，繁荣",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-010-013",
+          "word": "anarchy",
+          "phonetic": [
+            "'ænəki"
+          ],
+          "pos": "n.",
+          "meaning": "无政府状态，混乱",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-010-014",
+          "word": "oriental",
+          "phonetic": [
+            "'ɔri'entl"
+          ],
+          "pos": "n.",
+          "meaning": "东方人",
+          "orderInLesson": 14
+        },
+        {
+          "id": "nce4-010-015",
+          "word": "constitute",
+          "phonetic": [
+            "'kɔnstitju:t"
+          ],
+          "pos": "v.",
+          "meaning": "构成",
+          "orderInLesson": 15
+        },
+        {
+          "id": "nce4-010-016",
+          "word": "drove",
+          "phonetic": [
+            "drəuv"
+          ],
+          "pos": "n.",
+          "meaning": "群",
+          "orderInLesson": 16
+        },
+        {
+          "id": "nce4-010-017",
+          "word": "innovator",
+          "phonetic": [
+            "'inouveitə"
+          ],
+          "pos": "n.",
+          "meaning": "改革者",
+          "orderInLesson": 17
+        },
+        {
+          "id": "nce4-010-018",
+          "word": "forge",
+          "phonetic": [
+            "fɔ:dʒ"
+          ],
+          "pos": "v.",
+          "meaning": "发展",
+          "orderInLesson": 18
+        },
+        {
+          "id": "nce4-010-019",
+          "word": "memory-chip",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "内存条",
+          "orderInLesson": 19
+        },
+        {
+          "id": "nce4-010-020",
+          "word": "AT&T",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "美国电话电报公司(American Telephone and Telegraph)",
+          "orderInLesson": 20
+        },
+        {
+          "id": "nce4-010-021",
+          "word": "Kansas",
+          "phonetic": [
+            "'kænzəs"
+          ],
+          "pos": "n.",
+          "meaning": "堪萨斯(美国州名)",
+          "orderInLesson": 21
+        },
+        {
+          "id": "nce4-010-022",
+          "word": "Missouri",
+          "phonetic": [
+            "mə'zuri"
+          ],
+          "pos": "n.",
+          "meaning": "密苏里(美国州名)",
+          "orderInLesson": 22
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-011",
+      "lessonNumber": "011",
+      "titleEn": "How to grow old",
+      "titleCn": "论老之将至",
+      "wordCount": 14,
+      "words": [
+        {
+          "id": "nce4-011-001",
+          "word": "oppress",
+          "phonetic": [
+            "ə'pres"
+          ],
+          "pos": "v.",
+          "meaning": "忧郁，压抑",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-011-002",
+          "word": "justification",
+          "phonetic": [
+            "'dʒʌstifi'keiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "正当理由",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-011-003",
+          "word": "justifiably",
+          "phonetic": [
+            "-faiəbli"
+          ],
+          "pos": "ad.",
+          "meaning": "无可非议地",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-011-004",
+          "word": "cheat",
+          "phonetic": [
+            "tʃi:t"
+          ],
+          "pos": "v.",
+          "meaning": "欺骗",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-011-005",
+          "word": "abject",
+          "phonetic": [
+            "'æbdʒekt"
+          ],
+          "pos": "a.",
+          "meaning": "可怜的",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-011-006",
+          "word": "ignoble",
+          "phonetic": [
+            "ig'nəubl"
+          ],
+          "pos": "a.",
+          "meaning": "不体面的，可耻的",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-011-007",
+          "word": "impersonal",
+          "phonetic": [
+            "im'pə:sənl"
+          ],
+          "pos": "a.",
+          "meaning": "超脱个人感情影响的",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-011-008",
+          "word": "ego",
+          "phonetic": [
+            "'egəu"
+          ],
+          "pos": "n.",
+          "meaning": "自我",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-011-009",
+          "word": "recede",
+          "phonetic": [
+            "ri'si:d"
+          ],
+          "pos": "v.",
+          "meaning": "退去",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-011-010",
+          "word": "increasingly",
+          "phonetic": [
+            "in'kri:siŋli"
+          ],
+          "pos": "ad.",
+          "meaning": "日益，不断",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-011-011",
+          "word": "passionately",
+          "phonetic": [],
+          "pos": "ad.",
+          "meaning": "激昂地",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-011-012",
+          "word": "painlessly",
+          "phonetic": [],
+          "pos": "ad.",
+          "meaning": "毫无痛苦地",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-011-013",
+          "word": "vitality",
+          "phonetic": [
+            "vai'tæliti"
+          ],
+          "pos": "n.",
+          "meaning": "精力",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-011-014",
+          "word": "weariness",
+          "phonetic": [
+            "wiərinis"
+          ],
+          "pos": "n.",
+          "meaning": "疲惫感",
+          "orderInLesson": 14
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-012",
+      "lessonNumber": "012",
+      "titleEn": "Banks and their customers",
+      "titleCn": "银行和顾客",
+      "wordCount": 14,
+      "words": [
+        {
+          "id": "nce4-012-001",
+          "word": "current",
+          "phonetic": [
+            "'kʌrənt"
+          ],
+          "pos": "a.",
+          "meaning": "通用的，流行的",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-012-002",
+          "word": "account",
+          "phonetic": [
+            "ə'kaunt"
+          ],
+          "pos": "n.",
+          "meaning": "账户",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-012-003",
+          "word": "cash",
+          "phonetic": [
+            "kæʃ"
+          ],
+          "pos": "n.",
+          "meaning": "现金",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-012-004",
+          "word": "cheque",
+          "phonetic": [
+            "tʃek"
+          ],
+          "pos": "n.",
+          "meaning": "支票",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-012-005",
+          "word": "debtor",
+          "phonetic": [
+            "'detə"
+          ],
+          "pos": "n.",
+          "meaning": "借方",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-012-006",
+          "word": "creditor",
+          "phonetic": [
+            "'kreditə"
+          ],
+          "pos": "n.",
+          "meaning": "贷方",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-012-007",
+          "word": "obligation",
+          "phonetic": [
+            "'ɔbli'geiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "义务",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-012-008",
+          "word": "complication",
+          "phonetic": [
+            "'kɔmpli'keiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "纠纷",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-012-009",
+          "word": "debit",
+          "phonetic": [
+            "'debit"
+          ],
+          "pos": "v.",
+          "meaning": "把…记入借方",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-012-010",
+          "word": "specimen",
+          "phonetic": [
+            "'spesimin"
+          ],
+          "pos": "n.",
+          "meaning": "样本",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-012-011",
+          "word": "forge",
+          "phonetic": [
+            "fɔ:dʒ"
+          ],
+          "pos": "v.",
+          "meaning": "发展",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-012-012",
+          "word": "forgery",
+          "phonetic": [
+            "'fɔ:dʒəri"
+          ],
+          "pos": "n.",
+          "meaning": "伪造(文件，签名等)",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-012-013",
+          "word": "adopt",
+          "phonetic": [
+            "ə'dɔpt"
+          ],
+          "pos": "v.",
+          "meaning": "采用",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-012-014",
+          "word": "facilitate",
+          "phonetic": [
+            "fə'siliteit"
+          ],
+          "pos": "v.",
+          "meaning": "使便利",
+          "orderInLesson": 14
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-013",
+      "lessonNumber": "013",
+      "titleEn": "The search for oil",
+      "titleCn": "探寻石油",
+      "wordCount": 13,
+      "words": [
+        {
+          "id": "nce4-013-001",
+          "word": "mineral",
+          "phonetic": [
+            "'minərəl"
+          ],
+          "pos": "a.",
+          "meaning": "矿物的",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-013-002",
+          "word": "boring",
+          "phonetic": [
+            "'bɔ:riŋ"
+          ],
+          "pos": "n.",
+          "meaning": "钻孔",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-013-003",
+          "word": "derrick",
+          "phonetic": [
+            "'derik"
+          ],
+          "pos": "n.",
+          "meaning": "井架",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-013-004",
+          "word": "block and tackle",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "滑轮组",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-013-005",
+          "word": "haul",
+          "phonetic": [
+            "hɔ:l"
+          ],
+          "pos": "v.",
+          "meaning": "拖，拉",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-013-006",
+          "word": "rotate",
+          "phonetic": [
+            "rəu'teit"
+          ],
+          "pos": "v.",
+          "meaning": "使转动",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-013-007",
+          "word": "cutting bit",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "钻头",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-013-008",
+          "word": "geologist",
+          "phonetic": [
+            "dʒi'ɔlədʒist"
+          ],
+          "pos": "n.",
+          "meaning": "地质学家",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-013-009",
+          "word": "coring bit",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "取芯钻头",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-013-010",
+          "word": "cylinder",
+          "phonetic": [
+            "'silində"
+          ],
+          "pos": "n.",
+          "meaning": "圆柱体",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-013-011",
+          "word": "strata",
+          "phonetic": [
+            "'streitə"
+          ],
+          "pos": "n.",
+          "meaning": "岩层［复］(［单］stratum)",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-013-012",
+          "word": "circulate",
+          "phonetic": [
+            "'sə:kjuleit"
+          ],
+          "pos": "v.",
+          "meaning": "注入，环流",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-013-013",
+          "word": "gusher",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "喷油井",
+          "orderInLesson": 13
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-014",
+      "lessonNumber": "014",
+      "titleEn": "The Butterfly Effect",
+      "titleCn": "蝴蝶效应",
+      "wordCount": 18,
+      "words": [
+        {
+          "id": "nce4-014-001",
+          "word": "forecast",
+          "phonetic": [
+            "'fɔ:ka:st"
+          ],
+          "pos": "n.",
+          "meaning": "预报",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-014-002",
+          "word": "speculative",
+          "phonetic": [
+            "'spekjulətiv"
+          ],
+          "pos": "a.",
+          "meaning": "推测的",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-014-003",
+          "word": "blizzard",
+          "phonetic": [
+            "'blizəd"
+          ],
+          "pos": "n.",
+          "meaning": "暴风雪",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-014-004",
+          "word": "deteriorate",
+          "phonetic": [
+            "di'tiəriəreit"
+          ],
+          "pos": "v.",
+          "meaning": "变坏，恶化",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-014-005",
+          "word": "multiply",
+          "phonetic": [
+            "'mʌltiplai"
+          ],
+          "pos": "v.",
+          "meaning": "增加",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-014-006",
+          "word": "cascade",
+          "phonetic": [
+            "kæs'keid"
+          ],
+          "pos": "v.",
+          "meaning": "瀑布似地落下",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-014-007",
+          "word": "turbulent",
+          "phonetic": [
+            "'tə:bjulənt"
+          ],
+          "pos": "a.",
+          "meaning": "狂暴的",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-014-008",
+          "word": "dust devil",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "小尘暴，尘旋风",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-014-009",
+          "word": "squall",
+          "phonetic": [
+            "skwɔ:l"
+          ],
+          "pos": "n.",
+          "meaning": "暴风",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-014-010",
+          "word": "eddy",
+          "phonetic": [
+            "'edi"
+          ],
+          "pos": "n.",
+          "meaning": "旋涡",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-014-011",
+          "word": "grid",
+          "phonetic": [
+            "grid"
+          ],
+          "pos": "n.",
+          "meaning": "坐标方格",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-014-012",
+          "word": "sensor",
+          "phonetic": [
+            "'sensə"
+          ],
+          "pos": "n.",
+          "meaning": "传感器",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-014-013",
+          "word": "humidity",
+          "phonetic": [
+            "hju:'miditi"
+          ],
+          "pos": "n.",
+          "meaning": "湿度",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-014-014",
+          "word": "meteorologist",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "气象学家",
+          "orderInLesson": 14
+        },
+        {
+          "id": "nce4-014-015",
+          "word": "Princeton",
+          "phonetic": [
+            "'prinstən"
+          ],
+          "pos": "n.",
+          "meaning": "普林斯顿(美国城市名)",
+          "orderInLesson": 15
+        },
+        {
+          "id": "nce4-014-016",
+          "word": "Mew Jersey",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "新泽西(美国州名)",
+          "orderInLesson": 16
+        },
+        {
+          "id": "nce4-014-017",
+          "word": "fluctuation",
+          "phonetic": [
+            "'flʌktju'eiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "起伏，波动",
+          "orderInLesson": 17
+        },
+        {
+          "id": "nce4-014-018",
+          "word": "deviation",
+          "phonetic": [
+            "'di:vi'eiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "偏差",
+          "orderInLesson": 18
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-015",
+      "lessonNumber": "015",
+      "titleEn": "Secrecy in industry",
+      "titleCn": "工业中的秘密",
+      "wordCount": 7,
+      "words": [
+        {
+          "id": "nce4-015-001",
+          "word": "secrecy",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "秘密",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-015-002",
+          "word": "effectiveness",
+          "phonetic": [
+            "i'fektivnis"
+          ],
+          "pos": "n.",
+          "meaning": "成效，效力",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-015-003",
+          "word": "inquiry",
+          "phonetic": [
+            "in'kwaiəri"
+          ],
+          "pos": "n.",
+          "meaning": "调查研究",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-015-004",
+          "word": "positive",
+          "phonetic": [
+            "'pɔzətiv"
+          ],
+          "pos": "a.",
+          "meaning": "确实的",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-015-005",
+          "word": "process",
+          "phonetic": [
+            "'prəuses"
+          ],
+          "pos": "n.",
+          "meaning": "过程",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-015-006",
+          "word": "patent",
+          "phonetic": [
+            "'peitənt"
+          ],
+          "pos": "n./v.",
+          "meaning": "专利；得到专利权",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-015-007",
+          "word": "agent",
+          "phonetic": [
+            "'eidʒənt"
+          ],
+          "pos": "n.",
+          "meaning": "情报人员",
+          "orderInLesson": 7
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-016",
+      "lessonNumber": "016",
+      "titleEn": "The modern city",
+      "titleCn": "现代城市",
+      "wordCount": 18,
+      "words": [
+        {
+          "id": "nce4-016-001",
+          "word": "physiological",
+          "phonetic": [
+            "'fiziə'lɔdʒikəl"
+          ],
+          "pos": "a.",
+          "meaning": "生理的",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-016-002",
+          "word": "maximum",
+          "phonetic": [
+            "'mæksiməm"
+          ],
+          "pos": "a.",
+          "meaning": "最大限度的",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-016-003",
+          "word": "consideration",
+          "phonetic": [
+            "kən'sidə'reiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "考虑",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-016-004",
+          "word": "descendant",
+          "phonetic": [
+            "di'sendənt"
+          ],
+          "pos": "n.",
+          "meaning": "子孙，后代",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-016-005",
+          "word": "artificial",
+          "phonetic": [
+            "'a:ti'fiʃəl"
+          ],
+          "pos": "a.",
+          "meaning": "人工的",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-016-006",
+          "word": "impose",
+          "phonetic": [
+            "im'pəuz"
+          ],
+          "pos": "v.",
+          "meaning": "强加",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-016-007",
+          "word": "dimension",
+          "phonetic": [
+            "di'menʃən"
+          ],
+          "pos": "n.",
+          "meaning": "直径",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-016-008",
+          "word": "skyscraper",
+          "phonetic": [
+            "'skai'skreipə"
+          ],
+          "pos": "n.",
+          "meaning": "摩天大楼",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-016-009",
+          "word": "tenant",
+          "phonetic": [
+            "'tenənt"
+          ],
+          "pos": "n.",
+          "meaning": "租户",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-016-010",
+          "word": "civilized",
+          "phonetic": [
+            "'sivilaizd"
+          ],
+          "pos": "a.",
+          "meaning": "文明的",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-016-011",
+          "word": "banal",
+          "phonetic": [
+            "bə'na:l"
+          ],
+          "pos": "a.",
+          "meaning": "平庸的",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-016-012",
+          "word": "luxury",
+          "phonetic": [
+            "'lʌkʃəri"
+          ],
+          "pos": "n.",
+          "meaning": "豪华",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-016-013",
+          "word": "deprive",
+          "phonetic": [
+            "di'praiv"
+          ],
+          "pos": "v.",
+          "meaning": "剥夺",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-016-014",
+          "word": "monstrous",
+          "phonetic": [
+            "'mɔnstrəs"
+          ],
+          "pos": "a.",
+          "meaning": "畸形的",
+          "orderInLesson": 14
+        },
+        {
+          "id": "nce4-016-015",
+          "word": "edifice",
+          "phonetic": [
+            "'edifis"
+          ],
+          "pos": "n.",
+          "meaning": "大厦",
+          "orderInLesson": 15
+        },
+        {
+          "id": "nce4-016-016",
+          "word": "toxic",
+          "phonetic": [
+            "'tɔksik"
+          ],
+          "pos": "a.",
+          "meaning": "有毒的",
+          "orderInLesson": 16
+        },
+        {
+          "id": "nce4-016-017",
+          "word": "ceaselessly",
+          "phonetic": [
+            "'si:slisli"
+          ],
+          "pos": "ad.",
+          "meaning": "不停地",
+          "orderInLesson": 17
+        },
+        {
+          "id": "nce4-016-018",
+          "word": "throng",
+          "phonetic": [
+            "θrɔŋ"
+          ],
+          "pos": "v.",
+          "meaning": "挤满，壅塞",
+          "orderInLesson": 18
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-017",
+      "lessonNumber": "017",
+      "titleEn": "A man-made disease",
+      "titleCn": "人为的疾病",
+      "wordCount": 23,
+      "words": [
+        {
+          "id": "nce4-017-001",
+          "word": "settlement",
+          "phonetic": [
+            "'setlmənt"
+          ],
+          "pos": "n.",
+          "meaning": "新拓居地",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-017-002",
+          "word": "enterprising",
+          "phonetic": [
+            "'entəpraiziŋ"
+          ],
+          "pos": "a.",
+          "meaning": "有事业心的",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-017-003",
+          "word": "settler",
+          "phonetic": [
+            "'setlə"
+          ],
+          "pos": "n.",
+          "meaning": "移居者",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-017-004",
+          "word": "Antipodes",
+          "phonetic": [
+            "æn'tipədi:z"
+          ],
+          "pos": "n.",
+          "meaning": "(the～)新西兰和澳大利亚(英)",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-017-005",
+          "word": "promiscuous",
+          "phonetic": [
+            "prə'miskjuəs"
+          ],
+          "pos": "a.",
+          "meaning": "杂乱的",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-017-006",
+          "word": "abandon",
+          "phonetic": [
+            "ə'bændən"
+          ],
+          "pos": "n.",
+          "meaning": "放任，纵情",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-017-007",
+          "word": "overrun",
+          "phonetic": [
+            "əuvə'rʌn"
+          ],
+          "pos": "v.",
+          "meaning": "蔓延，泛滥",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-017-008",
+          "word": "devastation",
+          "phonetic": [
+            "devə'steiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "破坏，劫掠",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-017-009",
+          "word": "burrow",
+          "phonetic": [
+            "'bʌrəu"
+          ],
+          "pos": "v.",
+          "meaning": "挖、掘",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-017-010",
+          "word": "susceptible",
+          "phonetic": [
+            "sə'septəbl"
+          ],
+          "pos": "a.",
+          "meaning": "易受感染的",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-017-011",
+          "word": "virus",
+          "phonetic": [
+            "'vaiərəs"
+          ],
+          "pos": "n.",
+          "meaning": "病毒",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-017-012",
+          "word": "myxomatosis",
+          "phonetic": [
+            "'miksəmə'təusis"
+          ],
+          "pos": "n.",
+          "meaning": "多发性粘液瘤",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-017-013",
+          "word": "infect",
+          "phonetic": [
+            "in'fekt"
+          ],
+          "pos": "v.",
+          "meaning": "传染",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-017-014",
+          "word": "epidemic",
+          "phonetic": [
+            "'epi'demik"
+          ],
+          "pos": "n.",
+          "meaning": "流行病",
+          "orderInLesson": 14
+        },
+        {
+          "id": "nce4-017-015",
+          "word": "mosquito",
+          "phonetic": [
+            "məs'ki:təu"
+          ],
+          "pos": "n.",
+          "meaning": "蚊虫",
+          "orderInLesson": 15
+        },
+        {
+          "id": "nce4-017-016",
+          "word": "carrier",
+          "phonetic": [
+            "'kæriə"
+          ],
+          "pos": "n.",
+          "meaning": "带菌者",
+          "orderInLesson": 16
+        },
+        {
+          "id": "nce4-017-017",
+          "word": "exterminate",
+          "phonetic": [
+            "eks'tə:mineit"
+          ],
+          "pos": "v.",
+          "meaning": "消灭",
+          "orderInLesson": 17
+        },
+        {
+          "id": "nce4-017-018",
+          "word": "ironically",
+          "phonetic": [
+            "ai'rɔnikəli"
+          ],
+          "pos": "ad.",
+          "meaning": "具有讽刺意味地",
+          "orderInLesson": 18
+        },
+        {
+          "id": "nce4-017-019",
+          "word": "bequeath",
+          "phonetic": [
+            "bi'kwi:ð"
+          ],
+          "pos": "v.",
+          "meaning": "把…传给",
+          "orderInLesson": 19
+        },
+        {
+          "id": "nce4-017-020",
+          "word": "pest",
+          "phonetic": [
+            "pest"
+          ],
+          "pos": "n.",
+          "meaning": "害虫，有害动物",
+          "orderInLesson": 20
+        },
+        {
+          "id": "nce4-017-021",
+          "word": "pestilence",
+          "phonetic": [
+            "'pestiləns"
+          ],
+          "pos": "n.",
+          "meaning": "瘟疫",
+          "orderInLesson": 21
+        },
+        {
+          "id": "nce4-017-022",
+          "word": "confine",
+          "phonetic": [
+            "kən'fain"
+          ],
+          "pos": "n.",
+          "meaning": "范围",
+          "orderInLesson": 22
+        },
+        {
+          "id": "nce4-017-023",
+          "word": "domesticate",
+          "phonetic": [
+            "də'mestikeit"
+          ],
+          "pos": "v.",
+          "meaning": "驯养",
+          "orderInLesson": 23
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-018",
+      "lessonNumber": "018",
+      "titleEn": "Porpoises",
+      "titleCn": "海豚",
+      "wordCount": 22,
+      "words": [
+        {
+          "id": "nce4-018-001",
+          "word": "porpoise",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "海豚",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-018-002",
+          "word": "mariner",
+          "phonetic": [
+            "'mærinə"
+          ],
+          "pos": "n.",
+          "meaning": "水手",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-018-003",
+          "word": "shark",
+          "phonetic": [
+            "ʃa:k"
+          ],
+          "pos": "n.",
+          "meaning": "鲨鱼",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-018-004",
+          "word": "formation",
+          "phonetic": [
+            "fɔ:'meiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "队形",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-018-005",
+          "word": "dolphin",
+          "phonetic": [
+            "'dɔlfin"
+          ],
+          "pos": "n.",
+          "meaning": "海豚科动物",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-018-006",
+          "word": "unconscious",
+          "phonetic": [
+            "ʌn'kɔʃəs"
+          ],
+          "pos": "a.",
+          "meaning": "不省人事的",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-018-007",
+          "word": "beaver",
+          "phonetic": [
+            "'bi:və"
+          ],
+          "pos": "n.",
+          "meaning": "海狸",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-018-008",
+          "word": "ashore",
+          "phonetic": [
+            "ə'ʃɔ:"
+          ],
+          "pos": "ad.",
+          "meaning": "上岸",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-018-009",
+          "word": "waterlogged",
+          "phonetic": [],
+          "pos": "a.",
+          "meaning": "浸满水的",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-018-010",
+          "word": "scent",
+          "phonetic": [
+            "sent"
+          ],
+          "pos": "n.",
+          "meaning": "香味",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-018-011",
+          "word": "ensue",
+          "phonetic": [
+            "in'sju:"
+          ],
+          "pos": "v.",
+          "meaning": "接着发生",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-018-012",
+          "word": "intrigue",
+          "phonetic": [
+            "in'tri:g"
+          ],
+          "pos": "v.",
+          "meaning": "引起兴趣",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-018-013",
+          "word": "indignity",
+          "phonetic": [
+            "in'digniti"
+          ],
+          "pos": "n.",
+          "meaning": "侮辱",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-018-014",
+          "word": "snout",
+          "phonetic": [
+            "snaut"
+          ],
+          "pos": "n.",
+          "meaning": "口鼻部",
+          "orderInLesson": 14
+        },
+        {
+          "id": "nce4-018-015",
+          "word": "shove",
+          "phonetic": [
+            "ʃʌv"
+          ],
+          "pos": "v.",
+          "meaning": "硬推",
+          "orderInLesson": 15
+        },
+        {
+          "id": "nce4-018-016",
+          "word": "aquaplane",
+          "phonetic": [
+            "'ækwəplein"
+          ],
+          "pos": "n.",
+          "meaning": "驾浪滑水板",
+          "orderInLesson": 16
+        },
+        {
+          "id": "nce4-018-017",
+          "word": "oceanarium",
+          "phonetic": [
+            "'ouʃən'ʒəri-əm"
+          ],
+          "pos": "n.",
+          "meaning": "水族馆",
+          "orderInLesson": 17
+        },
+        {
+          "id": "nce4-018-018",
+          "word": "swoop",
+          "phonetic": [
+            "swu:p"
+          ],
+          "pos": "v.",
+          "meaning": "猛扑",
+          "orderInLesson": 18
+        },
+        {
+          "id": "nce4-018-019",
+          "word": "belly",
+          "phonetic": [
+            "'beli"
+          ],
+          "pos": "n.",
+          "meaning": "腹部",
+          "orderInLesson": 19
+        },
+        {
+          "id": "nce4-018-020",
+          "word": "equilibrium",
+          "phonetic": [
+            "i:kwi'libriəm"
+          ],
+          "pos": "n.",
+          "meaning": "平衡",
+          "orderInLesson": 20
+        },
+        {
+          "id": "nce4-018-021",
+          "word": "butt",
+          "phonetic": [
+            "bʌt"
+          ],
+          "pos": "v.",
+          "meaning": "碰撞",
+          "orderInLesson": 21
+        },
+        {
+          "id": "nce4-018-022",
+          "word": "crack",
+          "phonetic": [
+            "kræk"
+          ],
+          "pos": "n.",
+          "meaning": "重击",
+          "orderInLesson": 22
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-019",
+      "lessonNumber": "019",
+      "titleEn": "The stuff of dreams",
+      "titleCn": "话说梦的本质",
+      "wordCount": 14,
+      "words": [
+        {
+          "id": "nce4-019-001",
+          "word": "speculation",
+          "phonetic": [
+            "'spekju'leiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "推测",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-019-002",
+          "word": "literally",
+          "phonetic": [
+            "'litərəli"
+          ],
+          "pos": "ad.",
+          "meaning": "确实",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-019-003",
+          "word": "odd",
+          "phonetic": [
+            "ɔd"
+          ],
+          "pos": "a.",
+          "meaning": "奇特的",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-019-004",
+          "word": "tissue",
+          "phonetic": [
+            "'tisju:"
+          ],
+          "pos": "n.",
+          "meaning": "组织",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-019-005",
+          "word": "plausible",
+          "phonetic": [
+            "'plɔ:zəbl"
+          ],
+          "pos": "a.",
+          "meaning": "似乎有理的",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-019-006",
+          "word": "hypothesis",
+          "phonetic": [
+            "hai'pɔθisi:z"
+          ],
+          "pos": "n.",
+          "meaning": "假说",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-019-007",
+          "word": "electroencephalograph",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "脑电图仪",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-019-008",
+          "word": "electrode",
+          "phonetic": [
+            "i'lektrəud"
+          ],
+          "pos": "n.",
+          "meaning": "电极",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-019-009",
+          "word": "scaly",
+          "phonetic": [
+            "'skeili"
+          ],
+          "pos": "n.",
+          "meaning": "头发",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-019-010",
+          "word": "psychiatrist",
+          "phonetic": [
+            "sai'kaiətrist"
+          ],
+          "pos": "n.",
+          "meaning": "精神病学家",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-019-011",
+          "word": "punctuate",
+          "phonetic": [
+            "'pʌŋktjueit"
+          ],
+          "pos": "v.",
+          "meaning": "不时介入",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-019-012",
+          "word": "jerky",
+          "phonetic": [
+            "dʒə:ki"
+          ],
+          "pos": "a.",
+          "meaning": "急动的",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-019-013",
+          "word": "disorder",
+          "phonetic": [
+            "dis'ɔ:də"
+          ],
+          "pos": "n.",
+          "meaning": "失调",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-019-014",
+          "word": "implication",
+          "phonetic": [
+            "impli'keiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "表明",
+          "orderInLesson": 14
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-020",
+      "lessonNumber": "020",
+      "titleEn": "Snake poison",
+      "titleCn": "蛇毒",
+      "wordCount": 23,
+      "words": [
+        {
+          "id": "nce4-020-001",
+          "word": "saliva",
+          "phonetic": [
+            "sə'laivə"
+          ],
+          "pos": "n.",
+          "meaning": "唾液",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-020-002",
+          "word": "digestive",
+          "phonetic": [
+            "di'dʒestiv"
+          ],
+          "pos": "a.",
+          "meaning": "助消化的",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-020-003",
+          "word": "defy",
+          "phonetic": [
+            "di'fai"
+          ],
+          "pos": "v.",
+          "meaning": "使不可能",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-020-004",
+          "word": "analysis",
+          "phonetic": [
+            "ə'næləsis"
+          ],
+          "pos": "n.",
+          "meaning": "分析",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-020-005",
+          "word": "prey",
+          "phonetic": [
+            "prei"
+          ],
+          "pos": "n.",
+          "meaning": "被捕食的动物",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-020-006",
+          "word": "fierce",
+          "phonetic": [
+            "fiəs"
+          ],
+          "pos": "a.",
+          "meaning": "凶猛的",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-020-007",
+          "word": "tussle",
+          "phonetic": [
+            "'tʌsl"
+          ],
+          "pos": "n.",
+          "meaning": "扭打",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-020-008",
+          "word": "carnivore",
+          "phonetic": [
+            "'ka:nivɔ:"
+          ],
+          "pos": "n.",
+          "meaning": "食肉动物",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-020-009",
+          "word": "vertebrate",
+          "phonetic": [
+            "'və:tibrit"
+          ],
+          "pos": "n.",
+          "meaning": "脊椎动物",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-020-010",
+          "word": "lizard",
+          "phonetic": [
+            "'lizəd"
+          ],
+          "pos": "n.",
+          "meaning": "蜥蜴",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-020-011",
+          "word": "concoct",
+          "phonetic": [
+            "kən'kɔkt"
+          ],
+          "pos": "v.",
+          "meaning": "调制",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-020-012",
+          "word": "potency",
+          "phonetic": [
+            "'pəutənsi"
+          ],
+          "pos": "n.",
+          "meaning": "效力",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-020-013",
+          "word": "conversion",
+          "phonetic": [
+            "kən'və:ʃən"
+          ],
+          "pos": "n.",
+          "meaning": "转变",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-020-014",
+          "word": "arsenic",
+          "phonetic": [
+            "'a:snik"
+          ],
+          "pos": "n.",
+          "meaning": "砒霜",
+          "orderInLesson": 14
+        },
+        {
+          "id": "nce4-020-015",
+          "word": "strychnine",
+          "phonetic": [
+            "'striknin"
+          ],
+          "pos": "n.",
+          "meaning": "马钱子碱",
+          "orderInLesson": 15
+        },
+        {
+          "id": "nce4-020-016",
+          "word": "mamba",
+          "phonetic": [
+            "'mɔmbə"
+          ],
+          "pos": "n.",
+          "meaning": "树眼镜蛇",
+          "orderInLesson": 16
+        },
+        {
+          "id": "nce4-020-017",
+          "word": "cobra",
+          "phonetic": [
+            "'kəubrə"
+          ],
+          "pos": "n.",
+          "meaning": "眼镜蛇",
+          "orderInLesson": 17
+        },
+        {
+          "id": "nce4-020-018",
+          "word": "venom",
+          "phonetic": [
+            "'venəm"
+          ],
+          "pos": "n.",
+          "meaning": "毒液",
+          "orderInLesson": 18
+        },
+        {
+          "id": "nce4-020-019",
+          "word": "neurotoxic",
+          "phonetic": [
+            "'njuərou'tɔksik",
+            "'nu-"
+          ],
+          "pos": "a.",
+          "meaning": "毒害神经的",
+          "orderInLesson": 19
+        },
+        {
+          "id": "nce4-020-020",
+          "word": "viper",
+          "phonetic": [
+            "'vaipə"
+          ],
+          "pos": "n.",
+          "meaning": "蝰蛇",
+          "orderInLesson": 20
+        },
+        {
+          "id": "nce4-020-021",
+          "word": "rattlesnake",
+          "phonetic": [
+            "'rætlsneik"
+          ],
+          "pos": "n.",
+          "meaning": "响尾蛇",
+          "orderInLesson": 21
+        },
+        {
+          "id": "nce4-020-022",
+          "word": "haemolytic",
+          "phonetic": [],
+          "pos": "a.",
+          "meaning": "溶血性的",
+          "orderInLesson": 22
+        },
+        {
+          "id": "nce4-020-023",
+          "word": "viperine",
+          "phonetic": [
+            "'vaipərin"
+          ],
+          "pos": "a.",
+          "meaning": "毒蛇的",
+          "orderInLesson": 23
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-021",
+      "lessonNumber": "021",
+      "titleEn": "William S. Hart and the early 'Western' film",
+      "titleCn": "威廉·S·哈特和早期的西部片",
+      "wordCount": 21,
+      "words": [
+        {
+          "id": "nce4-021-001",
+          "word": "supreme",
+          "phonetic": [
+            "sju:'pri:m"
+          ],
+          "pos": "a.",
+          "meaning": "首屈一指的",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-021-002",
+          "word": "protagonist",
+          "phonetic": [
+            "prəu'tægənist"
+          ],
+          "pos": "n.",
+          "meaning": "主角",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-021-003",
+          "word": "outlaw",
+          "phonetic": [
+            "'autlɔ:"
+          ],
+          "pos": "n.",
+          "meaning": "逃犯，亡命之徒",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-021-004",
+          "word": "framed",
+          "phonetic": [],
+          "pos": "a.",
+          "meaning": "遭到陷害的",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-021-005",
+          "word": "vicious",
+          "phonetic": [
+            "'viʃəs"
+          ],
+          "pos": "a.",
+          "meaning": "恶毒的",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-021-006",
+          "word": "mythology",
+          "phonetic": [
+            "mi'θɔlədʒi"
+          ],
+          "pos": "n.",
+          "meaning": "神话",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-021-007",
+          "word": "vanished",
+          "phonetic": [],
+          "pos": "a.",
+          "meaning": "消失了的",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-021-008",
+          "word": "absurdly",
+          "phonetic": [
+            "əb'sə:dli"
+          ],
+          "pos": "ad.",
+          "meaning": "荒诞地",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-021-009",
+          "word": "arena",
+          "phonetic": [
+            "ə'ri:nə"
+          ],
+          "pos": "n.",
+          "meaning": "竞技场地",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-021-010",
+          "word": "encroaching",
+          "phonetic": [],
+          "pos": "a.",
+          "meaning": "渐渐渗入的",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-021-011",
+          "word": "Indian",
+          "phonetic": [
+            "'indiən"
+          ],
+          "pos": "n.",
+          "meaning": "印第安人",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-021-012",
+          "word": "bewilder",
+          "phonetic": [
+            "bi'wildə"
+          ],
+          "pos": "v.",
+          "meaning": "使手足无措",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-021-013",
+          "word": "alien",
+          "phonetic": [
+            "'eiljən"
+          ],
+          "pos": "a.",
+          "meaning": "外来的",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-021-014",
+          "word": "taboo",
+          "phonetic": [
+            "tə'bu:"
+          ],
+          "pos": "n.",
+          "meaning": "戒律",
+          "orderInLesson": 14
+        },
+        {
+          "id": "nce4-021-015",
+          "word": "disinherit",
+          "phonetic": [
+            "'disin'herit"
+          ],
+          "pos": "v.",
+          "meaning": "剥夺…继承权",
+          "orderInLesson": 15
+        },
+        {
+          "id": "nce4-021-016",
+          "word": "undeclared",
+          "phonetic": [
+            "'ʌndi'klєəd"
+          ],
+          "pos": "a.",
+          "meaning": "未经宣布的",
+          "orderInLesson": 16
+        },
+        {
+          "id": "nce4-021-017",
+          "word": "hypocrisy",
+          "phonetic": [
+            "hi'pɔkrəsi"
+          ],
+          "pos": "n.",
+          "meaning": "伪善",
+          "orderInLesson": 17
+        },
+        {
+          "id": "nce4-021-018",
+          "word": "chicanery",
+          "phonetic": [
+            "ʃi'keinəri"
+          ],
+          "pos": "n.",
+          "meaning": "诈骗",
+          "orderInLesson": 18
+        },
+        {
+          "id": "nce4-021-019",
+          "word": "impending",
+          "phonetic": [
+            "im'pendiŋ"
+          ],
+          "pos": "a.",
+          "meaning": "迫近的，迫在眉睫的",
+          "orderInLesson": 19
+        },
+        {
+          "id": "nce4-021-020",
+          "word": "immolation",
+          "phonetic": [
+            "iməu'leiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "杀戮",
+          "orderInLesson": 20
+        },
+        {
+          "id": "nce4-021-021",
+          "word": "code",
+          "phonetic": [
+            "kəud"
+          ],
+          "pos": "n.",
+          "meaning": "准则",
+          "orderInLesson": 21
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-022",
+      "lessonNumber": "022",
+      "titleEn": "Knowledge and progress",
+      "titleCn": "知识和进步",
+      "wordCount": 15,
+      "words": [
+        {
+          "id": "nce4-022-001",
+          "word": "loom",
+          "phonetic": [
+            "lu:m"
+          ],
+          "pos": "v.",
+          "meaning": "赫然耸起",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-022-002",
+          "word": "manifest",
+          "phonetic": [
+            "'mænifest"
+          ],
+          "pos": "a.",
+          "meaning": "明显的",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-022-003",
+          "word": "morality",
+          "phonetic": [
+            "mə'ræliti"
+          ],
+          "pos": "n.",
+          "meaning": "道德",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-022-004",
+          "word": "communicate",
+          "phonetic": [
+            "kə'mju:nikeit"
+          ],
+          "pos": "v.",
+          "meaning": "交流，交际",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-022-005",
+          "word": "compound",
+          "phonetic": [
+            "'kɔmpaund",
+            "kəm'paund"
+          ],
+          "pos": "a.",
+          "meaning": "复合的",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-022-006",
+          "word": "enhance",
+          "phonetic": [
+            "in'ha:ns"
+          ],
+          "pos": "v.",
+          "meaning": "增进",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-022-007",
+          "word": "tempo",
+          "phonetic": [
+            "'tempəu"
+          ],
+          "pos": "n.",
+          "meaning": "速率",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-022-008",
+          "word": "trickle",
+          "phonetic": [
+            "'trikl"
+          ],
+          "pos": "n.",
+          "meaning": "涓涓细流",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-022-009",
+          "word": "torrent",
+          "phonetic": [
+            "'tɔrənt"
+          ],
+          "pos": "n.",
+          "meaning": "滔滔洪流",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-022-010",
+          "word": "humanity",
+          "phonetic": [
+            "hju:'mæniti"
+          ],
+          "pos": "n.",
+          "meaning": "人类",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-022-011",
+          "word": "indifferently",
+          "phonetic": [
+            "in'difrəntli"
+          ],
+          "pos": "ad.",
+          "meaning": "不在乎地",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-022-012",
+          "word": "grimly",
+          "phonetic": [
+            "'grimli"
+          ],
+          "pos": "ad.",
+          "meaning": "可怖地",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-022-013",
+          "word": "whimsical",
+          "phonetic": [
+            "'wimzikl"
+          ],
+          "pos": "a.",
+          "meaning": "怪诞的",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-022-014",
+          "word": "shatter",
+          "phonetic": [
+            "'ʃætə"
+          ],
+          "pos": "v.",
+          "meaning": "毁坏",
+          "orderInLesson": 14
+        },
+        {
+          "id": "nce4-022-015",
+          "word": "twofold",
+          "phonetic": [
+            "'tu:fəuld"
+          ],
+          "pos": "a.",
+          "meaning": "双重的",
+          "orderInLesson": 15
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-023",
+      "lessonNumber": "023",
+      "titleEn": "Bird flight",
+      "titleCn": "鸟的飞行方法",
+      "wordCount": 14,
+      "words": [
+        {
+          "id": "nce4-023-001",
+          "word": "albatross",
+          "phonetic": [
+            "'ælbətrɔs"
+          ],
+          "pos": "n.",
+          "meaning": "信天翁",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-023-002",
+          "word": "sustenance",
+          "phonetic": [
+            "'sʌstənəns"
+          ],
+          "pos": "n.",
+          "meaning": "支撑力",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-023-003",
+          "word": "glider",
+          "phonetic": [
+            "'glaidə"
+          ],
+          "pos": "n.",
+          "meaning": "滑翔者",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-023-004",
+          "word": "harness",
+          "phonetic": [
+            "'ha:nis"
+          ],
+          "pos": "v.",
+          "meaning": "利用",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-023-005",
+          "word": "endow",
+          "phonetic": [
+            "in'dau"
+          ],
+          "pos": "v.",
+          "meaning": "赋有",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-023-006",
+          "word": "ply",
+          "phonetic": [
+            "plai"
+          ],
+          "pos": "v.",
+          "meaning": "不断地供给",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-023-007",
+          "word": "gale",
+          "phonetic": [
+            "geil"
+          ],
+          "pos": "n.",
+          "meaning": "大风",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-023-008",
+          "word": "partridge",
+          "phonetic": [
+            "'pa:tridʒ"
+          ],
+          "pos": "n.",
+          "meaning": "鹧鸪",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-023-009",
+          "word": "like",
+          "phonetic": [
+            "laik"
+          ],
+          "pos": "a.",
+          "meaning": "类似的",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-023-010",
+          "word": "propulsion",
+          "phonetic": [
+            "prə'pʌlʃən"
+          ],
+          "pos": "n.",
+          "meaning": "推进力",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-023-011",
+          "word": "utter",
+          "phonetic": [
+            "'ʌtə"
+          ],
+          "pos": "a.",
+          "meaning": "完全的",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-023-012",
+          "word": "slip",
+          "phonetic": [
+            "slip"
+          ],
+          "pos": "v.",
+          "meaning": "滑行",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-023-013",
+          "word": "adverse",
+          "phonetic": [
+            "'ædvə:s"
+          ],
+          "pos": "a.",
+          "meaning": "逆的，相反的",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-023-014",
+          "word": "omen",
+          "phonetic": [
+            "'əumen"
+          ],
+          "pos": "n.",
+          "meaning": "预兆",
+          "orderInLesson": 14
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-024",
+      "lessonNumber": "024",
+      "titleEn": "Beauty",
+      "titleCn": "美",
+      "wordCount": 11,
+      "words": [
+        {
+          "id": "nce4-024-001",
+          "word": "intense",
+          "phonetic": [
+            "in'tens"
+          ],
+          "pos": "a.",
+          "meaning": "强烈的",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-024-002",
+          "word": "aesthetic",
+          "phonetic": [
+            "i:s'θetik"
+          ],
+          "pos": "a.",
+          "meaning": "审美的",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-024-003",
+          "word": "realm",
+          "phonetic": [
+            "'relm"
+          ],
+          "pos": "n.",
+          "meaning": "世界",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-024-004",
+          "word": "serenity",
+          "phonetic": [
+            "si'reniti"
+          ],
+          "pos": "n.",
+          "meaning": "静谧",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-024-005",
+          "word": "undeniable",
+          "phonetic": [
+            "'ʌndi'naiəbl"
+          ],
+          "pos": "a.",
+          "meaning": "不可否认的",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-024-006",
+          "word": "indefinable",
+          "phonetic": [
+            "'indi'fainəbl"
+          ],
+          "pos": "a.",
+          "meaning": "模糊不清的",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-024-007",
+          "word": "vulgar",
+          "phonetic": [
+            "'vʌlgə"
+          ],
+          "pos": "a.",
+          "meaning": "平庸的",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-024-008",
+          "word": "radiance",
+          "phonetic": [
+            "'reidjəns"
+          ],
+          "pos": "n.",
+          "meaning": "发光",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-024-009",
+          "word": "intimation",
+          "phonetic": [
+            "inti'meiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "暗示",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-024-010",
+          "word": "unutterable",
+          "phonetic": [
+            "ʌn'ʌtərəbl"
+          ],
+          "pos": "a.",
+          "meaning": "不可言传的",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-024-011",
+          "word": "invest",
+          "phonetic": [
+            "in'vest"
+          ],
+          "pos": "v.",
+          "meaning": "赋予",
+          "orderInLesson": 11
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-025",
+      "lessonNumber": "025",
+      "titleEn": "Non-auditory effects of noise",
+      "titleCn": "噪音的非听觉效应",
+      "wordCount": 16,
+      "words": [
+        {
+          "id": "nce4-025-001",
+          "word": "auditory",
+          "phonetic": [
+            "'ɔ:ditɑ:i"
+          ],
+          "pos": "a.",
+          "meaning": "听觉的",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-025-002",
+          "word": "inadequate",
+          "phonetic": [
+            "in'ædikwit"
+          ],
+          "pos": "a.",
+          "meaning": "不适当的",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-025-003",
+          "word": "plea",
+          "phonetic": [
+            "pli:"
+          ],
+          "pos": "n.",
+          "meaning": "要求",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-025-004",
+          "word": "abatement",
+          "phonetic": [
+            "ə'beitmənt"
+          ],
+          "pos": "n.",
+          "meaning": "减少",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-025-005",
+          "word": "discredit",
+          "phonetic": [
+            "dis'kredit"
+          ],
+          "pos": "v.",
+          "meaning": "怀疑",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-025-006",
+          "word": "allegation",
+          "phonetic": [
+            "æli'geiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "断言",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-025-007",
+          "word": "caption",
+          "phonetic": [
+            "kæpʃən"
+          ],
+          "pos": "n.",
+          "meaning": "插图说明",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-025-008",
+          "word": "wreck",
+          "phonetic": [
+            "rek"
+          ],
+          "pos": "n.",
+          "meaning": "残废人",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-025-009",
+          "word": "snag",
+          "phonetic": [
+            "snæg"
+          ],
+          "pos": "n.",
+          "meaning": "疑难之处，障碍",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-025-010",
+          "word": "anecdote",
+          "phonetic": [
+            "'ænikdəut"
+          ],
+          "pos": "n.",
+          "meaning": "轶闻",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-025-011",
+          "word": "slander",
+          "phonetic": [
+            "'sla:ndə"
+          ],
+          "pos": "v.",
+          "meaning": "诽谤",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-025-012",
+          "word": "persecute",
+          "phonetic": [
+            "'pə:sikju:t"
+          ],
+          "pos": "v.",
+          "meaning": "迫害",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-025-013",
+          "word": "squadron",
+          "phonetic": [
+            "'skwɔdrən"
+          ],
+          "pos": "n.",
+          "meaning": "中队",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-025-014",
+          "word": "psychiatric",
+          "phonetic": [
+            "'saiki'ætrik"
+          ],
+          "pos": "a.",
+          "meaning": "精神病学的",
+          "orderInLesson": 14
+        },
+        {
+          "id": "nce4-025-015",
+          "word": "diagnosis",
+          "phonetic": [
+            "'daiəg'nəusis"
+          ],
+          "pos": "n.",
+          "meaning": "诊断",
+          "orderInLesson": 15
+        },
+        {
+          "id": "nce4-025-016",
+          "word": "orphanage",
+          "phonetic": [
+            "'ɔ:fənidʒ"
+          ],
+          "pos": "n.",
+          "meaning": "孤儿院",
+          "orderInLesson": 16
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-026",
+      "lessonNumber": "026",
+      "titleEn": "The past life of the earth",
+      "titleCn": "地球上的昔日生命",
+      "wordCount": 13,
+      "words": [
+        {
+          "id": "nce4-026-001",
+          "word": "preservation",
+          "phonetic": [
+            "'prezə(:)'veiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "保存",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-026-002",
+          "word": "silt",
+          "phonetic": [
+            "silt"
+          ],
+          "pos": "n.",
+          "meaning": "淤泥",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-026-003",
+          "word": "scavenger",
+          "phonetic": [
+            "'skævindʒə"
+          ],
+          "pos": "n.",
+          "meaning": "食腐动物",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-026-004",
+          "word": "vole",
+          "phonetic": [
+            "vəul"
+          ],
+          "pos": "n.",
+          "meaning": "野鼠，鼹鼠",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-026-005",
+          "word": "decompose",
+          "phonetic": [
+            "'di:kəm'pəuz"
+          ],
+          "pos": "v.",
+          "meaning": "腐烂",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-026-006",
+          "word": "inaccessible",
+          "phonetic": [
+            "inæk'sesəbl"
+          ],
+          "pos": "a.",
+          "meaning": "不能到达的",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-026-007",
+          "word": "crevasse",
+          "phonetic": [
+            "kri'væs"
+          ],
+          "pos": "n.",
+          "meaning": "缝隙",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-026-008",
+          "word": "Siberian",
+          "phonetic": [
+            "sai'biəriən"
+          ],
+          "pos": "a.",
+          "meaning": "西伯利亚的",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-026-009",
+          "word": "paleontological",
+          "phonetic": [],
+          "pos": "a.",
+          "meaning": "古生物学的",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-026-010",
+          "word": "St.Petersbrug",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "圣彼得堡",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-026-011",
+          "word": "sabre-toothed",
+          "phonetic": [],
+          "pos": "a.",
+          "meaning": "长着锐利的长犬牙的",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-026-012",
+          "word": "venture",
+          "phonetic": [
+            "'ventʃə"
+          ],
+          "pos": "v.",
+          "meaning": "冒险",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-026-013",
+          "word": "bogged",
+          "phonetic": [],
+          "pos": "a.",
+          "meaning": "陷入泥沼的，陷于困境的",
+          "orderInLesson": 13
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-027",
+      "lessonNumber": "027",
+      "titleEn": "The 'Vasa'",
+      "titleCn": "瓦萨号",
+      "wordCount": 38,
+      "words": [
+        {
+          "id": "nce4-027-001",
+          "word": "galleon",
+          "phonetic": [
+            "'gæliən"
+          ],
+          "pos": "n.",
+          "meaning": "大型帆船",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-027-002",
+          "word": "Stockholm",
+          "phonetic": [
+            "'stɔkhəum"
+          ],
+          "pos": "n.",
+          "meaning": "斯德哥尔摩",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-027-003",
+          "word": "flagship",
+          "phonetic": [
+            "'flægʃip"
+          ],
+          "pos": "n.",
+          "meaning": "旗舰",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-027-004",
+          "word": "imperial",
+          "phonetic": [
+            "im'piəriəl"
+          ],
+          "pos": "a.",
+          "meaning": "帝国的",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-027-005",
+          "word": "hurricane",
+          "phonetic": [
+            "'hʌrikən"
+          ],
+          "pos": "n.",
+          "meaning": "飓风",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-027-006",
+          "word": "might",
+          "phonetic": [
+            "mait"
+          ],
+          "pos": "n.",
+          "meaning": "力量",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-027-007",
+          "word": "ferment",
+          "phonetic": [
+            "'fə:ment"
+          ],
+          "pos": "n.",
+          "meaning": "激动不安",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-027-008",
+          "word": "ornament",
+          "phonetic": [
+            "'ɔ:nəmənt",
+            "'ɔ:nəment"
+          ],
+          "pos": "v.",
+          "meaning": "装饰",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-027-009",
+          "word": "riot",
+          "phonetic": [
+            "'raiət"
+          ],
+          "pos": "n.",
+          "meaning": "丰富",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-027-010",
+          "word": "demon",
+          "phonetic": [
+            "'di:mən"
+          ],
+          "pos": "n.",
+          "meaning": "恶魔",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-027-011",
+          "word": "mermaid",
+          "phonetic": [
+            "'mə:meid"
+          ],
+          "pos": "n.",
+          "meaning": "美人鱼",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-027-012",
+          "word": "cherub",
+          "phonetic": [
+            "'tʃerəb"
+          ],
+          "pos": "n.",
+          "meaning": "小天使",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-027-013",
+          "word": "zoomorphic",
+          "phonetic": [
+            "'zouə'mɔ:fik"
+          ],
+          "pos": "a.",
+          "meaning": "兽形的",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-027-014",
+          "word": "ablaze",
+          "phonetic": [
+            "ə'bleiz"
+          ],
+          "pos": "a.",
+          "meaning": "光彩的",
+          "orderInLesson": 14
+        },
+        {
+          "id": "nce4-027-015",
+          "word": "portray",
+          "phonetic": [
+            "pɔ:'trei"
+          ],
+          "pos": "v.",
+          "meaning": "绘制",
+          "orderInLesson": 15
+        },
+        {
+          "id": "nce4-027-016",
+          "word": "drifting",
+          "phonetic": [],
+          "pos": "a.",
+          "meaning": "弥漫的",
+          "orderInLesson": 16
+        },
+        {
+          "id": "nce4-027-017",
+          "word": "churn",
+          "phonetic": [
+            "tʃə:n"
+          ],
+          "pos": "v.",
+          "meaning": "翻滚",
+          "orderInLesson": 17
+        },
+        {
+          "id": "nce4-027-018",
+          "word": "pennant",
+          "phonetic": [
+            "'p n nt; 'pen nt"
+          ],
+          "pos": "n.",
+          "meaning": "三角旗",
+          "orderInLesson": 18
+        },
+        {
+          "id": "nce4-027-019",
+          "word": "superstructure",
+          "phonetic": [
+            "'sju:pə'strʌktʃə"
+          ],
+          "pos": "n.",
+          "meaning": "上部结构",
+          "orderInLesson": 19
+        },
+        {
+          "id": "nce4-027-020",
+          "word": "armament",
+          "phonetic": [
+            "'a:məmənt"
+          ],
+          "pos": "n.",
+          "meaning": "军械",
+          "orderInLesson": 20
+        },
+        {
+          "id": "nce4-027-021",
+          "word": "triple",
+          "phonetic": [
+            "'tripl"
+          ],
+          "pos": "a.",
+          "meaning": "三层的",
+          "orderInLesson": 21
+        },
+        {
+          "id": "nce4-027-022",
+          "word": "mount",
+          "phonetic": [
+            "maunt"
+          ],
+          "pos": "v.",
+          "meaning": "登上",
+          "orderInLesson": 22
+        },
+        {
+          "id": "nce4-027-023",
+          "word": "bronze",
+          "phonetic": [
+            "brɔnz"
+          ],
+          "pos": "n.",
+          "meaning": "青铜",
+          "orderInLesson": 23
+        },
+        {
+          "id": "nce4-027-024",
+          "word": "cannon",
+          "phonetic": [
+            "'kænən"
+          ],
+          "pos": "n.",
+          "meaning": "加农炮",
+          "orderInLesson": 24
+        },
+        {
+          "id": "nce4-027-025",
+          "word": "majestic",
+          "phonetic": [
+            "mə'dʒestik"
+          ],
+          "pos": "a.",
+          "meaning": "威严的",
+          "orderInLesson": 25
+        },
+        {
+          "id": "nce4-027-026",
+          "word": "muzzle",
+          "phonetic": [
+            "'mʌzl"
+          ],
+          "pos": "n.",
+          "meaning": "炮口",
+          "orderInLesson": 26
+        },
+        {
+          "id": "nce4-027-027",
+          "word": "freshen",
+          "phonetic": [
+            "'freʃən"
+          ],
+          "pos": "v.",
+          "meaning": "变强",
+          "orderInLesson": 27
+        },
+        {
+          "id": "nce4-027-028",
+          "word": "squall",
+          "phonetic": [
+            "skwɔ:l"
+          ],
+          "pos": "n.",
+          "meaning": "暴风",
+          "orderInLesson": 28
+        },
+        {
+          "id": "nce4-027-029",
+          "word": "list",
+          "phonetic": [
+            "list"
+          ],
+          "pos": "v.",
+          "meaning": "倾斜",
+          "orderInLesson": 29
+        },
+        {
+          "id": "nce4-027-030",
+          "word": "port",
+          "phonetic": [
+            "pɔ:t"
+          ],
+          "pos": "n.",
+          "meaning": "(船、飞机的)左舷",
+          "orderInLesson": 30
+        },
+        {
+          "id": "nce4-027-031",
+          "word": "ordnance",
+          "phonetic": [
+            "'ɔ:dnəns"
+          ],
+          "pos": "n.",
+          "meaning": "军械",
+          "orderInLesson": 31
+        },
+        {
+          "id": "nce4-027-032",
+          "word": "heave",
+          "phonetic": [
+            "hi:v"
+          ],
+          "pos": "v.",
+          "meaning": "拖",
+          "orderInLesson": 32
+        },
+        {
+          "id": "nce4-027-033",
+          "word": "starboard",
+          "phonetic": [
+            "'sta:bəd"
+          ],
+          "pos": "n.",
+          "meaning": "(船、飞机的)右舷",
+          "orderInLesson": 33
+        },
+        {
+          "id": "nce4-027-034",
+          "word": "counteract",
+          "phonetic": [
+            "'kauntə'rækt"
+          ],
+          "pos": "v.",
+          "meaning": "抵消",
+          "orderInLesson": 34
+        },
+        {
+          "id": "nce4-027-035",
+          "word": "steepen",
+          "phonetic": [
+            "'sti:pən"
+          ],
+          "pos": "v.",
+          "meaning": "变得更陡峭",
+          "orderInLesson": 35
+        },
+        {
+          "id": "nce4-027-036",
+          "word": "ballast",
+          "phonetic": [
+            "'bæləst"
+          ],
+          "pos": "n.",
+          "meaning": "压舱物",
+          "orderInLesson": 36
+        },
+        {
+          "id": "nce4-027-037",
+          "word": "inrush",
+          "phonetic": [
+            "'inrʌʃ"
+          ],
+          "pos": "n.",
+          "meaning": "水的涌入",
+          "orderInLesson": 37
+        },
+        {
+          "id": "nce4-027-038",
+          "word": "Baltic",
+          "phonetic": [
+            "'bɔ:ltik"
+          ],
+          "pos": "n.",
+          "meaning": "波罗的海",
+          "orderInLesson": 38
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-028",
+      "lessonNumber": "028",
+      "titleEn": "Patients and doctors",
+      "titleCn": "病人与医生",
+      "wordCount": 12,
+      "words": [
+        {
+          "id": "nce4-028-001",
+          "word": "skeptical",
+          "phonetic": [
+            "'skeptikəl"
+          ],
+          "pos": "a.",
+          "meaning": "怀疑的",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-028-002",
+          "word": "forefathers",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "祖先",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-028-003",
+          "word": "fervently",
+          "phonetic": [
+            "'fə:vəntli"
+          ],
+          "pos": "ad.",
+          "meaning": "热情地",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-028-004",
+          "word": "curative",
+          "phonetic": [
+            "'kjuərətiv"
+          ],
+          "pos": "a.",
+          "meaning": "治病的",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-028-005",
+          "word": "astronomical",
+          "phonetic": [
+            "'æstrə'nɔmikəl"
+          ],
+          "pos": "a.",
+          "meaning": "天文学的",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-028-006",
+          "word": "tangible",
+          "phonetic": [
+            "tændʒəbl"
+          ],
+          "pos": "a.",
+          "meaning": "实实在在的",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-028-007",
+          "word": "remedy",
+          "phonetic": [
+            "'remidi"
+          ],
+          "pos": "n.",
+          "meaning": "药物",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-028-008",
+          "word": "ointment",
+          "phonetic": [
+            "'ɔintmənt"
+          ],
+          "pos": "n.",
+          "meaning": "药膏",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-028-009",
+          "word": "prescribe",
+          "phonetic": [
+            "pri'skraib"
+          ],
+          "pos": "v.",
+          "meaning": "开药方",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-028-010",
+          "word": "indisposition",
+          "phonetic": [
+            "in'dispə'ziʃən"
+          ],
+          "pos": "n.",
+          "meaning": "小病",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-028-011",
+          "word": "disgusting",
+          "phonetic": [],
+          "pos": "a.",
+          "meaning": "令人讨厌的",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-028-012",
+          "word": "inconvenience",
+          "phonetic": [
+            "'inkən'vi:njəns"
+          ],
+          "pos": "n.",
+          "meaning": "不便",
+          "orderInLesson": 12
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-029",
+      "lessonNumber": "029",
+      "titleEn": "The hovercraft",
+      "titleCn": "气垫船",
+      "wordCount": 9,
+      "words": [
+        {
+          "id": "nce4-029-001",
+          "word": "hovercraft",
+          "phonetic": [
+            "'hɔvəkra:ft"
+          ],
+          "pos": "n.",
+          "meaning": "气垫船",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-029-002",
+          "word": "Norfolk Broads",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "诺福克郡的湖泊地区",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-029-003",
+          "word": "cushion",
+          "phonetic": [
+            "'kuʃən"
+          ],
+          "pos": "n.",
+          "meaning": "座垫",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-029-004",
+          "word": "ring",
+          "phonetic": [
+            "riŋ"
+          ],
+          "pos": "v.",
+          "meaning": "围",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-029-005",
+          "word": "Solent",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "(英国的)苏伦特海峡",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-029-006",
+          "word": "sensation",
+          "phonetic": [
+            "sen'seiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "轰动",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-029-007",
+          "word": "dune",
+          "phonetic": [
+            "dju:n"
+          ],
+          "pos": "n.",
+          "meaning": "沙丘",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-029-008",
+          "word": "plantation",
+          "phonetic": [
+            "plæn'teiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "种植园",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-029-009",
+          "word": "hover-train",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "气垫火车",
+          "orderInLesson": 9
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-030",
+      "lessonNumber": "030",
+      "titleEn": "Exploring the sea-floor",
+      "titleCn": "海底勘探",
+      "wordCount": 14,
+      "words": [
+        {
+          "id": "nce4-030-001",
+          "word": "navigation",
+          "phonetic": [
+            "'nævi'geiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "航海",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-030-002",
+          "word": "sounding",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "水深度",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-030-003",
+          "word": "porcupine",
+          "phonetic": [
+            "'pɔ:kjupain"
+          ],
+          "pos": "n.",
+          "meaning": "箭猪",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-030-004",
+          "word": "dredge",
+          "phonetic": [
+            "dredʒ"
+          ],
+          "pos": "v.",
+          "meaning": "挖掘",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-030-005",
+          "word": "expedition",
+          "phonetic": [
+            "'ekspi'diʃən"
+          ],
+          "pos": "n.",
+          "meaning": "远征",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-030-006",
+          "word": "physicist",
+          "phonetic": [
+            "'fizisist"
+          ],
+          "pos": "n.",
+          "meaning": "物理学家",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-030-007",
+          "word": "magnitude",
+          "phonetic": [
+            "'mægnitju:d"
+          ],
+          "pos": "n.",
+          "meaning": "很多",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-030-008",
+          "word": "topography",
+          "phonetic": [
+            "tə'pɔgrəfi"
+          ],
+          "pos": "n.",
+          "meaning": "地形",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-030-009",
+          "word": "crust",
+          "phonetic": [
+            "krʌst"
+          ],
+          "pos": "n.",
+          "meaning": "地壳",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-030-010",
+          "word": "rugged",
+          "phonetic": [
+            "'rʌgid"
+          ],
+          "pos": "a.",
+          "meaning": "崎岖不平的",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-030-011",
+          "word": "tableland",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "高地",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-030-012",
+          "word": "sediment",
+          "phonetic": [
+            "'sedimənt"
+          ],
+          "pos": "n.",
+          "meaning": "沉淀物",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-030-013",
+          "word": "terrace",
+          "phonetic": [
+            "'terəs"
+          ],
+          "pos": "n.",
+          "meaning": "阶地",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-030-014",
+          "word": "erode",
+          "phonetic": [
+            "i'rəud"
+          ],
+          "pos": "v.",
+          "meaning": "侵蚀",
+          "orderInLesson": 14
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-031",
+      "lessonNumber": "031",
+      "titleEn": "The sculptor speaks",
+      "titleCn": "雕塑家的语言",
+      "wordCount": 13,
+      "words": [
+        {
+          "id": "nce4-031-001",
+          "word": "colour-blind",
+          "phonetic": [],
+          "pos": "a.",
+          "meaning": "色盲的",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-031-002",
+          "word": "perception",
+          "phonetic": [
+            "pə'sepʃən"
+          ],
+          "pos": "n.",
+          "meaning": "知觉",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-031-003",
+          "word": "comprehend",
+          "phonetic": [
+            "'kɔmpri'hend"
+          ],
+          "pos": "v.",
+          "meaning": "理解",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-031-004",
+          "word": "spatial",
+          "phonetic": [
+            "'speiʃəl"
+          ],
+          "pos": "a.",
+          "meaning": "空间的",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-031-005",
+          "word": "visualize",
+          "phonetic": [
+            "'vizjuəlaiz"
+          ],
+          "pos": "v.",
+          "meaning": "使具形象，设想",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-031-006",
+          "word": "reminiscence",
+          "phonetic": [
+            "'remi'nisns"
+          ],
+          "pos": "n.",
+          "meaning": "回忆，联想",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-031-007",
+          "word": "tadpole",
+          "phonetic": [
+            "'tædpəul"
+          ],
+          "pos": "n.",
+          "meaning": "蝌蚪",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-031-008",
+          "word": "mushroom",
+          "phonetic": [
+            "'mʌʃrum"
+          ],
+          "pos": "n.",
+          "meaning": "蘑菇",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-031-009",
+          "word": "carrot",
+          "phonetic": [
+            "'kærət"
+          ],
+          "pos": "n.",
+          "meaning": "胡萝卜",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-031-010",
+          "word": "bud",
+          "phonetic": [
+            "bʌd"
+          ],
+          "pos": "n.",
+          "meaning": "花蕾",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-031-011",
+          "word": "lark",
+          "phonetic": [
+            "la:k"
+          ],
+          "pos": "n.",
+          "meaning": "云雀",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-031-012",
+          "word": "ladybird",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "瓢虫",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-031-013",
+          "word": "bulrush",
+          "phonetic": [
+            "'bulrʌʃ"
+          ],
+          "pos": "n.",
+          "meaning": "芦苇",
+          "orderInLesson": 13
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-032",
+      "lessonNumber": "032",
+      "titleEn": "Galileo reborn",
+      "titleCn": "伽利略的复生",
+      "wordCount": 22,
+      "words": [
+        {
+          "id": "nce4-032-001",
+          "word": "controversy",
+          "phonetic": [
+            "'kɔntrəvə:si"
+          ],
+          "pos": "n.",
+          "meaning": "争议，争论",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-032-002",
+          "word": "dust",
+          "phonetic": [
+            "dʌst"
+          ],
+          "pos": "n.",
+          "meaning": "纠纷，骚动",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-032-003",
+          "word": "clash",
+          "phonetic": [
+            "klæʃ"
+          ],
+          "pos": "n.",
+          "meaning": "冲突",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-032-004",
+          "word": "Inquisition",
+          "phonetic": [
+            "inkwi'ziʃən"
+          ],
+          "pos": "n.",
+          "meaning": "(罗马天主教的)宗教法庭",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-032-005",
+          "word": "perspective",
+          "phonetic": [
+            "pə:'spektiv"
+          ],
+          "pos": "n.",
+          "meaning": "观点，看法",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-032-006",
+          "word": "despise",
+          "phonetic": [
+            "dis'paiz"
+          ],
+          "pos": "v.",
+          "meaning": "蔑视",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-032-007",
+          "word": "generalize",
+          "phonetic": [
+            "'dʒenərəlaiz"
+          ],
+          "pos": "v.",
+          "meaning": "归纳",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-032-008",
+          "word": "undercurrent",
+          "phonetic": [
+            "'ʌndə'kʌrənt"
+          ],
+          "pos": "n.",
+          "meaning": "潜流",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-032-009",
+          "word": "theoretical",
+          "phonetic": [
+            "θiə'retikl"
+          ],
+          "pos": "a.",
+          "meaning": "理论上的",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-032-010",
+          "word": "potentiality",
+          "phonetic": [
+            "pə'tenʃi'æliti"
+          ],
+          "pos": "n.",
+          "meaning": "潜能",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-032-011",
+          "word": "intimate",
+          "phonetic": [
+            "'intimit"
+          ],
+          "pos": "a.",
+          "meaning": "详尽的",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-032-012",
+          "word": "familiarity",
+          "phonetic": [
+            "fə'mili'æriti"
+          ],
+          "pos": "n.",
+          "meaning": "熟悉",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-032-013",
+          "word": "culpable",
+          "phonetic": [
+            "'kʌlpəbl"
+          ],
+          "pos": "a.",
+          "meaning": "应受谴责的",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-032-014",
+          "word": "Aristotelian",
+          "phonetic": [
+            "æristə'ti:liən"
+          ],
+          "pos": "n.",
+          "meaning": "亚里士多德学派的人",
+          "orderInLesson": 14
+        },
+        {
+          "id": "nce4-032-015",
+          "word": "Aristotle",
+          "phonetic": [
+            "'æristɔtl"
+          ],
+          "pos": "n.",
+          "meaning": "亚里士多德(古希腊哲学家)",
+          "orderInLesson": 15
+        },
+        {
+          "id": "nce4-032-016",
+          "word": "Ptolemy",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "托勒密(公元-，古希腊天文学家)",
+          "orderInLesson": 16
+        },
+        {
+          "id": "nce4-032-017",
+          "word": "Leaning Tower Pisa",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "比萨斜塔",
+          "orderInLesson": 17
+        },
+        {
+          "id": "nce4-032-018",
+          "word": "spiral",
+          "phonetic": [
+            "'spaiərəl"
+          ],
+          "pos": "a.",
+          "meaning": "螺旋状的",
+          "orderInLesson": 18
+        },
+        {
+          "id": "nce4-032-019",
+          "word": "nebula",
+          "phonetic": [
+            "'nebjulə"
+          ],
+          "pos": "n.",
+          "meaning": "星云",
+          "orderInLesson": 19
+        },
+        {
+          "id": "nce4-032-020",
+          "word": "scratch",
+          "phonetic": [
+            "skrætʃ"
+          ],
+          "pos": "n.",
+          "meaning": "擦痕",
+          "orderInLesson": 20
+        },
+        {
+          "id": "nce4-032-021",
+          "word": "contrivance",
+          "phonetic": [
+            "kən'traivəns"
+          ],
+          "pos": "n.",
+          "meaning": "器械",
+          "orderInLesson": 21
+        },
+        {
+          "id": "nce4-032-022",
+          "word": "distort",
+          "phonetic": [
+            "dis'tɔ:t"
+          ],
+          "pos": "v.",
+          "meaning": "歪曲",
+          "orderInLesson": 22
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-033",
+      "lessonNumber": "033",
+      "titleEn": "Education",
+      "titleCn": "教育",
+      "wordCount": 17,
+      "words": [
+        {
+          "id": "nce4-033-001",
+          "word": "adverse",
+          "phonetic": [
+            "'ædvə:s"
+          ],
+          "pos": "a.",
+          "meaning": "逆的，相反的",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-033-002",
+          "word": "purchasable",
+          "phonetic": [
+            "'pə:tʃəsəbl"
+          ],
+          "pos": "a.",
+          "meaning": "可买到的",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-033-003",
+          "word": "preacher",
+          "phonetic": [
+            "'pri:tʃə"
+          ],
+          "pos": "n.",
+          "meaning": "传教士",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-033-004",
+          "word": "defendant",
+          "phonetic": [
+            "di'fendənt"
+          ],
+          "pos": "n.",
+          "meaning": "被告",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-033-005",
+          "word": "outlook",
+          "phonetic": [
+            "'aut-luk"
+          ],
+          "pos": "n.",
+          "meaning": "视野",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-033-006",
+          "word": "capacity",
+          "phonetic": [
+            "kə'pæsiti"
+          ],
+          "pos": "n.",
+          "meaning": "能力",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-033-007",
+          "word": "means",
+          "phonetic": [
+            "mi:nz"
+          ],
+          "pos": "n.",
+          "meaning": "方法，手段，财产，资力",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-033-008",
+          "word": "hamper",
+          "phonetic": [
+            "'hæmpə"
+          ],
+          "pos": "v.",
+          "meaning": "妨碍",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-033-009",
+          "word": "savannah",
+          "phonetic": [
+            "sə'vænə"
+          ],
+          "pos": "n.",
+          "meaning": "大草原",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-033-010",
+          "word": "democratic",
+          "phonetic": [
+            "'demə'krætik"
+          ],
+          "pos": "a.",
+          "meaning": "民主的",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-033-011",
+          "word": "tribal",
+          "phonetic": [
+            "traibl"
+          ],
+          "pos": "a.",
+          "meaning": "部落的",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-033-012",
+          "word": "tribe",
+          "phonetic": [
+            "traib"
+          ],
+          "pos": "n.",
+          "meaning": "部落",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-033-013",
+          "word": "illiterate",
+          "phonetic": [
+            "i'litərit"
+          ],
+          "pos": "n.",
+          "meaning": "文盲",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-033-014",
+          "word": "compulsory",
+          "phonetic": [
+            "kəm'pʌlsəri"
+          ],
+          "pos": "a.",
+          "meaning": "义务的",
+          "orderInLesson": 14
+        },
+        {
+          "id": "nce4-033-015",
+          "word": "deem",
+          "phonetic": [
+            "di:m"
+          ],
+          "pos": "v.",
+          "meaning": "认为",
+          "orderInLesson": 15
+        },
+        {
+          "id": "nce4-033-016",
+          "word": "juvenile",
+          "phonetic": [
+            "'dʒu:vinail"
+          ],
+          "pos": "a.",
+          "meaning": "青少年的",
+          "orderInLesson": 16
+        },
+        {
+          "id": "nce4-033-017",
+          "word": "delinquency",
+          "phonetic": [
+            "di'liŋkwənsi"
+          ],
+          "pos": "n.",
+          "meaning": "犯罪",
+          "orderInLesson": 17
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-034",
+      "lessonNumber": "034",
+      "titleEn": "Adolescence",
+      "titleCn": "青春期",
+      "wordCount": 15,
+      "words": [
+        {
+          "id": "nce4-034-001",
+          "word": "adolescence",
+          "phonetic": [
+            "'ædəu'lesns"
+          ],
+          "pos": "n.",
+          "meaning": "青春期",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-034-002",
+          "word": "slur",
+          "phonetic": [
+            "slə:"
+          ],
+          "pos": "n.",
+          "meaning": "诋毁",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-034-003",
+          "word": "adolescent",
+          "phonetic": [
+            "ædə'lesənt"
+          ],
+          "pos": "n.",
+          "meaning": "青少年(-岁)",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-034-004",
+          "word": "disloyalty",
+          "phonetic": [
+            "dis'lɔiəlti"
+          ],
+          "pos": "n.",
+          "meaning": "不忠实",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-034-005",
+          "word": "spiteful",
+          "phonetic": [
+            "'spaitful"
+          ],
+          "pos": "a.",
+          "meaning": "恶意的，怀恨的",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-034-006",
+          "word": "disillusionment",
+          "phonetic": [
+            "-mənt"
+          ],
+          "pos": "n.",
+          "meaning": "幻灭感",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-034-007",
+          "word": "evaluation",
+          "phonetic": [
+            "i'vælju'eiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "评价",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-034-008",
+          "word": "Infallibility",
+          "phonetic": [
+            "in'fælə'biləti"
+          ],
+          "pos": "n.",
+          "meaning": "一贯正确",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-034-009",
+          "word": "resent",
+          "phonetic": [
+            "ri'zent"
+          ],
+          "pos": "v.",
+          "meaning": "怨恨",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-034-010",
+          "word": "sincerity",
+          "phonetic": [
+            "sin'seriti"
+          ],
+          "pos": "n.",
+          "meaning": "诚挚",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-034-011",
+          "word": "victorian",
+          "phonetic": [
+            "vik'tɔ:riən"
+          ],
+          "pos": "a.",
+          "meaning": "维多利亚式的",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-034-012",
+          "word": "retreat",
+          "phonetic": [
+            "ri'tri:t"
+          ],
+          "pos": "v.",
+          "meaning": "后退",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-034-013",
+          "word": "unreasoning",
+          "phonetic": [
+            "ʌn'ri:zəniŋ"
+          ],
+          "pos": "a.",
+          "meaning": "不凭理智的",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-034-014",
+          "word": "authoritarian",
+          "phonetic": [
+            "ɔ:'θɔri'tєəriən"
+          ],
+          "pos": "a.",
+          "meaning": "专制的",
+          "orderInLesson": 14
+        },
+        {
+          "id": "nce4-034-015",
+          "word": "cow",
+          "phonetic": [
+            "kau"
+          ],
+          "pos": "v.",
+          "meaning": "吓唬",
+          "orderInLesson": 15
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-035",
+      "lessonNumber": "035",
+      "titleEn": "Space odyssey",
+      "titleCn": "太空探索",
+      "wordCount": 11,
+      "words": [
+        {
+          "id": "nce4-035-001",
+          "word": "hub",
+          "phonetic": [
+            "hʌb"
+          ],
+          "pos": "n.",
+          "meaning": "(活动的)中心",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-035-002",
+          "word": "lunar",
+          "phonetic": [
+            "'lju:nə"
+          ],
+          "pos": "a.",
+          "meaning": "月球的",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-035-003",
+          "word": "oxygen",
+          "phonetic": [
+            "'ɔksidʒən"
+          ],
+          "pos": "n.",
+          "meaning": "氧气",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-035-004",
+          "word": "Apollo",
+          "phonetic": [
+            "ə'pɔləu"
+          ],
+          "pos": "n.",
+          "meaning": "阿波罗",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-035-005",
+          "word": "accelerate",
+          "phonetic": [
+            "æk'seləreit"
+          ],
+          "pos": "v.",
+          "meaning": "加速",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-035-006",
+          "word": "terrestrial",
+          "phonetic": [
+            "ti'restriəl"
+          ],
+          "pos": "a.",
+          "meaning": "地球",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-035-007",
+          "word": "permanently",
+          "phonetic": [],
+          "pos": "ad.",
+          "meaning": "永远地",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-035-008",
+          "word": "fascination",
+          "phonetic": [
+            "'fæsi'neiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "魅力",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-035-009",
+          "word": "senior",
+          "phonetic": [
+            "'si:njə"
+          ],
+          "pos": "a.",
+          "meaning": "资历深的，年长的",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-035-010",
+          "word": "chasm",
+          "phonetic": [
+            "tʃæzəm"
+          ],
+          "pos": "n.",
+          "meaning": "断层，裂口",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-035-011",
+          "word": "canyon",
+          "phonetic": [
+            "'kænjən"
+          ],
+          "pos": "n.",
+          "meaning": "峡谷",
+          "orderInLesson": 11
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-036",
+      "lessonNumber": "036",
+      "titleEn": "The cost of government",
+      "titleCn": "政府的开支",
+      "wordCount": 13,
+      "words": [
+        {
+          "id": "nce4-036-001",
+          "word": "disunited",
+          "phonetic": [],
+          "pos": "a.",
+          "meaning": "分裂的",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-036-002",
+          "word": "correspondingly",
+          "phonetic": [],
+          "pos": "ad.",
+          "meaning": "相应地",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-036-003",
+          "word": "backward",
+          "phonetic": [
+            "'bækwəd"
+          ],
+          "pos": "a.",
+          "meaning": "落后的",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-036-004",
+          "word": "incur",
+          "phonetic": [
+            "in'kə:"
+          ],
+          "pos": "v.",
+          "meaning": "承担",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-036-005",
+          "word": "administer",
+          "phonetic": [
+            "əd'ministə"
+          ],
+          "pos": "v.",
+          "meaning": "管理",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-036-006",
+          "word": "administrative",
+          "phonetic": [
+            "əd'ministrətiv"
+          ],
+          "pos": "a.",
+          "meaning": "行政管理的",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-036-007",
+          "word": "analogous",
+          "phonetic": [
+            "ə'næləgəs"
+          ],
+          "pos": "a.",
+          "meaning": "类似的",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-036-008",
+          "word": "overheads",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "一般费用",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-036-009",
+          "word": "initiative",
+          "phonetic": [
+            "i'niʃiətiv"
+          ],
+          "pos": "n.",
+          "meaning": "主动，积极性",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-036-010",
+          "word": "checker",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "检查人员",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-036-011",
+          "word": "foreman",
+          "phonetic": [
+            "'fɔ:mən"
+          ],
+          "pos": "n.",
+          "meaning": "监工",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-036-012",
+          "word": "dividend",
+          "phonetic": [
+            "'dividend"
+          ],
+          "pos": "n.",
+          "meaning": "红利",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-036-013",
+          "word": "unduly",
+          "phonetic": [
+            "ʌn'dju:li"
+          ],
+          "pos": "ad.",
+          "meaning": "过度地",
+          "orderInLesson": 13
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-037",
+      "lessonNumber": "037",
+      "titleEn": "The process of ageing",
+      "titleCn": "衰老过程",
+      "wordCount": 14,
+      "words": [
+        {
+          "id": "nce4-037-001",
+          "word": "likelihood",
+          "phonetic": [
+            "'laiklihud"
+          ],
+          "pos": "n.",
+          "meaning": "可能性",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-037-002",
+          "word": "infant",
+          "phonetic": [
+            "'infənt"
+          ],
+          "pos": "n.",
+          "meaning": "婴儿",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-037-003",
+          "word": "vulnerable",
+          "phonetic": [
+            "'vʌlnərəbl"
+          ],
+          "pos": "a.",
+          "meaning": "脆弱的",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-037-004",
+          "word": "imperceptible",
+          "phonetic": [
+            "'impə'septəbl"
+          ],
+          "pos": "a.",
+          "meaning": "感觉不到的",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-037-005",
+          "word": "robust",
+          "phonetic": [
+            "rəu'bʌst"
+          ],
+          "pos": "a.",
+          "meaning": "强健的",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-037-006",
+          "word": "organism",
+          "phonetic": [
+            "'ɔ:gənizəm"
+          ],
+          "pos": "n.",
+          "meaning": "有机体",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-037-007",
+          "word": "thermodynamics",
+          "phonetic": [
+            "'θə:məudai'næmiks"
+          ],
+          "pos": "n.",
+          "meaning": "热力学",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-037-008",
+          "word": "steep",
+          "phonetic": [
+            "sti:p"
+          ],
+          "pos": "a.",
+          "meaning": "急转直下的",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-037-009",
+          "word": "ageing",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "老化",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-037-010",
+          "word": "odds",
+          "phonetic": [
+            "ɔdz"
+          ],
+          "pos": "n.",
+          "meaning": "可能性",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-037-011",
+          "word": "virtual",
+          "phonetic": [
+            "'və:tjuəl"
+          ],
+          "pos": "a.",
+          "meaning": "实际上的",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-037-012",
+          "word": "moot",
+          "phonetic": [
+            "mu:t"
+          ],
+          "pos": "a.",
+          "meaning": "争论未决的",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-037-013",
+          "word": "run-down",
+          "phonetic": [],
+          "pos": "a.",
+          "meaning": "破旧的",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-037-014",
+          "word": "friction",
+          "phonetic": [
+            "'frikʃən"
+          ],
+          "pos": "n.",
+          "meaning": "摩擦",
+          "orderInLesson": 14
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-038",
+      "lessonNumber": "038",
+      "titleEn": "Water and the traveller",
+      "titleCn": "水和旅行者",
+      "wordCount": 14,
+      "words": [
+        {
+          "id": "nce4-038-001",
+          "word": "contamination",
+          "phonetic": [
+            "kəntæmi'neiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "污染",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-038-002",
+          "word": "sanitation",
+          "phonetic": [
+            "'sæni'teiʃn"
+          ],
+          "pos": "n.",
+          "meaning": "卫生，卫生设备",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-038-003",
+          "word": "sewage",
+          "phonetic": [
+            "'sju:idʒ"
+          ],
+          "pos": "n.",
+          "meaning": "污水",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-038-004",
+          "word": "leakage",
+          "phonetic": [
+            "'li:kidʒ"
+          ],
+          "pos": "n.",
+          "meaning": "泄漏",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-038-005",
+          "word": "intermittent",
+          "phonetic": [
+            "intə'mitnt"
+          ],
+          "pos": "a.",
+          "meaning": "间歇的，断断续续的",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-038-006",
+          "word": "carbonated",
+          "phonetic": [],
+          "pos": "a.",
+          "meaning": "碳化的，碳酸的",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-038-007",
+          "word": "acidic",
+          "phonetic": [
+            "ə'sidik"
+          ],
+          "pos": "a.",
+          "meaning": "酸的，酸性的",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-038-008",
+          "word": "alcohol",
+          "phonetic": [
+            "'ælkəhɔl"
+          ],
+          "pos": "n.",
+          "meaning": "酒精",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-038-009",
+          "word": "disinfectant",
+          "phonetic": [
+            "disin'fektənt"
+          ],
+          "pos": "n.",
+          "meaning": "消毒剂",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-038-010",
+          "word": "sterilize",
+          "phonetic": [
+            "'sterilaiz"
+          ],
+          "pos": "v.",
+          "meaning": "消毒",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-038-011",
+          "word": "ethanol",
+          "phonetic": [
+            "'eθənoul"
+          ],
+          "pos": "n.",
+          "meaning": "乙醇",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-038-012",
+          "word": "bactericidal",
+          "phonetic": [
+            "bæktirə'saidl"
+          ],
+          "pos": "a.",
+          "meaning": "杀菌的",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-038-013",
+          "word": "negligible",
+          "phonetic": [
+            "'neglidʒəbl"
+          ],
+          "pos": "a.",
+          "meaning": "可以忽略的，微不足道的",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-038-014",
+          "word": "methylated",
+          "phonetic": [],
+          "pos": "a.",
+          "meaning": "加入甲醇的",
+          "orderInLesson": 14
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-039",
+      "lessonNumber": "039",
+      "titleEn": "What every writer wants",
+      "titleCn": "作家之所需",
+      "wordCount": 16,
+      "words": [
+        {
+          "id": "nce4-039-001",
+          "word": "confess",
+          "phonetic": [
+            "kən'fes"
+          ],
+          "pos": "v.",
+          "meaning": "承认",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-039-002",
+          "word": "inspiration",
+          "phonetic": [
+            "'inspə'reiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "灵感",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-039-003",
+          "word": "Kashmir",
+          "phonetic": [
+            "'kæʃ'miə"
+          ],
+          "pos": "n.",
+          "meaning": "克什米尔",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-039-004",
+          "word": "interweave",
+          "phonetic": [
+            "'intə'wi:v"
+          ],
+          "pos": "v.",
+          "meaning": "交织",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-039-005",
+          "word": "afresh",
+          "phonetic": [
+            "ə'freʃ"
+          ],
+          "pos": "ad.",
+          "meaning": "重新",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-039-006",
+          "word": "discern",
+          "phonetic": [
+            "di'sə:n"
+          ],
+          "pos": "v.",
+          "meaning": "辨明，领悟",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-039-007",
+          "word": "indescribable",
+          "phonetic": [
+            "indis'kraibəbl"
+          ],
+          "pos": "a.",
+          "meaning": "无法描述的",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-039-008",
+          "word": "blur",
+          "phonetic": [
+            "blə:"
+          ],
+          "pos": "v.",
+          "meaning": "使…模糊不清",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-039-009",
+          "word": "yeast",
+          "phonetic": [
+            "ji:st"
+          ],
+          "pos": "n.",
+          "meaning": "激动",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-039-010",
+          "word": "fathom",
+          "phonetic": [
+            "'fæðəm"
+          ],
+          "pos": "n.",
+          "meaning": "噚（噚等于.米）",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-039-011",
+          "word": "interminably",
+          "phonetic": [],
+          "pos": "ad.",
+          "meaning": "没完没了地",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-039-012",
+          "word": "winkle",
+          "phonetic": [
+            "'wiŋkl"
+          ],
+          "pos": "v.",
+          "meaning": "挖掘",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-039-013",
+          "word": "incidentally",
+          "phonetic": [
+            "'insi'dentəli"
+          ],
+          "pos": "ad.",
+          "meaning": "顺便说一下",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-039-014",
+          "word": "pertinent",
+          "phonetic": [
+            "'pə:tinənt"
+          ],
+          "pos": "a.",
+          "meaning": "中肯的",
+          "orderInLesson": 14
+        },
+        {
+          "id": "nce4-039-015",
+          "word": "flirt",
+          "phonetic": [
+            "flə:t"
+          ],
+          "pos": "v.",
+          "meaning": "调情",
+          "orderInLesson": 15
+        },
+        {
+          "id": "nce4-039-016",
+          "word": "inmost",
+          "phonetic": [
+            "'inməust"
+          ],
+          "pos": "a.",
+          "meaning": "内心深处的",
+          "orderInLesson": 16
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-040",
+      "lessonNumber": "040",
+      "titleEn": "Waves",
+      "titleCn": "海浪",
+      "wordCount": 19,
+      "words": [
+        {
+          "id": "nce4-040-001",
+          "word": "signature",
+          "phonetic": [
+            "'signitʃə"
+          ],
+          "pos": "n.",
+          "meaning": "签名，标记",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-040-002",
+          "word": "infinity",
+          "phonetic": [
+            "in'finiti"
+          ],
+          "pos": "n.",
+          "meaning": "无穷",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-040-003",
+          "word": "ray",
+          "phonetic": [
+            "rei"
+          ],
+          "pos": "n.",
+          "meaning": "光线",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-040-004",
+          "word": "energize",
+          "phonetic": [
+            "'enə'dʒaiz"
+          ],
+          "pos": "v.",
+          "meaning": "给与…能量",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-040-005",
+          "word": "rhythm",
+          "phonetic": [
+            "'riðəm"
+          ],
+          "pos": "n.",
+          "meaning": "节奏",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-040-006",
+          "word": "transmit",
+          "phonetic": [
+            "trænz'mit"
+          ],
+          "pos": "v.",
+          "meaning": "传送",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-040-007",
+          "word": "exquisite",
+          "phonetic": [
+            "'ekskwizit"
+          ],
+          "pos": "a.",
+          "meaning": "高雅的",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-040-008",
+          "word": "phenomena",
+          "phonetic": [
+            "fi'nɔminə"
+          ],
+          "pos": "n.",
+          "meaning": "现象",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-040-009",
+          "word": "crest",
+          "phonetic": [
+            "krest"
+          ],
+          "pos": "n.",
+          "meaning": "浪峰",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-040-010",
+          "word": "trough",
+          "phonetic": [
+            "trɔ:f"
+          ],
+          "pos": "n.",
+          "meaning": "波谷",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-040-011",
+          "word": "vertical",
+          "phonetic": [
+            "'və:tikəl"
+          ],
+          "pos": "a.",
+          "meaning": "垂直的",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-040-012",
+          "word": "horizontal",
+          "phonetic": [
+            "'hɔri'zɔntl"
+          ],
+          "pos": "a.",
+          "meaning": "水平的",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-040-013",
+          "word": "actuality",
+          "phonetic": [
+            "æktʃu'æliti"
+          ],
+          "pos": "n.",
+          "meaning": "现实",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-040-014",
+          "word": "catastrophic",
+          "phonetic": [
+            "kætə'strɔfik"
+          ],
+          "pos": "a.",
+          "meaning": "大灾难的",
+          "orderInLesson": 14
+        },
+        {
+          "id": "nce4-040-015",
+          "word": "particle",
+          "phonetic": [
+            "'pa:tikl"
+          ],
+          "pos": "n.",
+          "meaning": "微粒",
+          "orderInLesson": 15
+        },
+        {
+          "id": "nce4-040-016",
+          "word": "maturity",
+          "phonetic": [
+            "mə'tjuəriti"
+          ],
+          "pos": "n.",
+          "meaning": "成熟",
+          "orderInLesson": 16
+        },
+        {
+          "id": "nce4-040-017",
+          "word": "undulate",
+          "phonetic": [
+            "'ʌndjuleit"
+          ],
+          "pos": "v.",
+          "meaning": "波动，形成波浪",
+          "orderInLesson": 17
+        },
+        {
+          "id": "nce4-040-018",
+          "word": "tremor",
+          "phonetic": [
+            "'tremə"
+          ],
+          "pos": "n.",
+          "meaning": "震颤",
+          "orderInLesson": 18
+        },
+        {
+          "id": "nce4-040-019",
+          "word": "gravitational",
+          "phonetic": [
+            "grævi'teiʃənl"
+          ],
+          "pos": "a.",
+          "meaning": "地心吸力的",
+          "orderInLesson": 19
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-041",
+      "lessonNumber": "041",
+      "titleEn": "Training elephants",
+      "titleCn": "训练大象",
+      "wordCount": 25,
+      "words": [
+        {
+          "id": "nce4-041-001",
+          "word": "technique",
+          "phonetic": [
+            "tek'ni:k"
+          ],
+          "pos": "n.",
+          "meaning": "技术",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-041-002",
+          "word": "tough",
+          "phonetic": [
+            "tʌf"
+          ],
+          "pos": "a.",
+          "meaning": "强硬的",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-041-003",
+          "word": "resentful",
+          "phonetic": [
+            "ri'zentful"
+          ],
+          "pos": "a.",
+          "meaning": "仇恨不满的",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-041-004",
+          "word": "assign",
+          "phonetic": [
+            "ə'sain"
+          ],
+          "pos": "v.",
+          "meaning": "分配，指派",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-041-005",
+          "word": "mahout",
+          "phonetic": [
+            "mə'haut"
+          ],
+          "pos": "n.",
+          "meaning": "驯象的人",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-041-006",
+          "word": "calf",
+          "phonetic": [
+            "ka:f"
+          ],
+          "pos": "n.",
+          "meaning": "幼仔",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-041-007",
+          "word": "pine",
+          "phonetic": [
+            "pain"
+          ],
+          "pos": "v.",
+          "meaning": "消瘦",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-041-008",
+          "word": "underline",
+          "phonetic": [
+            "'ʌndə'lain"
+          ],
+          "pos": "v.",
+          "meaning": "着重说明，强调",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-041-009",
+          "word": "keep",
+          "phonetic": [
+            "ki:p"
+          ],
+          "pos": "n.",
+          "meaning": "生计",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-041-010",
+          "word": "subservient",
+          "phonetic": [
+            "səb'sə:vjənt"
+          ],
+          "pos": "a.",
+          "meaning": "屈从的",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-041-011",
+          "word": "plunge",
+          "phonetic": [
+            "plʌndʒ"
+          ],
+          "pos": "v.",
+          "meaning": "向前冲",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-041-012",
+          "word": "tame",
+          "phonetic": [
+            "teim"
+          ],
+          "pos": "a.",
+          "meaning": "养驯服了的",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-041-013",
+          "word": "tether",
+          "phonetic": [
+            "'teðə"
+          ],
+          "pos": "v.",
+          "meaning": "(用绳)拴",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-041-014",
+          "word": "ticklish",
+          "phonetic": [
+            "'tikliʃ"
+          ],
+          "pos": "a.",
+          "meaning": "难对付的，棘手的",
+          "orderInLesson": 14
+        },
+        {
+          "id": "nce4-041-015",
+          "word": "alarming",
+          "phonetic": [],
+          "pos": "a.",
+          "meaning": "引起惊恐的",
+          "orderInLesson": 15
+        },
+        {
+          "id": "nce4-041-016",
+          "word": "accompaniment",
+          "phonetic": [
+            "ə'kʌmpənimənt"
+          ],
+          "pos": "n.",
+          "meaning": "伴奏",
+          "orderInLesson": 16
+        },
+        {
+          "id": "nce4-041-017",
+          "word": "soothe",
+          "phonetic": [
+            "su:ð"
+          ],
+          "pos": "v.",
+          "meaning": "镇定",
+          "orderInLesson": 17
+        },
+        {
+          "id": "nce4-041-018",
+          "word": "chant",
+          "phonetic": [
+            "tʃa:nt"
+          ],
+          "pos": "n.",
+          "meaning": "单调的歌",
+          "orderInLesson": 18
+        },
+        {
+          "id": "nce4-041-019",
+          "word": "reinforce",
+          "phonetic": [
+            "'ri:in'fɔ:s"
+          ],
+          "pos": "v.",
+          "meaning": "加强",
+          "orderInLesson": 19
+        },
+        {
+          "id": "nce4-041-020",
+          "word": "endearing",
+          "phonetic": [
+            "in'diəriŋ"
+          ],
+          "pos": "a.",
+          "meaning": "惹人喜爱的",
+          "orderInLesson": 20
+        },
+        {
+          "id": "nce4-041-021",
+          "word": "epithet",
+          "phonetic": [
+            "'epiθet"
+          ],
+          "pos": "n.",
+          "meaning": "称呼",
+          "orderInLesson": 21
+        },
+        {
+          "id": "nce4-041-022",
+          "word": "susceptible",
+          "phonetic": [
+            "sə'septəbl"
+          ],
+          "pos": "a.",
+          "meaning": "易受感染的",
+          "orderInLesson": 22
+        },
+        {
+          "id": "nce4-041-023",
+          "word": "blandishment",
+          "phonetic": [
+            "'blændiʃmənt"
+          ],
+          "pos": "n.",
+          "meaning": "奉承",
+          "orderInLesson": 23
+        },
+        {
+          "id": "nce4-041-024",
+          "word": "lash",
+          "phonetic": [
+            "læsh"
+          ],
+          "pos": "v.",
+          "meaning": "猛烈地甩",
+          "orderInLesson": 24
+        },
+        {
+          "id": "nce4-041-025",
+          "word": "curl",
+          "phonetic": [
+            "kə:l"
+          ],
+          "pos": "v.",
+          "meaning": "使卷曲",
+          "orderInLesson": 25
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-042",
+      "lessonNumber": "042",
+      "titleEn": "Recording an earthquake",
+      "titleCn": "记录地震",
+      "wordCount": 15,
+      "words": [
+        {
+          "id": "nce4-042-001",
+          "word": "earthquake",
+          "phonetic": [
+            "'ə:θkweik"
+          ],
+          "pos": "n.",
+          "meaning": "地震",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-042-002",
+          "word": "slumber",
+          "phonetic": [
+            "'slʌmbə"
+          ],
+          "pos": "v.",
+          "meaning": "睡眠",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-042-003",
+          "word": "ninepin",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "九柱戏中的木柱",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-042-004",
+          "word": "rigid",
+          "phonetic": [
+            "'ridʒid"
+          ],
+          "pos": "a.",
+          "meaning": "坚硬的",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-042-005",
+          "word": "delicate",
+          "phonetic": [
+            "'delikit"
+          ],
+          "pos": "a.",
+          "meaning": "灵敏的",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-042-006",
+          "word": "seismometer",
+          "phonetic": [
+            "saiz'mɔmitə"
+          ],
+          "pos": "n.",
+          "meaning": "地震仪",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-042-007",
+          "word": "penholder",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "笔杆",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-042-008",
+          "word": "legibly",
+          "phonetic": [
+            "'ledʒəbli"
+          ],
+          "pos": "ad.",
+          "meaning": "字迹清楚地",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-042-009",
+          "word": "drum",
+          "phonetic": [
+            "drʌm"
+          ],
+          "pos": "n.",
+          "meaning": "鼓状物",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-042-010",
+          "word": "wriggle",
+          "phonetic": [
+            "'rigl"
+          ],
+          "pos": "v.",
+          "meaning": "扭动",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-042-011",
+          "word": "bluebottle",
+          "phonetic": [
+            "'blu:bɔtl"
+          ],
+          "pos": "n.",
+          "meaning": "绿头苍蝇",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-042-012",
+          "word": "graph",
+          "phonetic": [
+            "græf"
+          ],
+          "pos": "n.",
+          "meaning": "图表",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-042-013",
+          "word": "graphic",
+          "phonetic": [
+            "'græfik"
+          ],
+          "pos": "a.",
+          "meaning": "图示的",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-042-014",
+          "word": "longitudinal",
+          "phonetic": [
+            "'lɔndʒi'tju:dinl"
+          ],
+          "pos": "a.",
+          "meaning": "纵向的",
+          "orderInLesson": 14
+        },
+        {
+          "id": "nce4-042-015",
+          "word": "transverse",
+          "phonetic": [
+            "'trænzvə:s"
+          ],
+          "pos": "a.",
+          "meaning": "横向的",
+          "orderInLesson": 15
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-043",
+      "lessonNumber": "043",
+      "titleEn": "Are there strangers in space?",
+      "titleCn": "宇宙中有外星人吗？",
+      "wordCount": 13,
+      "words": [
+        {
+          "id": "nce4-043-001",
+          "word": "Mercury",
+          "phonetic": [
+            "'mə:kjuri"
+          ],
+          "pos": "n.",
+          "meaning": "水星",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-043-002",
+          "word": "hydrogen",
+          "phonetic": [
+            "'haidridʒən"
+          ],
+          "pos": "n.",
+          "meaning": "氢气",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-043-003",
+          "word": "prevailing",
+          "phonetic": [
+            "pri'veiliŋ"
+          ],
+          "pos": "a.",
+          "meaning": "普遍的",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-043-004",
+          "word": "radio astronomer",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "射电天文学家",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-043-005",
+          "word": "uniquely",
+          "phonetic": [],
+          "pos": "ad.",
+          "meaning": "唯一地",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-043-006",
+          "word": "rational",
+          "phonetic": [
+            "'ræʃənl"
+          ],
+          "pos": "a.",
+          "meaning": "合理的",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-043-007",
+          "word": "radio frequency",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "无线电频率",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-043-008",
+          "word": "cm",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "厘米(=centimetre)",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-043-009",
+          "word": "megacycle",
+          "phonetic": [
+            "'megəsaikl"
+          ],
+          "pos": "n.",
+          "meaning": "兆周",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-043-010",
+          "word": "emission",
+          "phonetic": [
+            "i'miʃən"
+          ],
+          "pos": "n.",
+          "meaning": "散发",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-043-011",
+          "word": "interstellar",
+          "phonetic": [
+            "'intə'stelə"
+          ],
+          "pos": "a.",
+          "meaning": "星际的",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-043-012",
+          "word": "rendezvous",
+          "phonetic": [
+            "'rɔndəvu:"
+          ],
+          "pos": "n.",
+          "meaning": "约会地点",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-043-013",
+          "word": "encounter",
+          "phonetic": [
+            "in'kauntə"
+          ],
+          "pos": "n.",
+          "meaning": "相遇",
+          "orderInLesson": 13
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-044",
+      "lessonNumber": "044",
+      "titleEn": "Patterns of culture",
+      "titleCn": "文化的模式",
+      "wordCount": 23,
+      "words": [
+        {
+          "id": "nce4-044-001",
+          "word": "commonplace",
+          "phonetic": [
+            "'kɔmənpleis"
+          ],
+          "pos": "a.",
+          "meaning": "平凡的",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-044-002",
+          "word": "aberrant",
+          "phonetic": [
+            "æ'berənt"
+          ],
+          "pos": "a.",
+          "meaning": "脱离常轨的，异常的",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-044-003",
+          "word": "trivial",
+          "phonetic": [
+            "'triviəl"
+          ],
+          "pos": "a.",
+          "meaning": "微不足道的",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-044-004",
+          "word": "predominant",
+          "phonetic": [
+            "pri'dɔminənt"
+          ],
+          "pos": "a.",
+          "meaning": "占优势的，起支配作用的",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-044-005",
+          "word": "manifest",
+          "phonetic": [
+            "'mænifest"
+          ],
+          "pos": "a.",
+          "meaning": "明显的",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-044-006",
+          "word": "pristine",
+          "phonetic": [
+            "'pristain"
+          ],
+          "pos": "a.",
+          "meaning": "纯洁的，质朴的",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-044-007",
+          "word": "stereotype",
+          "phonetic": [
+            "stiəriətaip"
+          ],
+          "pos": "n.",
+          "meaning": "陈规",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-044-008",
+          "word": "vernacular",
+          "phonetic": [
+            "və'nækjulə"
+          ],
+          "pos": "n.",
+          "meaning": "方言",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-044-009",
+          "word": "accommodation",
+          "phonetic": [
+            "ə",
+            "kɔmə'deiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "适应",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-044-010",
+          "word": "incumbent",
+          "phonetic": [
+            "in'kʌmbənt"
+          ],
+          "pos": "a.",
+          "meaning": "义不容辞的，有责任的",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-044-011",
+          "word": "preliminary",
+          "phonetic": [
+            "pri'liminəri"
+          ],
+          "pos": "a.",
+          "meaning": "初步的",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-044-012",
+          "word": "proposition",
+          "phonetic": [
+            "'prɔpə'ziʃən"
+          ],
+          "pos": "n.",
+          "meaning": "主张",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-044-013",
+          "word": "preferential",
+          "phonetic": [
+            "prefə'renʃəl"
+          ],
+          "pos": "a.",
+          "meaning": "优先的",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-044-014",
+          "word": "controversial",
+          "phonetic": [
+            "'kɔntrə'və:ʃəl"
+          ],
+          "pos": "a.",
+          "meaning": "引起争论的",
+          "orderInLesson": 14
+        },
+        {
+          "id": "nce4-044-015",
+          "word": "cactus",
+          "phonetic": [
+            "'kæktəs"
+          ],
+          "pos": "n.",
+          "meaning": "仙人掌",
+          "orderInLesson": 15
+        },
+        {
+          "id": "nce4-044-016",
+          "word": "termite",
+          "phonetic": [
+            "'tə:mait"
+          ],
+          "pos": "n.",
+          "meaning": "白蚁",
+          "orderInLesson": 16
+        },
+        {
+          "id": "nce4-044-017",
+          "word": "nebula",
+          "phonetic": [
+            "'nebjulə"
+          ],
+          "pos": "n.",
+          "meaning": "星云",
+          "orderInLesson": 17
+        },
+        {
+          "id": "nce4-044-018",
+          "word": "variant",
+          "phonetic": [
+            "'vєəriənt"
+          ],
+          "pos": "a.",
+          "meaning": "不同的",
+          "orderInLesson": 18
+        },
+        {
+          "id": "nce4-044-019",
+          "word": "barbarian",
+          "phonetic": [
+            "ba:'bєəriən"
+          ],
+          "pos": "n.",
+          "meaning": "野蛮人",
+          "orderInLesson": 19
+        },
+        {
+          "id": "nce4-044-020",
+          "word": "pagan",
+          "phonetic": [
+            "'peigən"
+          ],
+          "pos": "n.",
+          "meaning": "异教徒",
+          "orderInLesson": 20
+        },
+        {
+          "id": "nce4-044-021",
+          "word": "sophistication",
+          "phonetic": [
+            "sə'fisti'keiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "老练",
+          "orderInLesson": 21
+        },
+        {
+          "id": "nce4-044-022",
+          "word": "premise",
+          "phonetic": [
+            "'premis",
+            "pri'maiz"
+          ],
+          "pos": "n.",
+          "meaning": "前提",
+          "orderInLesson": 22
+        },
+        {
+          "id": "nce4-044-023",
+          "word": "supernatural",
+          "phonetic": [
+            "'sju:pə'nætʃərəl"
+          ],
+          "pos": "a.",
+          "meaning": "超自然的",
+          "orderInLesson": 23
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-045",
+      "lessonNumber": "045",
+      "titleEn": "Men and galaxies",
+      "titleCn": "人和星系",
+      "wordCount": 12,
+      "words": [
+        {
+          "id": "nce4-045-001",
+          "word": "dispute",
+          "phonetic": [
+            "dis'pju:t"
+          ],
+          "pos": "v.",
+          "meaning": "争夺",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-045-002",
+          "word": "mosquito",
+          "phonetic": [
+            "məs'ki:təu"
+          ],
+          "pos": "n.",
+          "meaning": "蚊虫",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-045-003",
+          "word": "subdue",
+          "phonetic": [
+            "sʌb'dju:"
+          ],
+          "pos": "v.",
+          "meaning": "征服",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-045-004",
+          "word": "drainage",
+          "phonetic": [
+            "'dreinidʒ"
+          ],
+          "pos": "n.",
+          "meaning": "下水系统",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-045-005",
+          "word": "envision",
+          "phonetic": [
+            "en'viʒən"
+          ],
+          "pos": "n.",
+          "meaning": "预想",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-045-006",
+          "word": "Morocco",
+          "phonetic": [
+            "mə'rɔkəu"
+          ],
+          "pos": "n.",
+          "meaning": "摩洛哥",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-045-007",
+          "word": "latitude",
+          "phonetic": [
+            "'lætitju:d"
+          ],
+          "pos": "n.",
+          "meaning": "纬度",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-045-008",
+          "word": "heretic",
+          "phonetic": [
+            "'herətik"
+          ],
+          "pos": "n.",
+          "meaning": "异教徒，异端邪说",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-045-009",
+          "word": "conceive",
+          "phonetic": [
+            "kən'si:v"
+          ],
+          "pos": "v.",
+          "meaning": "想像",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-045-010",
+          "word": "suffice",
+          "phonetic": [
+            "sə'fais"
+          ],
+          "pos": "v.",
+          "meaning": "足够",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-045-011",
+          "word": "nuclear",
+          "phonetic": [
+            "'nju:kliə"
+          ],
+          "pos": "a.",
+          "meaning": "原子弹的",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-045-012",
+          "word": "original",
+          "phonetic": [
+            "ə'ridʒənəl"
+          ],
+          "pos": "a.",
+          "meaning": "有独到见解的",
+          "orderInLesson": 12
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-046",
+      "lessonNumber": "046",
+      "titleEn": "Hobbies",
+      "titleCn": "业余爱好",
+      "wordCount": 27,
+      "words": [
+        {
+          "id": "nce4-046-001",
+          "word": "gifted",
+          "phonetic": [
+            "'giftid"
+          ],
+          "pos": "a.",
+          "meaning": "有天才的",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-046-002",
+          "word": "psychologist",
+          "phonetic": [
+            "sai'kɔlədʒist"
+          ],
+          "pos": "n.",
+          "meaning": "心理学家",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-046-003",
+          "word": "spasm",
+          "phonetic": [
+            "'spæzəm"
+          ],
+          "pos": "n.",
+          "meaning": "一阵(感情)发作",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-046-004",
+          "word": "futile",
+          "phonetic": [
+            "'fju:tail"
+          ],
+          "pos": "a.",
+          "meaning": "无用的",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-046-005",
+          "word": "insinuate",
+          "phonetic": [
+            "in'sinjueit"
+          ],
+          "pos": "v.",
+          "meaning": "使潜入，暗示",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-046-006",
+          "word": "convulsive",
+          "phonetic": [
+            "kən'vʌlsiv"
+          ],
+          "pos": "a.",
+          "meaning": "起痉挛的",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-046-007",
+          "word": "illumination",
+          "phonetic": [
+            "i'lju:mi'neiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "启发，照明",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-046-008",
+          "word": "undue",
+          "phonetic": [
+            "'ʌn'dju:"
+          ],
+          "pos": "a.",
+          "meaning": "不适当的",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-046-009",
+          "word": "grip",
+          "phonetic": [
+            "grip"
+          ],
+          "pos": "n.",
+          "meaning": "紧张",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-046-010",
+          "word": "recuperation",
+          "phonetic": [
+            "ri'kju:pə'reiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "休息",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-046-011",
+          "word": "improvise",
+          "phonetic": [
+            "'imprəvaiz"
+          ],
+          "pos": "v.",
+          "meaning": "临时作成",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-046-012",
+          "word": "sedulously",
+          "phonetic": [],
+          "pos": "ad.",
+          "meaning": "孜孜不倦地",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-046-013",
+          "word": "vivify",
+          "phonetic": [
+            "'vivifai"
+          ],
+          "pos": "v.",
+          "meaning": "使生气勃勃",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-046-014",
+          "word": "aggravate",
+          "phonetic": [
+            "'ægrəveit"
+          ],
+          "pos": "v.",
+          "meaning": "加剧",
+          "orderInLesson": 14
+        },
+        {
+          "id": "nce4-046-015",
+          "word": "trifling",
+          "phonetic": [
+            "'traifliŋ"
+          ],
+          "pos": "a.",
+          "meaning": "微小的",
+          "orderInLesson": 15
+        },
+        {
+          "id": "nce4-046-016",
+          "word": "gratify",
+          "phonetic": [
+            "'grætifai"
+          ],
+          "pos": "v.",
+          "meaning": "使满意",
+          "orderInLesson": 16
+        },
+        {
+          "id": "nce4-046-017",
+          "word": "caprice",
+          "phonetic": [
+            "kə'pri:s"
+          ],
+          "pos": "n.",
+          "meaning": "任性",
+          "orderInLesson": 17
+        },
+        {
+          "id": "nce4-046-018",
+          "word": "satiation",
+          "phonetic": [
+            "'seiʃi'eiʃən"
+          ],
+          "pos": "n.",
+          "meaning": "满足",
+          "orderInLesson": 18
+        },
+        {
+          "id": "nce4-046-019",
+          "word": "frantically",
+          "phonetic": [
+            "'fræntikəli"
+          ],
+          "pos": "ad.",
+          "meaning": "狂乱地",
+          "orderInLesson": 19
+        },
+        {
+          "id": "nce4-046-020",
+          "word": "avenge",
+          "phonetic": [
+            "ə'vendʒ"
+          ],
+          "pos": "v.",
+          "meaning": "替…报复",
+          "orderInLesson": 20
+        },
+        {
+          "id": "nce4-046-021",
+          "word": "boredom",
+          "phonetic": [
+            "'bɔ:dəm"
+          ],
+          "pos": "n.",
+          "meaning": "厌烦",
+          "orderInLesson": 21
+        },
+        {
+          "id": "nce4-046-022",
+          "word": "clatter",
+          "phonetic": [
+            "'klætə"
+          ],
+          "pos": "n.",
+          "meaning": "喧闹的谈话",
+          "orderInLesson": 22
+        },
+        {
+          "id": "nce4-046-023",
+          "word": "sustenance",
+          "phonetic": [
+            "'sʌstənəns"
+          ],
+          "pos": "n.",
+          "meaning": "支撑力",
+          "orderInLesson": 23
+        },
+        {
+          "id": "nce4-046-024",
+          "word": "appetite",
+          "phonetic": [
+            "'æpitait"
+          ],
+          "pos": "n.",
+          "meaning": "欲望",
+          "orderInLesson": 24
+        },
+        {
+          "id": "nce4-046-025",
+          "word": "grudge",
+          "phonetic": [
+            "grʌdʒ"
+          ],
+          "pos": "v.",
+          "meaning": "怨恨",
+          "orderInLesson": 25
+        },
+        {
+          "id": "nce4-046-026",
+          "word": "absorbing",
+          "phonetic": [
+            "əb'sɔ:biŋ"
+          ],
+          "pos": "a.",
+          "meaning": "引人入胜的",
+          "orderInLesson": 26
+        },
+        {
+          "id": "nce4-046-027",
+          "word": "banish",
+          "phonetic": [
+            "'bæniʃ"
+          ],
+          "pos": "v.",
+          "meaning": "排除，放弃",
+          "orderInLesson": 27
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-047",
+      "lessonNumber": "047",
+      "titleEn": "The great escape",
+      "titleCn": "大逃亡",
+      "wordCount": 30,
+      "words": [
+        {
+          "id": "nce4-047-001",
+          "word": "assumption",
+          "phonetic": [
+            "ə'sʌmpʃən"
+          ],
+          "pos": "n.",
+          "meaning": "假定",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-047-002",
+          "word": "manoeuvre",
+          "phonetic": [
+            "mə'nu:və"
+          ],
+          "pos": "v.",
+          "meaning": "(驱车)移动",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-047-003",
+          "word": "myriad",
+          "phonetic": [
+            "'miriəd"
+          ],
+          "pos": "a.",
+          "meaning": "无数的",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-047-004",
+          "word": "paradox",
+          "phonetic": [
+            "'pærədɔks"
+          ],
+          "pos": "n.",
+          "meaning": "自相矛盾的事",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-047-005",
+          "word": "cynic",
+          "phonetic": [
+            "'sinik"
+          ],
+          "pos": "n.",
+          "meaning": "愤世嫉俗者",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-047-006",
+          "word": "sociologist",
+          "phonetic": [
+            "'səusi'ɔlədʒist"
+          ],
+          "pos": "n.",
+          "meaning": "社会学家",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-047-007",
+          "word": "shun",
+          "phonetic": [
+            "ʃʌn"
+          ],
+          "pos": "v.",
+          "meaning": "避开",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-047-008",
+          "word": "affluent",
+          "phonetic": [
+            "'æfluənt"
+          ],
+          "pos": "a.",
+          "meaning": "富有的",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-047-009",
+          "word": "chambermaid",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "女招待员",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-047-010",
+          "word": "boo",
+          "phonetic": [
+            "bu:"
+          ],
+          "pos": "n.",
+          "meaning": "呸的一声",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-047-011",
+          "word": "maitre d'hotel",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "［法语］总管",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-047-012",
+          "word": "snobbery",
+          "phonetic": [
+            "'snɔbəri"
+          ],
+          "pos": "n.",
+          "meaning": "势利",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-047-013",
+          "word": "hierarchy",
+          "phonetic": [
+            "'haiəra:ki"
+          ],
+          "pos": "n.",
+          "meaning": "等级制度",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-047-014",
+          "word": "entail",
+          "phonetic": [
+            "in'teil"
+          ],
+          "pos": "v.",
+          "meaning": "使成为必要",
+          "orderInLesson": 14
+        },
+        {
+          "id": "nce4-047-015",
+          "word": "inclement",
+          "phonetic": [
+            "in'klemənt"
+          ],
+          "pos": "a.",
+          "meaning": "险恶的",
+          "orderInLesson": 15
+        },
+        {
+          "id": "nce4-047-016",
+          "word": "package tour",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "由旅行社安排一切的一揽子旅游",
+          "orderInLesson": 16
+        },
+        {
+          "id": "nce4-047-017",
+          "word": "insularity",
+          "phonetic": [
+            "'insju'læriti"
+          ],
+          "pos": "n.",
+          "meaning": "偏狭",
+          "orderInLesson": 17
+        },
+        {
+          "id": "nce4-047-018",
+          "word": "cater",
+          "phonetic": [
+            "'keitə"
+          ],
+          "pos": "v.",
+          "meaning": "迎合",
+          "orderInLesson": 18
+        },
+        {
+          "id": "nce4-047-019",
+          "word": "exclusively",
+          "phonetic": [],
+          "pos": "ad.",
+          "meaning": "排他地",
+          "orderInLesson": 19
+        },
+        {
+          "id": "nce4-047-020",
+          "word": "cosmopolitan",
+          "phonetic": [
+            "'kɔzmə'pɔlitən"
+          ],
+          "pos": "a.",
+          "meaning": "世界的",
+          "orderInLesson": 20
+        },
+        {
+          "id": "nce4-047-021",
+          "word": "preponderance",
+          "phonetic": [
+            "pri'pɔndərəns"
+          ],
+          "pos": "n.",
+          "meaning": "优势",
+          "orderInLesson": 21
+        },
+        {
+          "id": "nce4-047-022",
+          "word": "overwhelmingly",
+          "phonetic": [
+            "'əuvə'hwelmiŋli"
+          ],
+          "pos": "ad.",
+          "meaning": "以压倒优势地，清一色地",
+          "orderInLesson": 22
+        },
+        {
+          "id": "nce4-047-023",
+          "word": "patronage",
+          "phonetic": [
+            "'pætrənidʒ"
+          ],
+          "pos": "n.",
+          "meaning": "恩惠，惠顾",
+          "orderInLesson": 23
+        },
+        {
+          "id": "nce4-047-024",
+          "word": "sauerkraut",
+          "phonetic": [
+            "'sauəkraut"
+          ],
+          "pos": "n.",
+          "meaning": "泡菜",
+          "orderInLesson": 24
+        },
+        {
+          "id": "nce4-047-025",
+          "word": "vie",
+          "phonetic": [
+            "vai"
+          ],
+          "pos": "v.",
+          "meaning": "竞争",
+          "orderInLesson": 25
+        },
+        {
+          "id": "nce4-047-026",
+          "word": "municipality",
+          "phonetic": [
+            "mju:'nisi'pæliti"
+          ],
+          "pos": "n.",
+          "meaning": "市政当局",
+          "orderInLesson": 26
+        },
+        {
+          "id": "nce4-047-027",
+          "word": "itinerant",
+          "phonetic": [
+            "i'tinərənt"
+          ],
+          "pos": "n.",
+          "meaning": "巡回者",
+          "orderInLesson": 27
+        },
+        {
+          "id": "nce4-047-028",
+          "word": "heath",
+          "phonetic": [
+            "hi:θ"
+          ],
+          "pos": "n.",
+          "meaning": "荒地",
+          "orderInLesson": 28
+        },
+        {
+          "id": "nce4-047-029",
+          "word": "alienate",
+          "phonetic": [
+            "'eiljəneit"
+          ],
+          "pos": "v.",
+          "meaning": "使疏远",
+          "orderInLesson": 29
+        },
+        {
+          "id": "nce4-047-030",
+          "word": "eternal",
+          "phonetic": [
+            "i'tə:nl"
+          ],
+          "pos": "a.",
+          "meaning": "永久的",
+          "orderInLesson": 30
+        }
+      ]
+    },
+    {
+      "lessonId": "nce4-048",
+      "lessonNumber": "048",
+      "titleEn": "Planning a share portfolio",
+      "titleCn": "规划股份投资",
+      "wordCount": 16,
+      "words": [
+        {
+          "id": "nce4-048-001",
+          "word": "portfolio",
+          "phonetic": [
+            "pɔ:t'fouljou"
+          ],
+          "pos": "n.",
+          "meaning": "投资组合",
+          "orderInLesson": 1
+        },
+        {
+          "id": "nce4-048-002",
+          "word": "tipster",
+          "phonetic": [
+            "'tipstə"
+          ],
+          "pos": "n.",
+          "meaning": "(提供证券投机等消息为生的)情报贩子",
+          "orderInLesson": 2
+        },
+        {
+          "id": "nce4-048-003",
+          "word": "Las Vegas",
+          "phonetic": [],
+          "pos": "n.",
+          "meaning": "拉斯韦加斯",
+          "orderInLesson": 3
+        },
+        {
+          "id": "nce4-048-004",
+          "word": "fritter",
+          "phonetic": [
+            "'fritə"
+          ],
+          "pos": "v.",
+          "meaning": "挥霍，浪费",
+          "orderInLesson": 4
+        },
+        {
+          "id": "nce4-048-005",
+          "word": "reputable",
+          "phonetic": [
+            "'repjutəbl"
+          ],
+          "pos": "a.",
+          "meaning": "享有声望的",
+          "orderInLesson": 5
+        },
+        {
+          "id": "nce4-048-006",
+          "word": "broker",
+          "phonetic": [
+            "'brəukə"
+          ],
+          "pos": "n.",
+          "meaning": "经纪人",
+          "orderInLesson": 6
+        },
+        {
+          "id": "nce4-048-007",
+          "word": "finance",
+          "phonetic": [
+            "fai'næns",
+            "fi-"
+          ],
+          "pos": "n.",
+          "meaning": "资金，财源",
+          "orderInLesson": 7
+        },
+        {
+          "id": "nce4-048-008",
+          "word": "mortgage",
+          "phonetic": [
+            "'mɔ:gidʒ"
+          ],
+          "pos": "n.",
+          "meaning": "抵押贷款",
+          "orderInLesson": 8
+        },
+        {
+          "id": "nce4-048-009",
+          "word": "pension",
+          "phonetic": [
+            "'penʃən"
+          ],
+          "pos": "n.",
+          "meaning": "养老金",
+          "orderInLesson": 9
+        },
+        {
+          "id": "nce4-048-010",
+          "word": "priority",
+          "phonetic": [
+            "prai'ɔriti"
+          ],
+          "pos": "n.",
+          "meaning": "优先权",
+          "orderInLesson": 10
+        },
+        {
+          "id": "nce4-048-011",
+          "word": "gilt",
+          "phonetic": [
+            "gilt"
+          ],
+          "pos": "n.",
+          "meaning": "金边证券(高度可靠的证券)",
+          "orderInLesson": 11
+        },
+        {
+          "id": "nce4-048-012",
+          "word": "convertible",
+          "phonetic": [
+            "kən'və:təbl"
+          ],
+          "pos": "n.",
+          "meaning": "可换证券",
+          "orderInLesson": 12
+        },
+        {
+          "id": "nce4-048-013",
+          "word": "sanguine",
+          "phonetic": [
+            "'sæŋgwin"
+          ],
+          "pos": "a.",
+          "meaning": "乐观的",
+          "orderInLesson": 13
+        },
+        {
+          "id": "nce4-048-014",
+          "word": "heady",
+          "phonetic": [
+            "'hedi"
+          ],
+          "pos": "a.",
+          "meaning": "令人陶醉的",
+          "orderInLesson": 14
+        },
+        {
+          "id": "nce4-048-015",
+          "word": "alongside",
+          "phonetic": [
+            "ə'lɔŋ'said"
+          ],
+          "pos": "prep.",
+          "meaning": "在…旁边，和…一起",
+          "orderInLesson": 15
+        },
+        {
+          "id": "nce4-048-016",
+          "word": "pedestrian",
+          "phonetic": [
+            "pi'destriən"
+          ],
+          "pos": "a.",
+          "meaning": "平淡无奇的，乏味的",
+          "orderInLesson": 16
+        }
+      ]
+    }
+  ]
+}

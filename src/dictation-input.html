@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a84ff" />
+    <title>NCE - 答案录入</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/dictation-input.css" />
+  </head>
+  <body>
+    <!-- 页面头部 -->
+    <header class="hero no-print">
+      <div style="display: flex; justify-content: space-between; align-items: center; max-width: var(--content-max); margin: 0 auto;">
+        <button class="control-btn" id="backBtn">← 返回</button>
+        <h1 id="inputTitle" style="margin: 0; font-size: 1.2rem;">答案录入</h1>
+        <div style="width: 80px;"></div>
+      </div>
+    </header>
+
+    <div class="input-container">
+      <!-- 进度 -->
+      <div class="progress-info">
+        <span>进度: <strong id="progressText">0/0</strong></span>
+      </div>
+
+      <!-- 说明 -->
+      <div class="instruction-box">
+        <div class="instruction-icon">📝</div>
+        <div class="instruction-text">
+          请根据你的听写本，逐个录入答案。留空的单词将标记为错误。
+        </div>
+      </div>
+
+      <!-- 录入列表 -->
+      <div class="input-list" id="inputList">
+        <!-- 动态生成 -->
+      </div>
+
+      <!-- 操作按钮 -->
+      <div class="action-buttons">
+        <button class="btn btn-primary" id="submitBtn">
+          完成批改
+        </button>
+        <button class="btn" id="cancelBtn">
+          取消
+        </button>
+      </div>
+    </div>
+
+    <script type="module" src="/js/dictation/dictation-input.js"></script>
+  </body>
+</html>
