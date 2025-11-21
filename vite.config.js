@@ -2,6 +2,22 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import fs from 'fs';
 import path from 'path';
+import { execSync } from 'child_process';
+
+// 读取版本信息
+const packageJson = JSON.parse(fs.readFileSync('./package.json', 'utf-8'));
+const version = packageJson.version;
+
+// 获取 Git commit hash（短格式）
+let gitCommit = 'unknown';
+try {
+  gitCommit = execSync('git rev-parse --short HEAD').toString().trim();
+} catch (error) {
+  console.warn('无法获取 Git commit hash:', error.message);
+}
+
+// 获取构建时间
+const buildTime = new Date().toISOString();
 
 export default defineConfig({
   // 部署在子路径 /nce/
@@ -10,6 +26,13 @@ export default defineConfig({
 
   root: 'src',
   publicDir: '../public',
+
+  // 定义全局常量，在构建时注入
+  define: {
+    __APP_VERSION__: JSON.stringify(version),
+    __GIT_COMMIT__: JSON.stringify(gitCommit),
+    __BUILD_TIME__: JSON.stringify(buildTime)
+  },
 
   build: {
     outDir: '../dist',

@@ -12,6 +12,7 @@ import { Storage } from './utils/storage.js';
 import { IOSHelper } from './utils/ios-helper.js';
 import { Toast } from './utils/toast.js';
 import { globalWakeLock } from './utils/global-wake-lock.js';
+import { renderVersion } from './utils/version.js';
 import { marked } from 'marked';
 
 // 配置 marked.js 安全选项
@@ -697,3 +698,6 @@ class LessonApp {
 
 // 启动应用
 new LessonApp();
+
+// 渲染版本信息
+renderVersion();

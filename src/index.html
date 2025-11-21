@@ -226,6 +226,7 @@
 
     <script type="module">
       import { Storage } from './js/utils/storage.js';
+      import { renderVersion } from './js/utils/version.js';
 
       class IndexApp {
         constructor() {
@@ -253,6 +254,9 @@
 
           // 渲染课程列表
           this.renderLessons();
+
+          // 渲染版本信息
+          renderVersion();
         }
 
         async loadData() {
@@ -461,6 +465,7 @@
             </svg>
           </a>
         </p>
+        <p class="footer-version" id="appVersion"></p>
       </div>
     </footer>
   </body>

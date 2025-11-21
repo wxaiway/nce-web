@@ -1,6 +1,7 @@
 import { Logger } from '../utils/logger.js';
 import { Storage } from '../utils/storage.js';
 import { historyManager } from '../utils/history.js';
+import { renderVersion } from '../utils/version.js';
 
 /**
  * 单词练习配置页
@@ -1938,3 +1939,6 @@ class VocabularyApp {
 
 // 启动应用
 new VocabularyApp();
+
+// 渲染版本信息
+renderVersion();

@@ -241,7 +241,13 @@
             </svg>
           </a>
         </p>
+        <p class="footer-version" id="appVersion"></p>
       </div>
     </footer>
+
+    <script type="module">
+      import { renderVersion } from './js/utils/version.js';
+      renderVersion();
+    </script>
   </body>
 </html>
