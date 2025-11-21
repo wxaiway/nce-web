@@ -216,15 +216,10 @@ class FlashcardApp {
     document.getElementById('wordMeaning').textContent = word.meaning;
     document.getElementById('wordPos').textContent = word.pos || '';
 
-    // 更新背面（英文）
-    document.getElementById('wordText').textContent = word.word;
-    document.getElementById('wordPhonetic').textContent =
-      word.phonetic.length > 0 ? `[${word.phonetic.join(', ')}]` : '';
-    document.getElementById('wordPosBack').textContent =
-      `${word.pos || ''} ${word.meaning}`;
-
-    // 更新音频按钮
-    this.updateAudioButtons(word);
+    // 清空背面内容（重要：防止翻转时看到上一个单词的内容）
+    document.getElementById('wordText').textContent = '';
+    document.getElementById('wordPhonetic').textContent = '';
+    document.getElementById('wordPosBack').textContent = '';
 
     // 重置卡片状态
     this.isFlipped = false;
@@ -298,7 +293,22 @@ class FlashcardApp {
   flipCard() {
     if (this.isFlipped) return;
 
+    const word = this.words[this.currentIndex];
+
     this.isFlipped = true;
+
+    // 在翻转动画开始后，立即填充背面内容
+    // 由于 backface-visibility: hidden，用户看不到这个更新过程
+    document.getElementById('wordText').textContent = word.word;
+    document.getElementById('wordPhonetic').textContent =
+      word.phonetic.length > 0 ? `[${word.phonetic.join(', ')}]` : '';
+    document.getElementById('wordPosBack').textContent =
+      `${word.pos || ''} ${word.meaning}`;
+
+    // 更新音频按钮
+    this.updateAudioButtons(word);
+
+    // 开始翻转动画
     document.getElementById('flashcard').classList.add('flipped');
 
     // 显示评价按钮

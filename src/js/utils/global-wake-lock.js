@@ -42,6 +42,9 @@ class GlobalWakeLock {
       return;
     }
 
+    // 给 body 添加 is-mobile 类，让 CSS 可以统一判断
+    document.body.classList.add('is-mobile');
+
     // 查找或创建工具栏
     this.buttonElement = document.getElementById('globalWakeLockBtn');
 

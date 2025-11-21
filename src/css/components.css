@@ -768,14 +768,12 @@ body.lang-bi .sentence .cn {
   bottom: 80px;  /* 距离底部 80px，避开页脚 */
   right: 20px;   /* 距离右侧 20px */
   z-index: 9999;
-  display: none; /* PC端默认隐藏 */
+  display: none; /* 默认隐藏 */
 }
 
-/* 手机端显示 */
-@media (max-width: 768px) {
-  .global-wake-lock-toolbar {
-    display: block;
-  }
+/* 移动设备显示（由 JavaScript 添加 is-mobile 类） */
+body.is-mobile .global-wake-lock-toolbar {
+  display: block;
 }
 
 /* 屏幕常亮按钮 */
