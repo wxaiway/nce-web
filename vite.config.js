@@ -19,10 +19,11 @@ try {
 // 获取构建时间
 const buildTime = new Date().toISOString();
 
+// 支持通过环境变量 PUBLIC_PATH 自定义部署路径: PUBLIC_PATH=/custom/ pnpm run build
+const publicPath = process.env.PUBLIC_PATH || '/nce/';
+
 export default defineConfig({
-  // 部署在子路径 /nce/
-  // 如果部署在根路径，改为 base: '/'
-  base: '/nce/',
+  base: publicPath,
 
   root: 'src',
   publicDir: '../public',
