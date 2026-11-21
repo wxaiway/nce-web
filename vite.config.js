@@ -45,6 +45,7 @@ export default defineConfig({
         lesson: resolve(__dirname, 'src/lesson.html'),
         book: resolve(__dirname, 'src/book.html'),
         guide: resolve(__dirname, 'src/guide.html'),
+        downloads: resolve(__dirname, 'src/downloads.html'),
         vocabulary: resolve(__dirname, 'src/vocabulary.html'),
         flashcard: resolve(__dirname, 'src/flashcard.html'),
         'flashcard-result': resolve(__dirname, 'src/flashcard-result.html'),

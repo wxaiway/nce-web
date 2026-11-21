@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a84ff" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>NCE - 资源下载</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/downloads.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-nav">
+        <a href="index.html" class="hero-brand">
+          <span class="hero-logo">📚</span>
+          <span class="hero-name">NCE</span>
+        </a>
+        <nav class="hero-menu" aria-label="主导航">
+          <a href="index.html" class="hero-link">课程</a>
+          <a href="vocabulary.html" class="hero-link">单词练习</a>
+          <a href="guide.html" class="hero-link">学习指导</a>
+          <a href="downloads.html" class="hero-link active" aria-current="page">资源下载</a>
+          <a href="https://wxaiway.com/ipa/" class="hero-link" target="_blank" rel="noopener noreferrer">国际音标</a>
+        </nav>
+      </div>
+      <h1>资源下载</h1>
+      <p>收集英语学习视频与资料，通过百度网盘分享，方便保存和学习。</p>
+    </header>
+
+    <main class="container downloads-content">
+      <div class="downloads-heading">
+        <h2>全部资源</h2>
+        <span id="resourceCount"></span>
+      </div>
+      <div id="downloadResources" class="downloads-grid"></div>
+      <noscript><p>请启用 JavaScript 以查看网盘资源和提取码。</p></noscript>
+      <p class="downloads-note">更多学习资源陆续整理中。</p>
+    </main>
+
+    <template id="downloadCard">
+      <article class="download-card">
+        <div class="download-header">
+          <span class="download-icon" aria-hidden="true"></span>
+          <div>
+            <div class="download-meta"><span class="download-category"></span><span>百度网盘</span></div>
+            <h2 class="download-title"></h2>
+          </div>
+        </div>
+        <p class="download-description"></p>
+        <p class="download-share-name"></p>
+        <div class="download-code-panel">
+          <div class="download-code-row">
+            <span>提取码</span>
+            <code class="download-code"></code>
+            <button type="button" class="download-copy">复制提取码</button>
+          </div>
+          <p class="download-status" role="status"></p>
+        </div>
+        <a class="download-link" target="_blank" rel="noopener noreferrer">
+          前往百度网盘 <span aria-hidden="true">↗</span><span class="download-sr-only">（新窗口打开）</span>
+        </a>
+        <p class="download-hint">链接已附带提取码；如提示输入，请填写上方提取码。</p>
+      </article>
+    </template>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p class="footer-title">New Concept English</p>
+        <p class="footer-desc">新概念英语在线学习平台</p>
+        <p class="footer-version" id="appVersion"></p>
+      </div>
+    </footer>
+    <script type="module" src="./js/downloads.js"></script>
+  </body>
+</html>
